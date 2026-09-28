@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/logo.svg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="LEFT4CODE">
+    <title>단호박 상담소 관리자</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5">
+    <div class="flex mt-0">
+        <!-- S : 사이드 메뉴 -->
+        <nav class="side-nav">
+            <a href="index.html" class="intro-x flex items-center pl-5 pt-4">
+                <img src="dist/images/danhobak_logo.svg" alt="">
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title">
+                            메인화면 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="mainbanner-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인배너 관리</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mainprod-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인 노출 상품 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="member-list.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                        <div class="side-menu__title">회원관리</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="table"></i> </div>
+                        <div class="side-menu__title">
+                            게시판 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="side-menu__sub-open">
+                        <li>
+                            <a href="concern-list.html" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">고민게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="share-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">정보공유게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">단호박 솔루션</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="keyword-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">키워드 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="message-square"></i> </div>
+                        <div class="side-menu__title">
+                            전문 상담사 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="counselor-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="counselor-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="package"></i> </div>
+                        <div class="side-menu__title">
+                            상품관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="side-menu-light-categories.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-light-add-product.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="order-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__title">
+                            주문관리
+                            <div class="side-menu__sub-icon "></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="keyword-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="search"></i> </div>
+                        <div class="side-menu__title">
+                            검색어 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 인기 검색어 관리 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rec-keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 연관 검색어 관리 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="report.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="feather"></i> </div>
+                        <div class="side-menu__title"> 단호박 리포트 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-file-manager.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="coins"></i> </div>
+                        <div class="side-menu__title"> 포인트 관리 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="crown"></i> </div>
+                        <div class="side-menu__title">
+                            리뷰관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="review-board.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 고민게시판 리뷰 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-review.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문솔루션 리뷰 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- E : 사이드 메뉴 -->
+
+
+        <!-- S: 컨텐츠 -->
+        <div class="content">
+            <div class="top-bar">
+                <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">고민게시판</li>
+                    </ol>
+                </nav>
+                <div class="intro-x dropdown w-8 h-8 ml-auto">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                        role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                        <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                    </div>
+                    <div class="dropdown-menu w-56">
+                        <ul class="dropdown-content bg-primary text-white">
+                            <li class="p-2">
+                                <div class="font-medium">Kevin Spacey</div>
+                                <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">Software Engineer</div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user"
+                                        class="w-4 h-4 mr-2"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit"
+                                        class="w-4 h-4 mr-2"></i> Add Account </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock"
+                                        class="w-4 h-4 mr-2"></i> Reset Password </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="help-circle"
+                                        class="w-4 h-4 mr-2"></i> Help </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                        class="w-4 h-4 mr-2"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 2xl:col-span-12">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 mt-8">
+                            <div class="box p-5 rounded-md mb-4">
+                                <div class="overflow-auto lg:overflow-visible">
+                                    <table class="table table-bordered">
+                                        <tbody> 
+                                            <tr>
+                                                <td class="text-center">카테고리</td>
+                                                <td class="text-center">
+                                                    <select class="form-select mt-2 sm:mr-2" aria-label="Default select example">
+                                                        <option>직장</option>
+                                                        <option>연애</option>
+                                                        <option>취업/진로</option>
+                                                        <option>가족</option>
+                                                        <option>결혼/육아</option>
+                                                        <option>학업/고시</option>
+                                                        <option>친구</option>
+                                                        <option>자아/성격</option>
+                                                        <option>사업/금전</option>
+                                                        <option>중독</option>
+                                                        <option>LGBT</option>
+                                                        <option>질병/질환</option>
+                                                        <option>생활/습관</option>
+                                                        <option>기타</option>
+                                                    </select> 
+                                                </td>
+                                                <td class="text-center">제목</td>
+                                                <td class="">
+                                                    <input id="regular-form-1" type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">작성자 닉네임</td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control" placeholder="">
+                                                </td>
+                                                <td class="text-center">작성자 UID</td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">투표</td>
+                                                <td class="text-center">
+                                                    <select class="form-select mt-2 sm:mr-2" aria-label="Default select example">
+                                                        <option>등록</option>
+                                                        <option>미등록</option>
+                                                    </select>
+                                                </td>
+                                                <td class="text-center">전문답변</td>
+                                                <td class="text-center">
+                                                    <select class="form-select mt-2 sm:mr-2" aria-label="Default select example">
+                                                        <option>미배정</option>
+                                                        <option>전문가 배정</option>
+                                                        <option>답변완료</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">솔루션</td>
+                                                <td class="text-center">
+                                                    <select class="form-select mt-2 sm:mr-2" aria-label="Default select example">
+                                                        <option>솔루션 완료</option>
+                                                        <option>솔루션 대기</option>
+                                                    </select>
+                                                </td>
+                                                <td class="text-center">전문가 이름</td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">등록일시</td>
+                                                <td class="text-center">
+                                                    <div class="relative ">
+                                                        <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                                                        </div> 
+                                                        <input type="text" class="datepicker form-control pl-12" data-daterange="true">
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">상태코드</td>
+                                                <td class="text-center">
+                                                    <select class="form-select mt-2 sm:mr-2" aria-label="Default select example">
+                                                        <option>코드 1</option>
+                                                        <option>코드 2</option>
+                                                        <option>코드 3</option>
+                                                        <option>코드 4</option>
+                                                        <option>코드 5</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="flex justify-end mt-4 gap-2">
+                                        <button class="btn btn-sm btn-secondary w-24 mr-1 mb-2">초기화</button>
+                                        <button class="btn btn-sm btn-primary w-24 mr-1 mb-2">검색</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box p-5 rounded-md">
+                                <div class="overflow-auto ">
+                                    <table class="table table-bordered table-sm table-hover">
+                                        <colgroup>
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="58%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                            <col width="3%">
+                                        </colgroup>
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="whitespace-nowrap text-center">카테고리</th>
+                                                <th class="whitespace-nowrap text-center">게시글<br/> 번호</th>
+                                                <th class="whitespace-nowrap text-center">고민글 제목</th>
+                                                <th class="whitespace-nowrap text-center">작성자<br/> 닉네임</th>
+                                                <th class="whitespace-nowrap text-center">작성자<br/> UID</th>
+                                                <th class="whitespace-nowrap text-center">등록일시</th>
+                                                <th class="whitespace-nowrap text-center">투표</th>
+                                                <th class="whitespace-nowrap text-center">투표<br/> 참여인원</th>
+                                                <th class="whitespace-nowrap text-center">전문가<br/> 배정</th>
+                                                <th class="whitespace-nowrap text-center">전문가<br/> 이름</th>
+                                                <th class="whitespace-nowrap text-center">단호박<br/> 솔루션</th>
+                                                <th class="whitespace-nowrap text-center">북마크</th>
+                                                <th class="whitespace-nowrap text-center">댓글</th>
+                                                <th class="whitespace-nowrap text-center">조회수</th>
+                                                <th class="whitespace-nowrap text-center">상태코드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="cursor-pointer">
+                                            <tr onclick="location.href='concern-detail.html'">
+                                                <td class="text-center">중독</td>
+                                                <td class="text-center">2134</td>
+                                                <td class="text-center no-link"><a href="javascript:;" class="underline">쇼핑 중독 치료법이 궁금해요</a></td>
+                                                <td class="text-center">보그</td>
+                                                <td class="text-center">adasd</td>
+                                                <td class="text-center">2023.03.03 12:13</td>
+                                                <td class="text-center">등록</td>
+                                                <td class="text-center">999명</td>
+                                                <td class="text-center">답변 완료</td>
+                                                <td class="text-center">홍길동</td>
+                                                <td class="text-center">완료</td>
+                                                <td class="text-center no-link"><a href="javascript:;" class="underline modal-btn" data-modal="#bookmark-list">12회</a></td>
+                                                <td class="text-center">3개</td>
+                                                <td class="text-center">76회</td>
+                                                <td class="text-center">코드1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <nav class="w-full mt-4">
+                                        <ul class="pagination justify-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-left"
+                                                        class="lucide lucide-chevrons-left w-4 h-4"
+                                                        data-lucide="chevrons-left">
+                                                        <polyline points="11 17 6 12 11 7"></polyline>
+                                                        <polyline points="18 17 13 12 18 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-left"
+                                                        class="lucide lucide-chevron-left w-4 h-4"
+                                                        data-lucide="chevron-left">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                            <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-right"
+                                                        class="lucide lucide-chevron-right w-4 h-4"
+                                                        data-lucide="chevron-right">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-right"
+                                                        class="lucide lucide-chevrons-right w-4 h-4"
+                                                        data-lucide="chevrons-right">
+                                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div id="bookmark-list" class="modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="font-medium text-base mr-auto">북마크 회원 닉네임</h2>
+                                            <a data-tw-dismiss="modal" href="javascript:;"> <i data-lucide="x" class="w-8 h-8 text-slate-400"></i> </a>
+                                        </div>
+                                        <div class="modal-body p-0 ">
+                                            <ul class="modal-member_list bg-slate-100">
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                                <li>북마크 회원 닉네임</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- END: Modal Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E: 컨텐츠 -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+    <script src="dist/js/app.js"></script>
+    <!-- END: JS Assets-->
+</body>
+
+</html>

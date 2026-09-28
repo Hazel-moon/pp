@@ -1,0 +1,967 @@
+@charset "utf-8";
+
+/* 시작 화면 */
+#start_page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../img/intro_bg.png) no-repeat center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+#start_page.off {
+	display: none;
+}
+#start_page .start_btn_area {
+	position: relative;
+}
+#start_page .start_btn_area > img {
+	display: block;
+	margin-bottom: 80px;
+	margin-left: 50px;
+}
+#start_page .intro_cha {
+	background: url(../img/intro_cloud_cha.png) no-repeat center;
+	width: 182px;
+	height: 95px;
+	position: absolute;
+	left: 160px;
+	top: 149px;
+}
+#start_page .start_btn {
+	background: url(../img/start_btn.png) no-repeat center;
+	width: 483px;
+	height: 204px;
+	font-family: '123RF';
+	font-size: 80px;
+	color: #fff;
+	padding-bottom: 13px;
+}
+
+/* 인트로 화면 */
+#intro_page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/* background: url(../img/bg1_gif.gif) no-repeat center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+#intro_page.off {
+	display: none;
+}
+.starting_title > span {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'HakgyoansimDotbogi';
+	font-size: 150px;
+	color: #002f4c;
+	font-weight: 500;
+	z-index: 10;
+	letter-spacing: -5px;
+	line-height: 180px;
+	opacity: 0;
+}
+
+.title_mask {
+	background: url(../img/intro_title_mask.png) no-repeat center;
+	width: 685px;
+	height: 354px;
+	position: absolute;
+	left: 616px;
+	top: 358px;
+	z-index: 5;
+	opacity: 0;
+}
+
+.starting_title.on > span {
+	opacity: 1;
+	transition: opacity 1s linear;
+}
+.title_mask.on {
+	opacity: 1;
+	transition: opacity 1s linear;
+}
+
+/* 조작 화면 */
+.action_page {
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg2.png) no-repeat center;
+}
+
+.action_page.off {
+	display: none;
+}
+
+.action_page.action_page02 {
+	background: url(../img/bg3.png) no-repeat center;
+}
+
+/* 상단 타이틀 */
+.action_page .action_title {
+	position: relative;
+	height: 140px;
+	margin: 0 80px;
+	text-align: left;
+	line-height: 113px;
+}
+.action_page .action_title::before {
+	content: '';
+	display: block;
+	background: url(../img/title_icon.png) no-repeat center;
+	width: 41px;
+	height: 46px;
+	position: absolute;
+	left: 0;
+	top: 47px;
+}
+.action_page.action_page02 .action_title::before {
+	background: url(../img/title_icon02.png) no-repeat center;
+	width: 48px;
+	height: 48px;
+}
+.action_page .action_title > span {
+	font-family: 'GmarketSans';
+	padding-left: 75px;
+	font-size: 42px;
+}
+
+/* 활동 화면 콘텐츠 */
+.action_contents {
+	/* width: 100%; */
+	height: 880px;
+	/* padding: 0 118px;
+  margin: 0 40px;
+  box-sizing: border-box; */
+}
+
+/* 좌우 슬라이드 */
+.slide-wrap {
+	width: 100%;
+	height: 100%;
+}
+.slide-wrap .slide-container .slide-item {
+	display: none;
+	/* width: 100%; */
+	height: 100%;
+	position: absolute;
+	top: 140px;
+	left: 0;
+	/* overflow: hidden; */
+	padding: 0 118px;
+	margin: 0 40px;
+	box-sizing: border-box;
+}
+.slide-wrap .slide-container .slide-item:nth-child(1) {
+	display: block;
+}
+.arrow.right {
+	background: url(../img/slide_next_btn.png) no-repeat center;
+	width: 106px;
+	height: 71px;
+	position: absolute;
+	right: 40px;
+	top: 560px;
+}
+.arrow.left {
+	background: url(../img/slide_prev_btn.png) no-repeat center;
+	width: 106px;
+	height: 71px;
+	position: absolute;
+	left: 40px;
+	top: 560px;
+	z-index: 5;
+}
+.arrow.right.off,
+.arrow.left.off {
+	display: none;
+}
+.arrow.right.hide,
+.arrow.left.hide {
+	display: none;
+}
+.arrow.right.ani,
+.arrow.left.ani {
+	animation: blink-effect 2s 5 linear;
+}
+
+.contents_txt_wrap {
+	margin-top: 50px;
+	text-align: left;
+}
+.contents_txt_wrap .contents_txt {
+	position: relative;
+	font-family: 'GangwonEduSaeeum';
+	font-size: 78px;
+	padding-left: 86px;
+	margin-bottom: 20px;
+}
+#drag2 .contents_txt_wrap .contents_txt {
+	line-height: 107px;
+	margin-top: -10px;
+}
+#drag3 .contents_txt_wrap .contents_txt {
+	line-height: 104px;
+	margin-top: -10px;
+}
+.contents_txt_wrap .contents_txt::before {
+	content: '1';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 20px;
+	background: #bfa8d9;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	font-family: 'KyoboHandwriting2023wsa';
+	font-size: 54px;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+#drag2 .contents_txt_wrap .contents_txt::before {
+	top: 30px;
+}
+#drag3 .contents_txt_wrap .contents_txt::before {
+	top: 28px;
+}
+/* 채점 표시 */
+.contents_txt_wrap .contents_txt .grading_icon {
+	background: url(../img/circle_icon.png) no-repeat center;
+	position: absolute;
+}
+.contents_txt_wrap .contents_txt .grading_icon.circle {
+	background: url(../img/circle_icon.png) no-repeat center;
+	width: 110px;
+	height: 119px;
+	left: -24px;
+	top: -1px;
+}
+.contents_txt_wrap .contents_txt .grading_icon.star {
+	background: url(../img/star_icon.png) no-repeat center;
+	width: 100px;
+	height: 108px;
+	left: -15px;
+	top: -5px;
+}
+/* 드롭 영역 */
+.contents_txt_wrap .contents_txt .drop_area {
+	display: inline-flex;
+	gap: 8px;
+	vertical-align: top;
+}
+#drag2 .contents_txt_wrap .contents_txt .drop_area {
+	padding-top: 10px;
+}
+#drag3 .contents_txt_wrap .contents_txt .drop_area {
+	/* margin-top: 5px; */
+	padding-top: 10px;
+}
+.contents_txt_wrap .contents_txt .drop_area .drop_obj {
+	background: url(../img/drop_obj.png) no-repeat center;
+	width: 100px;
+	height: 102px;
+	font-family: 'GangwonEduSaeeum';
+	font-size: 78px;
+	text-align: center;
+	line-height: 83px;
+}
+.contents_txt_wrap .contents_txt .drop_area .drop_obj.drop {
+	background: url(../img/drop_obj_on.png) no-repeat center;
+}
+.contents_txt_wrap .contents_txt.contents_txt02::before {
+	content: '2';
+}
+#drag2 .contents_txt_wrap .contents_txt.contents_txt01::before {
+	content: '3';
+}
+#drag3 .contents_txt_wrap .contents_txt.contents_txt01::before {
+	content: '4';
+}
+
+.contents_txt_wrap .contents_txt .drop_area .drop_obj > span {
+	width: 100%;
+	font-family: 'GangwonEduSaeeum';
+	font-size: 78px;
+}
+.contents_txt_wrap .contents_txt .drop_area .drop_obj.ans {
+	background: url(../img//drop_obj_ans.png) no-repeat center;
+}
+.contents_txt_wrap .contents_txt .drop_area .drop_obj.ans > span {
+	color: #001e40;
+}
+.contents_txt_wrap .contents_txt .drop_area .drop_obj.wrong {
+	background: url(../img//drop_obj_wrong.png) no-repeat center;
+}
+.contents_txt_wrap .contents_txt .drop_area .drop_obj.wrong > span {
+	color: #4d001d;
+}
+
+/* .contents_txt_wrap .contents_txt.contents_txt02 .drop_area .drop_obj.drop_obj02 {
+  margin-right: 24px;
+} */
+
+/* 드래그 영역 */
+.drag_area {
+	display: grid;
+	grid-template-columns: repeat(6, 140px);
+	column-gap: 40px;
+	row-gap: 17px;
+	width: 1230px;
+	margin-top: 165px;
+	padding-top: 72px;
+	padding-left: 100px;
+}
+#drag2 .drag_area {
+	margin-top: 50px;
+}
+#drag3 .drag_area {
+	margin-top: 272px;
+}
+
+.drag_area .item_wrap {
+	position: relative;
+	width: 140px;
+	height: 143px;
+}
+.drag_area .drag_obj {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../img/drag_obj.png) no-repeat center;
+	width: 140px;
+	height: 143px;
+	font-family: 'GangwonEduSaeeum';
+	font-size: 98px;
+}
+
+/* 채점하기 버튼 */
+/* .grading_area {
+  display: none;
+}
+.grading_area.on {
+  display: block;
+} */
+.grading_btn {
+	display: none;
+	background: url(../img/grading_btn.png) no-repeat center;
+	width: 200px;
+	height: 88px;
+	position: absolute;
+	left: 1535px;
+	top: 558px;
+	font-family: '123RF';
+	font-size: 34px;
+	color: #fff;
+	padding-bottom: 13px;
+	animation: blink-effect 2s linear infinite 1s;
+}
+.grading_btn.dis {
+	background: url(../img/grading_btn_dis.png) no-repeat center;
+	pointer-events: none;
+	animation: none;
+}
+.grading_btn.on {
+	display: block;
+}
+
+/* 캐릭터 */
+.cha {
+	background: url(../img/cha.png) no-repeat center;
+	width: 259px;
+	height: 292px;
+	position: absolute;
+	left: 1325px;
+	top: 647px;
+}
+.cha.on {
+	background: url(../img/cha_on.png) no-repeat center;
+	width: 261px;
+	height: 298px;
+	top: 640px;
+}
+
+/* 말풍선 */
+.bubble {
+	display: none;
+	background: url(../img/bubble.png) no-repeat center;
+	width: 287px;
+	height: 174px;
+	position: absolute;
+	left: 1575px;
+	top: 660px;
+}
+.bubble > span {
+	font-size: 38px;
+	color: #333333;
+	font-family: 'YanoljaYache';
+	font-weight: 500;
+	display: inline-block;
+	margin-top: 30px;
+	line-height: 40px;
+}
+.bubble.on {
+	display: block;
+}
+
+/* 활동2 마지막 페이지 구름 캐릭터와 버튼 */
+.final_obj {
+	display: none;
+	position: absolute;
+	left: 1116px;
+	top: 476px;
+}
+.final_obj .final_cha {
+	background: url(../img/cloud_cha.png) no-repeat center;
+	width: 182px;
+	height: 95px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.final_obj .final_btn {
+	background: url(../img/final_btn.png) no-repeat center;
+	width: 230px;
+	height: 88px;
+	font-family: '123RF';
+	font-size: 34px;
+	color: #fff;
+	padding-bottom: 13px;
+	position: absolute;
+	left: 205px;
+	top: -35px;
+}
+.final_obj .final_btn.hide {
+	display: none;
+}
+.final_obj.on {
+	display: block;
+}
+
+/* 팝업이 종료된 후 버튼 */
+.next_section_btn {
+	display: none;
+}
+.next_section_btn.show {
+	display: block;
+}
+.next_section_btn .replay_btn {
+	background: url(../img/replay_btn.png) no-repeat center;
+	width: 210px;
+	height: 88px;
+	position: absolute;
+	left: -230px;
+	top: -34px;
+	font-family: '123RF';
+	font-size: 34px;
+	color: #fff;
+	padding-bottom: 13px;
+}
+.next_section_btn .next_action_btn {
+	background: url(../img/next_action_btn.png) no-repeat center;
+	width: 280px;
+	height: 88px;
+	position: absolute;
+	left: 205px;
+	top: -35px;
+	font-family: '123RF';
+	font-size: 34px;
+	color: #fff;
+	padding-bottom: 13px;
+}
+
+/* 팝업 */
+.ui_pop {
+	background: rgba(0, 0, 0, 0.5);
+}
+.ui_pop .inner {
+	position: relative;
+	background: url(../img/popup_bg.png) no-repeat center;
+	width: 1694px;
+	height: 962px;
+	border: none;
+	box-shadow: none;
+	border-radius: 0px;
+	padding: 90px 0 100px 248px;
+}
+.ui_pop .inner .pop_title {
+	position: relative;
+	margin-right: 248px;
+	letter-spacing: -2px;
+}
+.ui_pop .inner .pop_title::before {
+	content: '';
+	display: block;
+	width: 670px;
+	height: 30px;
+	background: url(../img/pop_title_bg.png) no-repeat center;
+	position: absolute;
+	left: 265px;
+	top: 62px;
+	z-index: -1;
+}
+.ui_pop .inner .pop_title > span {
+	font-size: 58px;
+	font-family: 'GmarketSans';
+	font-weight: 700;
+}
+.ui_pop .inner .close {
+	position: absolute;
+	right: 114px;
+	top: 57px;
+	opacity: 0.5;
+	border-radius: 50%;
+	width: 64px;
+	height: 64px;
+}
+
+.pop_slide_wrap {
+	position: relative;
+	height: 100%;
+}
+.pop_slide_wrap .pop_slide {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.pop_slide_wrap .pop_slide.active {
+	display: block;
+}
+.pop_slide_wrap .pop_slide ul {
+	width: 1240px;
+	margin-top: 75px;
+}
+.pop_slide_wrap .pop_slide.pop_slide02 ul {
+	width: 1280px;
+}
+.pop_slide_wrap .pop_slide ul li {
+	position: relative;
+	font-size: 42px;
+	font-family: 'GmarketSans';
+	font-weight: 500;
+	text-align: left;
+	letter-spacing: -2px;
+}
+.pop_slide_wrap .pop_slide ul li::before {
+	content: '1';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: -75px;
+	top: 4px;
+	background: #bfa8d9;
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	font-family: 'GmarketSans';
+	font-size: 30px;
+	color: #fff;
+	font-weight: 700;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+.pop_slide_wrap .pop_slide ul li:nth-child(2):before {
+	content: '2';
+}
+.pop_slide_wrap .pop_slide ul li:nth-child(3):before {
+	content: '3';
+	padding-top: 3px;
+}
+.pop_slide_wrap .pop_slide.pop_slide02 ul li:before {
+	content: '4';
+	padding-top: 4px;
+	padding-right: 4px;
+}
+/* .pop_slide_wrap .pop_slide ul li > span {
+  
+  position: relative;
+  font-family: 'GmarketSans';
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.5;
+}
+.pop_slide_wrap .pop_slide ul li span.answer {
+  
+  font-family: 'GmarketSans';
+  font-weight: 500;
+  color: #187aef;
+  font-size: 42px;
+  line-height: 1.5;
+  
+} */
+
+/* 상속을 다르게 적용 */
+.pop_slide_wrap .pop_slide ul li > span,
+.pop_slide_wrap .pop_slide ul li span.answer {
+	position: relative;
+	font-family: 'GmarketSans';
+	font-weight: 500;
+	font-size: 42px;
+	line-height: 1.5;
+	color: inherit; /* 기본 색상 상속 */
+}
+.pop_slide_wrap .pop_slide ul li span.answer {
+	color: #187aef; /* 색상만 다르게 지정 */
+}
+
+.pop_slide_wrap .pop_slide ul li:not(:last-child) {
+	margin-bottom: 35px;
+	/* height: 65px; */
+}
+.pop_slide_wrap .pop_slide ul li .magnifire_btn {
+	display: inline-block;
+	background: url(../img/magnifire_icon.png) no-repeat center;
+	width: 40px;
+	height: 49px;
+	position: absolute;
+	right: -60px;
+	bottom: 0;
+}
+.pop_slide_wrap .pop_slide ul li .magnifire_btn::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 120px;
+	height: 21px;
+	background: linear-gradient(105deg, transparent 40%, rgba(255, 219, 112, 0.8) 45%, rgba(132, 50, 255, 0.6) 50%, transparent 54%);
+	filter: brightness(1.1) opacity(0.8);
+	mix-blend-mode: color-dodge;
+	background-size: 150% 150%;
+	background-position: 104%;
+	left: -4px;
+	top: 9px;
+	animation: magnifire_ani 1s linear infinite;
+}
+.pop_slide_wrap .pop_slide_btn {
+	width: 47px;
+	height: 79px;
+	position: absolute;
+	top: 240px;
+	z-index: 10;
+}
+.pop_slide_wrap .pop_slide_btn.next {
+	background: url(../img/pop_slide_next.png) no-repeat center;
+	right: 84px;
+}
+.pop_slide_wrap .pop_slide_btn.prev {
+	background: url(../img/pop_slide_prev.png) no-repeat center;
+	left: -160px;
+}
+.pop_slide_wrap .pop_slide_btn.off {
+	display: none;
+}
+
+/* 활동2 페이지 */
+.action_page02 .action_title .home_btn {
+	background: url(../img/home_btn.png) no-repeat center;
+	width: 230px;
+	height: 88px;
+	position: absolute;
+	right: 50px;
+	top: 24px;
+	font-family: '123RF';
+	font-size: 34px;
+	font-weight: 500;
+	color: #fff;
+	padding-bottom: 12px;
+	z-index: 100;
+}
+.action_page02 .action_title .home_btn.hide {
+	display: none;
+}
+.action_page02 .action_contents {
+	padding-top: 50px;
+	padding-left: 180px;
+	overflow: hidden;
+}
+.action_page02 .action_contents ul li {
+	position: relative;
+	text-align: left;
+}
+.action_page02 .action_contents ul li label {
+	cursor: pointer;
+}
+.action_page02 .action_contents ul li:not(:last-child) {
+	margin-bottom: 36px;
+}
+.action_page02 input[type='checkbox'] {
+	display: none;
+}
+.action_page02 .inspection_box {
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background-color: #f6f7fb;
+	border: 3px solid #000;
+	border-radius: 10px;
+	vertical-align: bottom;
+}
+.action_page02 .inspection_box::before {
+	content: '';
+	display: none;
+	background: url(../img/check.png) no-repeat center;
+	width: 69px;
+	height: 53px;
+	position: absolute;
+	left: 7px;
+	top: -4px;
+}
+/* .action_page02 input[type="checkbox"]:checked + .inspection_box::before, */
+.action_page02 .inspection_box.on::before {
+	display: block;
+}
+.action_page02 .inspection_txt {
+	position: relative;
+	font-size: 78px;
+	font-family: 'GangwonEduSaeeum';
+	vertical-align: top;
+	margin-left: 10px;
+}
+.action_page02 .inspection_txt .inspection_btn {
+	display: inline-block;
+	background: url(../img/magnifire_icon_big.png) no-repeat center;
+	width: 54px;
+	height: 66px;
+	position: absolute;
+	right: -67px;
+	top: 23px;
+}
+.action_page02 .inspection_txt .inspection_btn::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 174px;
+	height: 33px;
+	background: linear-gradient(105deg, transparent 40%, rgba(255, 219, 112, 0.8) 45%, rgba(132, 50, 255, 0.6) 50%, transparent 54%);
+	filter: brightness(1.1) opacity(0.65);
+	mix-blend-mode: color-dodge;
+	background-size: 150% 150%;
+	background-position: 104%;
+	left: -5px;
+	top: 10px;
+	animation: magnifire_ani 1s linear infinite;
+}
+
+.action_page02 .finger_ani {
+	background: url(../img/finger_icon.png) no-repeat center;
+	width: 112px;
+	height: 113px;
+	position: absolute;
+	left: 193px;
+	top: 233px;
+	opacity: 0;
+	z-index: 5;
+	transition: opacity 1s linear;
+}
+.action_page02 .finger_ani.on {
+	opacity: 1;
+	animation: blink-effect 2s 3 linear;
+}
+.action_page02 .finger_ani.hide {
+	display: none;
+}
+
+.complete_obj.hide {
+	display: none;
+}
+.action_page02 .final_btn {
+	background: url(../img/final_btn.png) no-repeat center;
+	width: 230px;
+	height: 88px;
+	font-family: '123RF';
+	font-size: 34px;
+	color: #fff;
+	padding-bottom: 13px;
+	position: absolute;
+	right: 265px;
+	bottom: 85px;
+}
+.action_page02 .final_btn.off {
+	display: none;
+}
+.action_page02 .final_cha02 {
+	background: url(../img/cloud_cha02.png) no-repeat center;
+	width: 156px;
+	height: 144px;
+	position: absolute;
+	right: 82px;
+	bottom: 40px;
+}
+.action_page02 .final_cha02.on {
+	background: url(../img/cloud_cha02_on.png) no-repeat center;
+	width: 155px;
+	height: 153px;
+}
+
+.up_down_btn_wrap {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 160px;
+	height: 100%;
+}
+.up_down_btn_wrap > button {
+	position: absolute;
+	left: 0;
+	width: 71px;
+	height: 55px;
+}
+.up_down_btn_wrap > button.up_btn {
+	background: url(../img/up_btn.png) no-repeat center;
+	top: 208px;
+	left: 0;
+}
+.up_down_btn_wrap > button.down_btn {
+	background: url(../img/down_btn.png) no-repeat center;
+	bottom: 208px;
+	left: 0;
+}
+
+/* 토스트 팝업 */
+.toast_popup {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 7;
+}
+.toast_popup.on {
+	display: block;
+}
+.toast_popup .inner {
+	background: url(../img/toast_pop.png) no-repeat center;
+	width: 659px;
+	height: 417px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding-top: 80px;
+	padding-bottom: 43px;
+}
+.toast_popup .inner .toast_popup_title {
+	font-family: 'GmarketSans';
+	font-size: 48px;
+	font-weight: 500;
+}
+.toast_popup .inner .btn_wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	margin-top: 70px;
+}
+.toast_popup .inner .btn_wrap > button {
+	width: 210px;
+	height: 88px;
+	font-family: '123RF';
+	font-size: 34px;
+	color: #fff;
+	padding-bottom: 13px;
+}
+.toast_popup .inner .btn_wrap .yes_btn {
+	background: url(../img/yes_btn.png) no-repeat center;
+}
+.toast_popup .inner .btn_wrap .no_btn {
+	background: url(../img/no_btn.png) no-repeat center;
+}
+
+/* 성공했을 때 나오는 배경 */
+.complete_bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	/* background: url(../img/complete_bg.gif) no-repeat center; */
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+.complete_bg.on {
+	display: block;
+}
+.complete_bg .complete_stamp {
+	display: none;
+	background: url(../img/complete_stamp.png) no-repeat center;
+	width: 256px;
+	height: 256px;
+	position: absolute;
+	right: 496px;
+	bottom: 4px;
+	animation: stampani 1s ease 1;
+}
+.complete_bg .complete_stamp.on {
+	display: block;
+}
+
+/* 배경음 버튼 */
+.btn_sound {
+	width: 80px;
+	height: 88px;
+	background: url(../img/btn_sound.png) no-repeat center / 100%;
+	position: absolute;
+	top: 24px;
+	right: 25px;
+	z-index: 11;
+}
+.btn_sound.off {
+	background-image: url(../img/btn_sound_off.png);
+}
+
+@keyframes blink-effect {
+	50% {
+		opacity: 0.3;
+	}
+}
+
+/* 도장 애니메이션 */
+@keyframes stampani {
+	0% {
+		transform: scale(1);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(5);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/* 돋보기 반짝이 애니메이션 */
+@keyframes magnifire_ani {
+	50% {
+		opacity: 0.3;
+	}
+}
+
+/* pc에서 */
+@media (min-width: 1240px) {
+	.pop_slide_wrap .pop_slide ul li::before {
+		top: 8px;
+	}
+}
+
+/* @media screen and (max-width: 375px) {
+  .pop_slide_wrap .pop_slide ul li span.answer {
+    font-size: 48px;
+  }
+} */

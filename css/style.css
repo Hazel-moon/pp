@@ -1,0 +1,685 @@
+/* ============================================================
+ * Game-deck portfolio — Nintendo console home screen 감성
+ * ============================================================ */
+
+:root {
+  --bg: #2d2d2d;
+  --bg-deep: #232323;
+  --surface: #3a3a3a;
+  --card: #444;
+  --text: #f2f2f2;
+  --text-dim: #a8a8a8;
+  --line: rgba(255, 255, 255, 0.08);
+  --select: #00c3e3; /* 스위치 시안 */
+  --danger: #e60012;
+  --shadow: rgba(0, 0, 0, 0.45);
+  --card-w: clamp(150px, 21vw, 230px);
+}
+
+[data-theme="light"] {
+  --bg: #ebebeb;
+  --bg-deep: #dcdcdc;
+  --surface: #f7f7f7;
+  --card: #fff;
+  --text: #2d2d2d;
+  --text-dim: #7a7a7a;
+  --line: rgba(0, 0, 0, 0.08);
+  --shadow: rgba(0, 0, 0, 0.18);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  transition: background 0.35s ease, color 0.35s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ── 부팅 스플래시 ─────────────────────────── */
+.boot {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: #1a1a1a;
+  animation: boot-out 0.5s ease 1.6s forwards;
+}
+.boot__logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  animation: boot-in 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+.boot__icon { font-size: 56px; }
+.boot__text {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+.boot__text em {
+  display: block;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  color: var(--select);
+}
+@keyframes boot-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes boot-out {
+  to { opacity: 0; visibility: hidden; }
+}
+
+/* ── 콘솔 레이아웃 ─────────────────────────── */
+.console {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  animation: console-in 0.6s ease 1.7s both;
+}
+@keyframes console-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── 상단 바 ──────────────────────────────── */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px clamp(20px, 4vw, 48px) 0;
+}
+.topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar__brand-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c6cf0, #3aa0e8);
+  box-shadow: 0 2px 8px var(--shadow);
+  flex-shrink: 0;
+}
+.topbar__brand-text {
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  font-size: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c6cf0, #3aa0e8);
+  box-shadow: 0 2px 8px var(--shadow);
+  outline-offset: 3px;
+}
+.topbar__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+.topbar__status {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-dim);
+}
+.topbar__clock {
+  font-size: 16px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.battery__body {
+  display: inline-block;
+  width: 26px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  position: relative;
+}
+.battery__body::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 2px;
+  width: 3px;
+  height: 5px;
+  background: currentColor;
+  border-radius: 0 2px 2px 0;
+}
+.battery__fill {
+  position: absolute;
+  inset: 1px;
+  right: 4px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+/* ── 게임 덱 ──────────────────────────────── */
+.deck-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  gap: clamp(14px, 3vh, 28px);
+}
+.deck-title {
+  padding: 0 clamp(20px, 4vw, 48px);
+  font-size: clamp(18px, 2.4vw, 26px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  min-height: 1.4em;
+}
+.deck-title small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.55em;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.deck {
+  display: flex;
+  gap: clamp(12px, 1.6vw, 20px);
+  padding: 26px clamp(20px, 4vw, 48px) 34px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.deck::-webkit-scrollbar { display: none; }
+
+.gamecard {
+  flex: 0 0 var(--card-w);
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 0 6px 18px var(--shadow);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1.15);
+  overflow: hidden;
+}
+.gamecard__cover {
+  font-size: clamp(44px, 6vw, 72px);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+.gamecard__label {
+  font-size: clamp(12px, 1.2vw, 15px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+.gamecard__badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  letter-spacing: 0.03em;
+}
+
+/* 선택 상태 — 스위치 특유의 시안 테두리 + 살짝 확대 */
+.gamecard.is-selected {
+  transform: scale(1.12);
+  z-index: 2;
+}
+.gamecard.is-selected::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 4px solid var(--select);
+  animation: pulse 1.6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 195, 227, 0.55), inset 0 0 0 0 rgba(0, 195, 227, 0.3); }
+  50% { box-shadow: 0 0 22px 4px rgba(0, 195, 227, 0.45), inset 0 0 10px 0 rgba(0, 195, 227, 0.18); }
+}
+
+/* ── 하단 바 ──────────────────────────────── */
+.bottombar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 4vw, 48px) 20px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.bottombar__left { display: flex; gap: 12px; }
+.roundbtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface);
+  box-shadow: 0 2px 6px var(--shadow);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  transition: transform 0.15s ease;
+}
+.roundbtn:hover { transform: scale(1.1); }
+.roundbtn:focus-visible { outline: 3px solid var(--select); outline-offset: 2px; }
+
+.bottombar__hints {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+.hint { display: flex; align-items: center; gap: 8px; }
+.key {
+  display: inline-grid;
+  place-items: center;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 2px solid currentColor;
+  font-size: 12px;
+  font-weight: 800;
+}
+.key--a { border-color: var(--select); color: var(--select); }
+.key--b { border-color: var(--danger); color: var(--danger); }
+
+/* ── 오버레이 화면 (게임 상세 / 사용자) ────── */
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: var(--bg-deep);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.06);
+  transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s;
+  overflow-y: auto;
+}
+.screen.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+#screen-panel { z-index: 50; }
+#screen-game { z-index: 51; } /* 실무 프로젝트 패널 위에 상세 화면이 쌓이도록 */
+.screen__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vh, 56px) clamp(20px, 4vw, 48px) 80px;
+}
+
+/* 상세 화면 공통 파츠 */
+.screen-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin-bottom: 28px;
+  transition: color 0.15s ease;
+}
+.screen-back:hover { color: var(--text); }
+.screen-back .key { font-size: 11px; min-width: 22px; height: 22px; }
+
+.screen-hints {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+.screen-hints .screen-back { margin-bottom: 0; }
+.screen-hints .hint .key { font-size: 11px; min-width: 22px; height: 22px; }
+
+.game-hero {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 32px);
+  padding: clamp(20px, 3.5vw, 36px);
+  border-radius: 18px;
+  color: #fff;
+  box-shadow: 0 12px 34px var(--shadow);
+  margin-bottom: 32px;
+}
+.game-hero__cover {
+  font-size: clamp(54px, 8vw, 96px);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.35));
+}
+.game-hero h2 {
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+.game-hero p {
+  margin-top: 6px;
+  font-size: clamp(13px, 1.6vw, 16px);
+  opacity: 0.92;
+  font-weight: 600;
+}
+.game-hero .meta {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.section { margin-bottom: 30px; }
+.section h3 {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.section p { line-height: 1.75; font-size: 15.5px; }
+
+/* 기여도 바 */
+.contrib {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contrib__bar {
+  flex: 1;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.contrib__fill {
+  height: 100%;
+  border-radius: 999px;
+  width: 0;
+  transition: width 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) 0.15s;
+}
+.contrib__num {
+  font-size: 22px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  min-width: 70px;
+  text-align: right;
+}
+.contrib__role {
+  margin-top: 8px;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 13.5px;
+  font-weight: 700;
+  border: 1px solid var(--line);
+}
+
+.hl-list { list-style: none; display: grid; gap: 10px; }
+.hl-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.hl-list li::before {
+  content: "▸";
+  color: var(--select);
+  font-weight: 900;
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 2px solid transparent;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--select); color: #08252a; box-shadow: 0 6px 16px rgba(0, 195, 227, 0.35); }
+.btn--ghost { border-color: var(--line); background: var(--surface); color: var(--text); }
+.btn--disabled { opacity: 0.45; pointer-events: none; }
+
+/* ── 사용자 페이지 ─────────────────────────── */
+.user-hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.user-hero .avatar {
+  width: 96px;
+  height: 96px;
+  font-size: 48px;
+}
+.user-hero h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 900; }
+.user-hero .role { color: var(--select); font-weight: 800; margin-top: 4px; }
+.user-hero .tagline { color: var(--text-dim); font-size: 14.5px; margin-top: 8px; font-weight: 600; }
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px 28px;
+}
+.skill { font-size: 14px; font-weight: 700; }
+.skill__head { display: flex; justify-content: space-between; margin-bottom: 6px; }
+.skill__head span:last-child { color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.skill__bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.skill__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7c6cf0, var(--select));
+  width: 0;
+  transition: width 0.7s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+.timeline { list-style: none; display: grid; gap: 14px; }
+.timeline li { display: flex; gap: 18px; font-size: 15px; line-height: 1.6; }
+.timeline .period {
+  flex: 0 0 110px;
+  font-weight: 800;
+  color: var(--select);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 공통 패널 제목/설명 (이력서·경력기술서·실무/개인 프로젝트) ── */
+.panel-title { font-size: clamp(24px, 4vw, 32px); font-weight: 900; margin-bottom: 8px; }
+.panel-desc { color: var(--text-dim); font-size: 14px; margin-bottom: 28px; }
+
+/* ── 경력기술서 ────────────────────────────── */
+.career-block { margin: 24px 0 32px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.career-block:last-of-type { border-bottom: none; padding-bottom: 0; }
+.career-block__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.career-block__head h3 { font-size: 19px; font-weight: 900; }
+.career-block__meta { font-size: 13px; color: var(--text-dim); font-weight: 700; }
+.career-block__section { margin-bottom: 18px; }
+.career-block__section:last-child { margin-bottom: 0; }
+.career-block__section h4 {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--select);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ── 이력서 ───────────────────────────────── */
+.resume-group { margin-bottom: 28px; }
+.resume-group:first-of-type { margin-top: 8px; }
+.resume-year {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--select);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+.resume-list { list-style: none; display: grid; gap: 8px; }
+.resume-list li {
+  font-size: 14.5px;
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+.resume-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--text-dim);
+}
+
+/* ── 실무/개인 프로젝트 목록 (연도별 그리드) ── */
+.work-year-group { margin-bottom: 32px; }
+.work-year {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--select);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+.workcard {
+  position: relative;
+  border-radius: 14px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  text-align: left;
+  color: #fff;
+  box-shadow: 0 4px 14px var(--shadow);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.workcard:hover { transform: translateY(-3px); }
+.workcard__cover { font-size: 28px; }
+.workcard__title { font-size: 14px; font-weight: 800; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+.workcard__subtitle { font-size: 12px; opacity: 0.88; font-weight: 600; line-height: 1.4; }
+.workcard.is-locked {
+  opacity: 1;
+  cursor: default;
+}
+.workcard.is-locked:hover { transform: none; }
+.workcard__lock {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+}
+
+/* 클릭 가능한(잠기지 않은) 카드만 눈에 띄게 — 시안 테두리 + 은은한 펄스 */
+.workcard.is-playable {
+  box-shadow: 0 4px 14px var(--shadow), 0 0 0 3px var(--select);
+  animation: workcard-glow 2s ease-in-out infinite;
+}
+@keyframes workcard-glow {
+  0%, 100% { box-shadow: 0 4px 14px var(--shadow), 0 0 0 3px var(--select); }
+  50% { box-shadow: 0 4px 18px var(--shadow), 0 0 14px 3px rgba(0, 195, 227, 0.65); }
+}
+/* 키보드(←/→)로 선택 중인 카드 — 흰 테두리로 한 번 더 강조, 펄스는 멈춤 */
+.workcard.is-playable.is-focused {
+  animation: none;
+  box-shadow: 0 4px 18px var(--shadow), 0 0 0 3px #fff, 0 0 18px 4px rgba(0, 195, 227, 0.85);
+}
+.workcard__play {
+  align-self: flex-start;
+  margin-top: 2px;
+  font-size: 10.5px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  background: var(--select);
+  color: #08252a;
+  border-radius: 999px;
+  padding: 3px 9px;
+}
+
+/* ── 빈 상태 (개인 프로젝트) ──────────────── */
+.empty-state { text-align: center; padding-top: 64px; }
+.empty-state__icon { font-size: 48px; margin-bottom: 16px; }
+
+/* ── 모바일 ───────────────────────────────── */
+@media (max-width: 600px) {
+  :root { --card-w: 62vw; }
+  .bottombar__hints { display: none; }
+  .topbar__brand-text { display: none; }
+  .game-hero { flex-direction: column; text-align: center; }
+  .user-hero { flex-direction: column; text-align: center; }
+  .timeline li { flex-direction: column; gap: 2px; }
+}
+
+/* ── 모션 최소화 ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .deck { scroll-behavior: auto; }
+}

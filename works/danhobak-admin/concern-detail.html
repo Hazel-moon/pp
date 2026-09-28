@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/logo.svg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="LEFT4CODE">
+    <title>단호박 상담소 관리자</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5">
+    <div class="flex mt-0">
+        <!-- S : 사이드 메뉴 -->
+        <nav class="side-nav">
+            <a href="index.html" class="intro-x flex items-center pl-5 pt-4">
+                <img src="dist/images/danhobak_logo.svg" alt="">
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title">
+                            메인화면 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="mainbanner-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인배너 관리</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mainprod-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인 노출 상품 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="member-list.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                        <div class="side-menu__title">회원관리</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="table"></i> </div>
+                        <div class="side-menu__title">
+                            게시판 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="side-menu__sub-open">
+                        <li>
+                            <a href="concern-list.html" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">고민게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="share-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">정보공유게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">단호박 솔루션</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="keyword-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">키워드 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="message-square"></i> </div>
+                        <div class="side-menu__title">
+                            전문 상담사 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="counselor-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="counselor-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="package"></i> </div>
+                        <div class="side-menu__title">
+                            상품관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="side-menu-light-categories.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="side-menu-light-add-product.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="order-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__title">
+                            주문관리
+                            <div class="side-menu__sub-icon "></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="keyword-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="search"></i> </div>
+                        <div class="side-menu__title">
+                            검색어 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 인기 검색어 관리 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rec-keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 연관 검색어 관리 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="report.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="feather"></i> </div>
+                        <div class="side-menu__title"> 단호박 리포트 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="side-menu-light-file-manager.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="coins"></i> </div>
+                        <div class="side-menu__title"> 포인트 관리 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="crown"></i> </div>
+                        <div class="side-menu__title">
+                            리뷰관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="review-board.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 고민게시판 리뷰 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-review.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문솔루션 리뷰 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- E : 사이드 메뉴 -->
+
+        <!-- S: 컨텐츠 -->
+        <div class="content">
+            <div class="top-bar">
+                <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item">고민게시판</li>
+                        <li class="breadcrumb-item active" aria-current="page">상세</li>
+                    </ol>
+                </nav>
+                <div class="intro-x dropdown w-8 h-8 ml-auto">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                        role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                        <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                    </div>
+                    <div class="dropdown-menu w-56">
+                        <ul class="dropdown-content bg-primary text-white">
+                            <li class="p-2">
+                                <div class="font-medium">Kevin Spacey</div>
+                                <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">Software Engineer</div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user"
+                                        class="w-4 h-4 mr-2"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit"
+                                        class="w-4 h-4 mr-2"></i> Add Account </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock"
+                                        class="w-4 h-4 mr-2"></i> Reset Password </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="help-circle"
+                                        class="w-4 h-4 mr-2"></i> Help </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                        class="w-4 h-4 mr-2"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 2xl:col-span-12">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 mt-8">
+                            <ul class="nav nav-tabs member_tab w-3/4 xl:w-1/2">
+                                <li class="nav-item flex-1" data-tab="tab_concern"><button class="nav-link w-full py-2 active">고민글</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_vote"><button class="nav-link w-full py-2">투표</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_expert"><button class="nav-link w-full py-2">전문 답변</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_solution"><button class="nav-link w-full py-2">단호박 솔루션</button> </li>
+                            </ul>
+                            <div class="box p-5 rounded-md">
+
+                                <!-- 고민글 -->
+                                <div class="member_box tab_concern">
+                                    <div class="overflow-auto lg:overflow-visible">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">카테고리</td>
+                                                    <td>
+                                                        연애
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">제목</td>
+                                                    <td>
+                                                        제목이 표시되는 영역입니다
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">작성자</td>
+                                                    <td>
+                                                        닉네임
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">작성자 UID</td>
+                                                    <td>
+                                                        asdfasdf
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">등록일</td>
+                                                    <td>
+                                                        YY.MM.DD HH:MM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">최근수정일</td>
+                                                    <td>
+                                                        YY.MM.DD HH:MM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">본문 내용</td>
+                                                    <td>
+                                                        <div class="overflow-y-auto max-h-[500px]">
+                                                            작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다작성되어 있는 고민 게시글의 본문이 표시되는자리입니다 
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">키워드</td>
+                                                    <td>
+                                                        #태그 #태그 #태그 #태그 #태그 #태그 #태그
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">희망 답변 유형</td>
+                                                    <td>
+                                                        위로와 공감, 전문적 분석, 실용적인 해결책
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="overflow-auto lg:overflow-visible mt-10">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">작성자 닉네임</td>
+                                                    <td>
+                                                        <div class="flex items-start justify-between">
+                                                            <div class="flex items-start gap-2">
+                                                                <p class="pt-2 text-center w-10">댓글</p>
+                                                                <div class="border border-gray-200 p-2 w-[300px]">
+                                                                    댓글이 표시되는 영역
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex items-center gap-2 pt-2">
+                                                                <p class="text-gray-500">2023.03.03 13:13</p>
+                                                                <button class="btn-sm btn-secondary rounded">삭제</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">작성자 닉네임</td>
+                                                    <td>
+                                                        <div class="flex items-start justify-between">
+                                                            <div class="flex items-start gap-2">
+                                                                <p class="pt-2 text-center w-10">댓글</p>
+                                                                <div class="border border-gray-200 p-2 w-[300px]">
+                                                                    댓글이 표시되는 영역
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex items-center gap-2 pt-2">
+                                                                <p class="text-gray-500">2023.03.03 13:13</p>
+                                                                <button class="btn-sm btn-secondary rounded">삭제</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">작성자 닉네임</td>
+                                                    <td>
+                                                        <div class="flex items-start justify-between">
+                                                            <div class="flex items-start gap-2">
+                                                                <p class="pt-2 text-center w-10">댓글</p>
+                                                                <div class="border border-gray-200 p-2 w-[300px]">
+                                                                    댓글이 표시되는 영역
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex items-center gap-2 pt-2">
+                                                                <p class="text-gray-500">2023.03.03 13:13</p>
+                                                                <button class="btn-sm btn-secondary rounded">삭제</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">작성자 닉네임</td>
+                                                    <td>
+                                                        <div class="flex items-start justify-between">
+                                                            <div class="flex items-start gap-2">
+                                                                <p class="pt-2 text-center w-10">대댓글</p>
+                                                                <div class="border border-gray-200 p-2 w-[300px]">
+                                                                    댓글이 표시되는 영역
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex items-center gap-2 pt-2">
+                                                                <p class="text-gray-500">2023.03.03 13:13</p>
+                                                                <button class="btn-sm btn-secondary rounded">삭제</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <nav class="w-full mt-4">
+                                            <ul class="pagination justify-center">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" icon-name="chevrons-left"
+                                                            class="lucide lucide-chevrons-left w-4 h-4"
+                                                            data-lucide="chevrons-left">
+                                                            <polyline points="11 17 6 12 11 7"></polyline>
+                                                            <polyline points="18 17 13 12 18 7"></polyline>
+                                                        </svg> </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" icon-name="chevron-left"
+                                                            class="lucide lucide-chevron-left w-4 h-4"
+                                                            data-lucide="chevron-left">
+                                                            <polyline points="15 18 9 12 15 6"></polyline>
+                                                        </svg> </a>
+                                                </li>
+                                                <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                                <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                                <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                                <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                                <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" icon-name="chevron-right"
+                                                            class="lucide lucide-chevron-right w-4 h-4"
+                                                            data-lucide="chevron-right">
+                                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                                        </svg> </a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                            width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round" icon-name="chevrons-right"
+                                                            class="lucide lucide-chevrons-right w-4 h-4"
+                                                            data-lucide="chevrons-right">
+                                                            <polyline points="13 17 18 12 13 7"></polyline>
+                                                            <polyline points="6 17 11 12 6 7"></polyline>
+                                                        </svg> </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+                                </div>
+
+                                <!-- 투표 -->
+                                <div class="member_box tab_vote hidden">
+                                    <div class="overflow-auto lg:overflow-visible">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">등록일</td>
+                                                    <td>
+                                                        YY.MM.DD HH:MM
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">마감일</td>
+                                                    <td>
+                                                        YY.MM.DD HH:MM
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="overflow-auto lg:overflow-visible mt-10">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">투표제목</td>
+                                                    <td>
+                                                        투표제목이 표시되는 영역
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center w-56 bg-slate-100">1항목</td>
+                                                    <td>
+                                                        질문지의 내용이 표시되는 영역
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="javascript:;" class="underline" data-tw-toggle="modal" data-tw-target="#votemember-list">득표 수 : 10</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center w-56 bg-slate-100">2항목</td>
+                                                    <td>
+                                                        질문지의 내용이 표시되는 영역
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="javascript:;" class="underline" data-tw-toggle="modal" data-tw-target="#votemember-list">득표 수 : 17</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="text-center w-56 bg-slate-100">3항목</td>
+                                                    <td>
+                                                        질문지의 내용이 표시되는 영역
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="javascript:;" class="underline" data-tw-toggle="modal" data-tw-target="#votemember-list">득표 수 : 11</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>총 득표 수 : 38   <a href="javascript:;" class="underline ml-2" data-tw-toggle="modal" data-tw-target="#votemember-list">총 참여 인원 : 35</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 전문 답변 -->
+                                <div class="member_box tab_expert hidden">
+                                    <div class="overflow-auto lg:overflow-visible">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">전문가</td>
+                                                    <td>
+                                                        <input id="regular-form-1" type="text" class="form-control w-96" placeholder="전문가를 배정해주세요. (전문가 코드 입력)">
+                                                        <button class="btn btn-outline-primary w-16 ml-2">등록</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">전문가 답변</td>
+                                                    <td>
+                                                        <input id="regular-form-1" type="text" class="form-control w-96" placeholder="전문가 답변이 입력되지 않았습니다.">
+                                                        <button class="btn btn-outline-primary w-16 ml-2">등록</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">답변 리뷰</td>
+                                                    <td>
+                                                        <div class="flex items-center">
+                                                            <div class="mr-2 text-slate-500">전문가 답변에 대한 리뷰가 작성되지 않았습니다.</div>
+                                                            <div class="flex items-center">
+                                                                <img src="/dist/images/star.svg" class="mr-1" alt="" /> 0.0
+                                                            </div> 
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">전문가</td>
+                                                    <td>
+                                                        QDAWRA
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">전문가 답변</td>
+                                                    <td>
+                                                        <div class="overflow-y-auto border border-gray-200 p-2 w-[500px] max-w-full max-h-[250px]">
+                                                            안녕하세요! 상담사  이정원입니다. <br/>
+
+                                                            보내주신 사연을 잘 읽어봤습니다. 제가 너무 어렵지 않게, 저의 주관적인 생각도 담아서 의견을 전해보도록 하겠습니다! <br/>
+
+                                                            아몬드님은 어릴 적부터 혼자 이야기하는 것을 좋아하고, 그에 따른 고충도 경험하셨었군요. 지금은 남편과의 관계에서 태도가 변한 남편의 모습으로 인해 마음의 상처를 받으신 것처럼 보이기도 합니다. 함께하는 동반자가 서로의 마음을 늘 알아줄 수 있다면 얼마나 좋겠냐만은.... 우리의 현실은 그렇지 않은 것 같습니다. 그래도 큰 일은 아니라고 생각합니다! 나도 나의 마음을 잘 모르는데, 상대방이라고 어떻게 나의 마음을 알 수 있을까요. 이제부터 경험한 어려움에 대해서 하나씩 얘기나눠보도록 해요! <br/>
+
+                                                            1.점검! 나는 정말 말수가 많은 편의 사람인가! <br/>
+
+                                                            저는 이번 투표에 대해서 1번 '말을 줄이자'를 선택했습니다. 1번을 선택한 이유는 아몬드님께서 전해주    
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">답변 리뷰</td>
+                                                    <td>
+                                                        <div class="flex items-center">
+                                                            <div class="overflow-y-auto border border-gray-200 p-2 w-[500px] max-w-full max-h-[250px] mr-2">
+                                                                잘 들어주시고 공감해주시고 편한 분위기를 만들어주셔서 좋았어요
+                                                            </div>
+                                                            <div class="flex items-center">
+                                                                <img src="/dist/images/star.svg" class="mr-1" alt="" /> 0.0
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 단호박 솔루션 -->
+                                <div class="member_box tab_solution hidden">
+                                    <div class="flex justify-end mt-4 gap-2">
+                                        <button class="btn btn-secondary w-24 mr-1 mb-2" onclick="confirm('입력된 내용을 초기화 하시겠습니까?')">초기화</button>
+                                        <button class="btn btn-primary w-24 mr-1 mb-2">저장</button>
+                                    </div>
+                                    <div class="overflow-auto lg:overflow-visible">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">단호박 솔루션 제목 <span class="red">*</span></td>
+                                                    <td>
+                                                        <input id="regular-form-1" type="text" class="form-control" value="직장으로 간 심리학자" placeholder="단호박 솔루션 제목을 입력해주세요.">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">단호박 솔루션 내용 <span class="red">*</span></td>
+                                                    <td>
+                                                        <textarea name="" id="" class="form-control h-40" placeholder="단호박 솔루션 내용을 입력해주세요.">회사를 떠나기로 결정하기 전에 내 마음을 먼저 들여다보면 좋을 것 같아요. 이 책의 저자는 제일기획 사내 마음건강센터에서 10년간 근무한 경험을 바탕으로 직장인들을 위한 처방전을 제시합니다. 다른 직장인들은 어떤 고민을 하는지 함께 살펴보다 보면 내가 진짜 원하는 것이 무엇인지 힌트를 얻을 수 있을 거예요.
+                                                        </textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">이미지 등록 <span class="red">*</span></td>
+                                                    <td>
+                                                        <input type="file" name="" id="" class="form-control p-2 border">
+                                                        <div class="flex items-center p-1">
+                                                            <img src="/dist/images/placeholders/200x200.jpg" alt="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center w-56 bg-slate-100">URL</td>
+                                                    <td>
+                                                        <input id="regular-form-1" type="text" class="form-control" value="https://product.kyobobook.co.kr/detail/S000061863958" placeholder="이동할 주소를 입력해주세요.">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <div class="solution_copy_area"></div>
+
+                                        <button class="btn btn-outline-primary my-3 block mx-auto solution_copy_btn"><i data-lucide="plus" class="w-8 h-8 text-slate-400"></i></button>
+
+                                        <div class="solution_copy_table hidden">
+                                            <table class="table table-bordered mt-5">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center w-56 bg-slate-100">단호박 솔루션 제목 <span class="red">*</span></td>
+                                                        <td>
+                                                            <input id="regular-form-1" type="text" class="form-control" placeholder="단호박 솔루션 제목을 입력해주세요.">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center w-56 bg-slate-100">단호박 솔루션 내용 <span class="red">*</span></td>
+                                                        <td>
+                                                            <textarea name="" id="" class="form-control" placeholder="단호박 솔루션 내용을 입력해주세요."></textarea>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center w-56 bg-slate-100">이미지 등록 <span class="red">*</span></td>
+                                                        <td>
+                                                            <input type="file" name="" id="" class="form-control p-2 border">
+                                                        </td> 
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center w-56 bg-slate-100">URL</td>
+                                                        <td>
+                                                            <input id="regular-form-1" type="text" class="form-control" placeholder="이동할 주소를 입력해주세요.">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div id="votemember-list" class="modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="font-medium text-base mr-auto">투표 참여자 닉네임</h2>
+                                            <a data-tw-dismiss="modal" href="javascript:;"> <i data-lucide="x" class="w-8 h-8 text-slate-400"></i> </a>
+                                        </div>
+                                        <div class="modal-body p-0">
+                                            <ul class="modal-member_list bg-slate-100">
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                                <li>투표 참여자 닉네임</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- END: Modal Content -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E: 컨텐츠 -->
+       
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+    <script src="dist/js/app.js"></script>
+    <!-- END: JS Assets-->
+</body>
+
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/logo.svg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="LEFT4CODE">
+    <title>단호박 상담소 관리자</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5">
+    <div class="flex mt-0">
+        <!-- S : 사이드 메뉴 -->
+        <nav class="side-nav">
+            <a href="index.html" class="intro-x flex items-center pl-5 pt-4">
+                <img src="dist/images/danhobak_logo.svg" alt="">
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title">
+                            메인화면 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="mainbanner-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인배너 관리</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mainprod-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인 노출 상품 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="member-list.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                        <div class="side-menu__title">회원관리</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu ">
+                        <div class="side-menu__icon"> <i data-lucide="table"></i> </div>
+                        <div class="side-menu__title">
+                            게시판 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="concern-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">고민게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="share-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">정보공유게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">단호박 솔루션</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="keyword-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">키워드 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="message-square"></i> </div>
+                        <div class="side-menu__title">
+                            전문 상담사 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="counselor-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="counselor-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="package"></i> </div>
+                        <div class="side-menu__title">
+                            상품관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="side-menu__sub-open">
+                        <li>
+                            <a href="product-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-upload.html" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="order-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__title">
+                            주문관리
+                            <div class="side-menu__sub-icon "></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="keyword-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="search"></i> </div>
+                        <div class="side-menu__title">
+                            검색어 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 인기 검색어 관리 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rec-keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 연관 검색어 관리 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="report.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="feather"></i> </div>
+                        <div class="side-menu__title"> 단호박 리포트 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="point-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="coins"></i> </div>
+                        <div class="side-menu__title"> 포인트 관리 </div>
+                    </a>
+                </li>
+                  <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="crown"></i> </div>
+                        <div class="side-menu__title">
+                            리뷰관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="review-board.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 고민게시판 리뷰 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-review.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문솔루션 리뷰 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- E : 사이드 메뉴 -->
+
+
+        <!-- S: 컨텐츠 -->
+        <div class="content">
+            <div class="top-bar">
+                <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item">상품 관리</li>
+                        <li class="breadcrumb-item">목록</li>
+                        <li class="breadcrumb-item active" aria-current="page">등록</li>
+                    </ol>
+                </nav>
+                <div class="intro-x dropdown w-8 h-8 ml-auto">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                        role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                        <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                    </div>
+                    <div class="dropdown-menu w-56">
+                        <ul class="dropdown-content bg-primary text-white">
+                            <li class="p-2">
+                                <div class="font-medium">Kevin Spacey</div>
+                                <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">Software Engineer</div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user"
+                                        class="w-4 h-4 mr-2"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit"
+                                        class="w-4 h-4 mr-2"></i> Add Account </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock"
+                                        class="w-4 h-4 mr-2"></i> Reset Password </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="help-circle"
+                                        class="w-4 h-4 mr-2"></i> Help </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                        class="w-4 h-4 mr-2"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 2xl:col-span-12">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 mt-8">
+                            <h2 class="text-lg font-medium mr-auto">
+                                상품 등록
+                            </h2>
+                            <div class="box p-5 rounded-md mt-4">
+                                <div class="overflow-auto lg:overflow-visible">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center w-56">상품명 <span class="red">*</span></td>
+                                                <td class="">
+                                                    <input id="regular-form-1" type="text" class="form-control"
+                                                        value="두고두고보는 채팅상담">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center w-56">상품코드</td>
+                                                <td>
+                                                    <div>
+                                                        ASFASDFAF
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">정가<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" value="10,000"
+                                                            aria-label="Price" aria-describedby="input-group-price">
+                                                        <div id="input-group-price" class="input-group-text">원
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">판매가<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="w-full">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control" value="9,000"
+                                                                    aria-label="Price"
+                                                                    aria-describedby="input-group-price">
+                                                                <div id="input-group-price" class="input-group-text">원
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="w-40">
+                                                            <div class="input-group"> <input type="text"
+                                                                    class="form-control" placeholder="" aria-label=""
+                                                                    aria-describedby="input-group-price">
+                                                                <div id="input-group-price"
+                                                                    class="input-group-text flex items-center">% <span
+                                                                        class="pl-2">D/C</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">전문가 코드<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control"
+                                                        value="QDAWRA">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">상품 카테고리<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <select class="form-select mt-2 sm:mr-2" aria-label="">
+                                                        <option>상담</option>
+                                                        <option>option 2</option>
+                                                        <option>option 3</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">인원<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <select class="form-select mt-2 sm:mr-2" aria-label="">
+                                                        <option>1:1</option>
+                                                        <option>option 2</option>
+                                                        <option>option 3</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">시간<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control"
+                                                        value="50 분">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">소통 방법<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <div class="flex gap-4 items-center">
+                                                        <div class="flex flex-col sm:flex-row">
+                                                            <div class="form-check mr-2"> <input id="communicate-1"
+                                                                    class="form-check-input" type="checkbox" value=""
+                                                                    checked>
+                                                                <label class="form-check-label"
+                                                                    for="communicate-1">채팅</label>
+                                                            </div>
+                                                            <div class="form-check mr-2 mt-2 sm:mt-0"> <input
+                                                                    id="communicate-2" class="form-check-input"
+                                                                    type="checkbox" value=""> <label
+                                                                    class="form-check-label"
+                                                                    for="communicate-2">화상</label> </div>
+                                                            <div class="form-check mr-2 mt-2 sm:mt-0"> <input
+                                                                    id="communicate-3" class="form-check-input"
+                                                                    type="checkbox" value=""> <label
+                                                                    class="form-check-label"
+                                                                    for="communicate-3">대면</label> </div>
+                                                            <div class="form-check mr-2 mt-2 sm:mt-0"> <input
+                                                                    id="communicate-4" class="form-check-input"
+                                                                    type="checkbox" value=""> <label
+                                                                    class="form-check-label"
+                                                                    for="communicate-4">전화</label> </div>
+                                                        </div>
+                                                        <div class="text-slate-500">다중선택 가능합니다.</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">판매 기간<span class="red">*</span></td>
+                                                <td class="">
+                                                    <div class="flex items-center gap-4">
+                                                        <div class="relative">
+                                                            <div
+                                                                class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                                            </div>
+                                                            <input type="text" data-daterange="true"
+                                                                class="datepicker form-control w-80 pl-16 block mx-auto">
+                                                        </div>
+                                                        <div class="text-slate-500">판매 시작일과 판매 종료일을 설정해주세요.</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">상품설명</td>
+                                                <td class="text-center">
+                                                    <textarea class="form-control py-4 resize-none"
+                                                        rows="4">전문가와 상담으로 이루어지는 상담입니다.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">상품 키워드</td>
+                                                <td class="text-center">
+                                                    <select id="subcategory"
+                                                        data-placeholder="#키워드를 입력해주세요 (예 : #심리상담#심리검사#족집게)"
+                                                        class="tom-select w-full" multiple>
+                                                        <option selected>키워드</option>
+                                                        <option selected>키워드2</option>
+                                                        <option selected>키워드3</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">다회기 상품 여부</td>
+                                                <td class="text-center">
+                                                    <div class="">
+                                                        <div class="flex flex-col sm:flex-row mt-2">
+                                                            <div class="form-check mr-2"> <input id="switch-1"
+                                                                    class="form-check-input" type="radio"
+                                                                    name="horizontal_radio_button" value="Y"> <label
+                                                                    class="form-check-label" for="switch-1">Y</label>
+                                                            </div>
+                                                            <div class="form-check mr-2 mt-2 sm:mt-0"> <input
+                                                                    id="switch-2" class="form-check-input" type="radio"
+                                                                    name="horizontal_radio_button" value="N" checked> <label
+                                                                    class="form-check-label" for="switch-2">N</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="text-center">구성회차</td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control"
+                                                        value="1">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">정산율</td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control"
+                                                        value="5%">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">한줄소개<span class="red">*</span></td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control"
+                                                        value="당신을 위로할 수 있어요">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center w-56">상태 값</td>
+                                                <td class="text-center">
+                                                    <div class="">
+                                                        <div class="flex flex-col sm:flex-row mt-2">
+                                                            <div class="form-check mr-2"> <input id="active-1"
+                                                                    class="form-check-input" type="radio"
+                                                                    name="horizontal_radio_button" value="활성화"> <label
+                                                                    class="form-check-label" for="active-1">활성화</label>
+                                                            </div>
+                                                            <div class="form-check mr-2 mt-2 sm:mt-0"> <input
+                                                                    id="active-2" class="form-check-input" type="radio"
+                                                                    name="horizontal_radio_button" value="비활성화" checked> <label
+                                                                    class="form-check-label" for="active-2">비활성화</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center mt-8 gap-2">
+                                <button class="btn btn-secondary w-24 mr-1 mb-2">목록</button>
+                                <button class="btn btn-primary w-24 mr-1 mb-2">저장</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E: 컨텐츠 -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+    <script src="dist/js/app.js"></script>
+    <!-- END: JS Assets-->
+</body>
+
+</html>

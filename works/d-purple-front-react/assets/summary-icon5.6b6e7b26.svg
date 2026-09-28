@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 68 68">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_937" data-name="사각형 937" width="68" height="68" transform="translate(19365.186 -8209)" fill="#cbd5e1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_11" data-name="마스크 그룹 11" transform="translate(-19365.185 8209)" clip-path="url(#clip-path)">
+    <g id="icon" transform="translate(19366.215 -8207.332)">
+      <line id="선_579" data-name="선 579" y2="28.288" transform="translate(14.448 31.364)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <path id="패스_382" data-name="패스 382" d="M67.019,65.93H1.266V1.266" transform="translate(-1.266 -1.266)" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <rect id="사각형_949" data-name="사각형 949" width="6.898" height="21.243" transform="translate(10.999 34.887)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <line id="선_580" data-name="선 580" y2="40.551" transform="translate(26.73 12.057)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <rect id="사각형_950" data-name="사각형 950" width="6.898" height="30.462" transform="translate(23.281 17.101)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <line id="선_581" data-name="선 581" y2="28.657" transform="translate(39.012 15.274)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <rect id="사각형_951" data-name="사각형 951" width="6.898" height="9.241" transform="translate(35.574 21.95)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <line id="선_582" data-name="선 582" y2="40.551" transform="translate(51.305 0.859)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+      <rect id="사각형_952" data-name="사각형 952" width="6.898" height="30.462" transform="translate(47.856 5.903)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.532"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+    <title>QR콘텐츠</title>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        your-component {
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <your-component></your-component>
+
+    <template id="class--content">
+        <div id="classStyudyContent">
+            <!-- Content -->
+            <div id="wrap" class="page">
+                <div id="container">
+                    <!-- 변경되는 컨텐츠 시작 -->
+
+                    <button type="button" class="btnStep prev"><span class="hidden">이전 스텝으로 이동하기</span></button>
+                    
+                    <button type="button" class="btnSound" data-state="on">
+                        <span class="off"><span class="hidden">배경음악 켜기</span></span>
+                        <span class="on"><span class="hidden">배경음악 끄기</span></span>
+                    </button>
+
+                    <!-- step0::인트로 -->
+                    <div class="step step0">
+                        <div class="contents">
+                            <h1><span class="hidden">실과 놀이 팡팡</span></h1>
+                            <div class="character"></div>
+                            <button type="button" class="btnStart"><span class="hidden">시작하기</span></button>
+                        </div>
+                    </div>
+
+                    <!-- step1::시작하기 -->
+                    <div class="step step1">
+                        <div class="contents">
+                            <h1><span class="hidden">맛있는 샌드위치 만들기</span></h1>
+                            <button type="button" class="btnStart"><span class="hidden">시작하기</span></button>
+                        </div>
+                    </div>
+
+                    <!-- step2::인트로 -->
+                    <div class="step step2">
+                        <div class="character character1">
+                            <div class="character_img"></div>
+                            <div class="character_text text1"><span class="hidden">안녕하세요? 오늘 우리 함께 다양한 재료를 이용해서 건강하고 맛있는 '달걀오이샌드위치'를 만들어 보아요.</span></div>
+                            <div class="character_text text2"><span class="hidden">먼저 필요한 재료와 조리 방법을 살펴볼까요?</span></div>
+                        </div>
+                    </div>
+
+                    <!-- step3::달걀오이샌드위치 만들기 재료 -->
+                    <div class="step step3">
+                        <div class="contents">
+                            <div class="step_title"><h3><span class="hidden">달걀오이샌드위치 만들기 재료</span></h3></div>
+                            <ul class="step_contents ingredients">
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient1">
+                                        <div class="img"><img src="./img/ingredient01.png" alt="" /></div>
+                                        <span class="text">식빵 2장</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient2">
+                                        <div class="img"><img src="./img/ingredient02.png" alt="" /></div>
+                                        <span class="text">오이 1개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient3">
+                                        <div class="img"><img src="./img/ingredient03.png" alt="" /></div>
+                                        <span class="text">삶은 달걀 <br/>5개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient4">
+                                        <div class="img"><img src="./img/ingredient04.png" alt="" /></div>
+                                        <span class="text">양파 1/2개</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient5">
+                                        <div class="img"><img src="./img/ingredient05.png" alt="" /></div>
+                                        <span class="text">머스터드 소스 <br/>1큰술</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient6">
+                                        <div class="img"><img src="./img/ingredient06.png" alt="" /></div>
+                                        <span class="text">마요네즈 <br/>3큰술</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient7">
+                                        <div class="img"><img src="./img/ingredient07.png" alt="" /></div>
+                                        <span class="text">소금</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient8">
+                                        <div class="img"><img src="./img/ingredient08.png" alt="" /></div>
+                                        <span class="text">후추</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button type="button" class="btnIngredient clicking"><span class="hidden">재료 보기</span></button>
+                                    <div class="ingredient ingredient9">
+                                        <div class="img"><img src="./img/ingredient09.png" alt="" /></div>
+                                        <span class="text">꿀 <br/>2큰술</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- step4::달걀오이샌드위치 조리 방법 -->
+                    <div class="step step4">
+                        <div class="contents">
+                            <div class="step_title"><h3><span class="hidden">달걀오이샌드위치 만들기 재료</span></h3></div>
+                            <div class="step_contents">
+                                <ul class="recipe">
+                                    <li>
+                                        <div class="num">1</div>
+                                        <div class="recipe_txt">
+                                            <span>오이를&nbsp;</span>
+                                            <div class="hidden_txt">
+                                                <button type="button" class="btnRecipe clicking"><span class="hidden">조리 방법 텍스트 보기</span></button>
+                                                <div class="text"><span>얇은 두께</span></div>
+                                            </div>
+                                            <span>로 썹니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="num">2</div>
+                                        <div class="recipe_txt">
+                                            <span>볼에 오이, 소금을 넣고 절인 뒤&nbsp;</span>
+                                            <div class="hidden_txt">
+                                                <button type="button" class="btnRecipe clicking"><span class="hidden">조리 방법 텍스트 보기</span></button>
+                                                <div class="text"><span>물기</span></div>
+                                            </div>
+                                            <span>를 꼭 짭니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="num">3</div>
+                                        <div class="recipe_txt">양파를 다집니다.</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">4</div>
+                                        <div class="recipe_txt">
+                                            <span>삶은 달걀의 껍데기를 벗긴 다음&nbsp;</span>
+                                            <div class="hidden_txt">
+                                                <button type="button" class="btnRecipe clicking"><span class="hidden">조리 방법 텍스트 보기</span></button>
+                                                <div class="text"><span>볼</span></div>
+                                            </div>
+                                            <span>에 넣고 으깹니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="num">5</div>
+                                        <div class="recipe_txt">양파, 마요네즈, 머스터드 소스, 후추, 꿀을 넣고 잘 섞습니다.</div>
+                                    </li>
+                                    <li>
+                                        <div class="num">6</div>
+                                        <div class="recipe_txt">
+                                            <span>식빵 한 쪽 면에&nbsp;</span>
+                                            <div class="hidden_txt">
+                                                <button type="button" class="btnRecipe clicking"><span class="hidden">조리 방법 텍스트 보기</span></button>
+                                                <div class="text"><span>절인 오이</span></div>
+                                            </div>
+                                            <span>를 가지런히 올립니다.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="num">7</div>
+                                        <div class="recipe_txt">
+                                            <span>속재료를&nbsp;</span>
+                                            <div class="hidden_txt">
+                                                <button type="button" class="btnRecipe clicking"><span class="hidden">조리 방법 텍스트 보기</span></button>
+                                                <div class="text"><span>적당량</span></div>
+                                            </div>
+                                            <span>&nbsp;올리고 나머지 식빵을 덮습니다.</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step5::조리 방법1 -->
+                    <div class="step step5">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">1</div>
+                                    <div class="txt">오이를 얇은 두께로 썹니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step5/0001.png" class="img0001" alt="도마" />
+                                    <img src="./img/step5/0002.png" class="img0002 img0002_0" alt="오이" />
+                                    <img src="./img/step5/0002_1.png" class="img0002 img0002_1" alt="한 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_2.png" class="img0002 img0002_2" alt="두 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_3.png" class="img0002 img0002_3" alt="세 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_4.png" class="img0002 img0002_4" alt="네 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_5.png" class="img0002 img0002_5" alt="다섯 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_6.png" class="img0002 img0002_6" alt="여섯 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_7.png" class="img0002 img0002_7" alt="일곱 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_8.png" class="img0002 img0002_8" alt="여덟 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_9.png" class="img0002 img0002_9" alt="아홉 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_10.png" class="img0002 img0002_10" alt="열 조각 썰어진 오이" />
+                                    <img src="./img/step5/0002_11.png" class="img0002 img0002_11" alt="열한 조각 썰어진 오이" />
+                                    <img src="./img/step5/0003.png" class="img0003 img0003_0" alt="다섯 손가락 모두 펼쳐진 왼손" />
+                                    <img src="./img/step5/0003_1.png" class="img0003 img0003_1" alt="엄지 손가락만 접혀진 왼손" />
+                                    <img src="./img/step5/0003_2.png" class="img0003 img0003_2" alt="엄지 손가락과 검지 손가락이 접혀진 왼손" />
+                                    <img src="./img/step5/0003_3.png" class="img0003 img0003_3" alt="엄지 손가락과 검지 손가락과 중지 손가락이 접혀진 왼손" />
+                                    <img src="./img/step5/0003_4.png" class="img0003 img0003_4" alt="엄지 손가락과 검지 손가락과 중지 손가락과 약지 손가락이 접혀진 왼손" />
+                                    <img src="./img/step5/0003_5.png" class="img0003 img0003_5" alt="다섯 손가락 모두 접혀진 왼손" />
+                                    <img src="./img/step5/0004.png" class="img0004" alt="칼을 든 오른손" />
+                                </div>
+                                <button type="button" class="btnFinger btnFinger1"><span class="hidden">엄지 손가락 접기</span></button>
+                                <button type="button" class="btnFinger btnFinger2"><span class="hidden">검지 손가락 접기</span></button>
+                                <button type="button" class="btnFinger btnFinger3"><span class="hidden">중지 손가락 접기</span></button>
+                                <button type="button" class="btnFinger btnFinger4"><span class="hidden">약지 손가락 접기</span></button>
+                                <button type="button" class="btnFinger btnFinger5"><span class="hidden">새끼 손가락 접기</span></button>
+                                <button type="button" class="btnKnife"><span class="hidden">오이 썰기</span></button>
+                            </div>
+                            <div class="character character2">
+                                <div class="character_img"></div>
+                                <div class="character_text"><span class="hidden">칼에 베이지 않도록 천천히 썰어요.</span></div>                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step6::조리 방법2 -->
+                    <div class="step step6">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">2</div>
+                                    <div class="txt">볼에 오이, 소금을 넣고 절인 뒤 물기를 꼭 짭니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step6/0001.png" class="img0001 img0001_0" alt="" />
+                                    <img src="./img/step6/0001_1.png" class="img0001 img0001_1" alt="" />
+                                    <img src="./img/step6/0001_2.png" class="img0001 img0001_2" alt="" />
+                                    <img src="./img/step6/0001_3.gif" class="img0001 img0001_3" alt="" />
+                                    <img src="./img/step6/0001_4.gif" class="img0001 img0001_4" alt="" />
+                                    <img src="./img/step6/0001_5.png" class="img0001 img0001_5" alt="" />
+                                    <img src="./img/step6/0001_6.png" class="img0001 img0001_6" alt="" />
+                                    <img src="./img/step6/0001_7.png" class="img0001 img0001_7" alt="" />
+                                    <img src="./img/step6/0004.png" class="img0004 img0004_0" alt="" />
+                                </div>
+                                <div class="droppable"></div>
+                                <div class="draggable_wrap">
+                                    <div class="draggable draggable1 guide top right" data-step="1">
+                                        <img src="./img/step6/0002.png" class="img img1" />
+                                        <img src="./img/step6/0002_1.png" class="img img2" />
+                                    </div>
+                                    <div class="draggable draggable2 guide top left" data-step="2">
+                                        <img src="./img/step6/0003.png" class="img img1" />
+                                        <img src="./img/step6/0003_1.png" class="img img2" />
+                                    </div>
+                                </div>
+                                <button type="button" class="btnSpoon"><span class="hidden">오이와 소금 섞기</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step7::조리 방법3 -->
+                    <div class="step step7">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">3</div>
+                                    <div class="txt">양파를 다집니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step7/0001.png" class="img0001" alt="" />
+                                    <img src="./img/step7/0002.png" class="img0002 img0002_0" alt="" />
+                                    <img src="./img/step7/0002_1.png" class="img0002 img0002_1" alt="" />
+                                    <img src="./img/step7/0002_2.png" class="img0002 img0002_2" alt="" />
+                                    <img src="./img/step7/0002_3.png" class="img0002 img0002_3" alt="" />
+                                    <img src="./img/step7/0002_4.png" class="img0002 img0002_4" alt="" />
+                                    <img src="./img/step7/0002_5.png" class="img0002 img0002_5" alt="" />
+                                    <img src="./img/step7/0002_6.png" class="img0002 img0002_6" alt="" />
+                                    <img src="./img/step7/0002_7.png" class="img0002 img0002_7" alt="" />
+                                    <img src="./img/step7/0002_8.png" class="img0002 img0002_8" alt="" />
+                                    <img src="./img/step7/0002_9.png" class="img0002 img0002_9" alt="" />
+                                    <img src="./img/step7/0002_10.png" class="img0002 img0002_10" alt="" />
+                                    <img src="./img/step7/0002_11.png" class="img0002 img0002_11" alt="" />
+                                    <img src="./img/step7/0002_12.png" class="img0002 img0002_12" alt="" />
+                                    <img src="./img/step7/0002_13.png" class="img0002 img0002_13" alt="" />
+                                    <img src="./img/step7/0002_14.png" class="img0002 img0002_14" alt="" />
+                                    <img src="./img/step7/0002_15.png" class="img0002 img0002_15" alt="" />
+                                    <img src="./img/step7/0003.png" class="img0003" alt="" />
+                                    <img src="./img/step7/0004.png" class="img0004" alt="" />
+                                    <img src="./img/step7/0005.png" class="img0005" alt="" />
+                                </div>
+                                <button type="button" class="btnKnife"><span class="hidden">양파 썰기</span></button>
+                                <button type="button" class="btnLine clicking"><span class="hidden">양파 썰기 시작하기</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step8::조리 방법4 -->
+                    <div class="step step8">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">4</div>
+                                    <div class="txt">삶은 달걀의 껍데기를 벗긴 다음 볼에 넣고 으깹니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step8/0001.png" class="img0001 img0001_0" alt="" />
+                                    <img src="./img/step8/0001_1.gif" class="img0001 img0001_1" alt="" />
+                                    <img src="./img/step8/0001_2.gif" class="img0001 img0001_2" alt="" />
+                                    <img src="./img/step8/0001_3.gif" class="img0001 img0001_3" alt="" />
+                                    <img src="./img/step8/0001_4.gif" class="img0001 img0001_4" alt="" />
+                                    <img src="./img/step8/0001_5.gif" class="img0001 img0001_5" alt="" />
+                                    <img src="./img/step8/0001_6.png" class="img0001 img0001_6" alt="" />
+                                    <img src="./img/step8/0002.png" class="img0002 img0002_0" alt="" />
+                                    <img src="./img/step8/0002_1.gif" class="img0002 img0002_1" alt="" />
+                                    <img src="./img/step8/0002_2.gif" class="img0002 img0002_2" alt="" />
+                                    <img src="./img/step8/0002_3.png" class="img0002 img0002_3" alt="" />
+                                </div>
+                                <div class="time_text">12~15분</div>                                
+                                <div class="droppable"></div>
+                                <div class="draggable_wrap">
+                                    <div class="draggable draggable1 guide bottom right" data-step="1">
+                                        <img src="./img/step8/0003.png" class="img img1" />
+                                        <img src="./img/step8/0003_1.png" class="img img2" />
+                                        <img src="./img/step8/0003_2.png" class="img img3" />
+                                    </div>
+                                    <div class="draggable draggable2 guide bottom left" data-step="2">
+                                        <img src="./img/step8/0004.png" class="img img1" />
+                                        <img src="./img/step8/0004_1.png" class="img img2" />
+                                    </div>
+                                </div>
+                                <button type="button" class="btnStove" data-switch="off">
+                                    <span class="hidden off">가스렌지 불 켜기</span>
+                                    <span class="hidden on">가스렌지 불 끄기</span>
+                                </button>
+                            </div>
+                            <div class="character character2">
+                                <div class="character_img"></div>
+                                <div class="character_text text1"><span class="hidden">불을 사용할 때에는 안전에 유의해요.</span></div>
+                                <div class="character_text text2"><span class="hidden">삶은 달걀은 뜨거우니 찬물에 담가 식힌 뒤 껍데기를 벗겨 주세요.</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step9::조리 방법4-2 -->
+                    <div class="step step9">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">4</div>
+                                    <div class="txt">삶은 달걀의 껍데기를 벗긴 다음 볼에 넣고 으깹니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step8/0008.png" class="img0001 img0001_0" alt="" />
+                                    <img src="./img/step8/0008_5.png" class="img0001 img0001_5" alt="" />
+                                    <img src="./img/step8/0008_4.png" class="img0001 img0001_4" alt="" />
+                                    <img src="./img/step8/0008_3.png" class="img0001 img0001_3" alt="" />
+                                    <img src="./img/step8/0008_2.png" class="img0001 img0001_2" alt="" />
+                                    <img src="./img/step8/0008_1.png" class="img0001 img0001_1" alt="" />
+                                    <img src="./img/step8/0008_6.gif" class="img0001 img0001_6" alt="" />
+                                    <img src="./img/step8/0008_7.gif" class="img0001 img0001_7" alt="" />
+                                    <img src="./img/step8/0008_8.gif" class="img0001 img0001_8" alt="" />
+                                    <img src="./img/step8/0008_9.gif" class="img0001 img0001_9" alt="" />
+                                    <img src="./img/step8/0008_10.gif" class="img0001 img0001_10" alt="" />
+                                    <img src="./img/step8/0008_11.png" class="img0001 img0001_11" alt="" />
+                                    <img src="./img/step8/0009.png" class="img0002 img0002_0" alt="" />
+                                    <img src="./img/step8/0009_1.png" class="img0002 img0002_1" alt="" />
+                                </div>
+                                <div class="droppable"></div>
+                                <div class="draggable_wrap">
+                                    <button type="button" class="btnEgg btnEgg1">
+                                        <img src="./img/step8/0007.png" />
+                                        <img src="./img/step8/0007_1.png" />
+                                    </button>
+                                    <div class="draggable draggable1" data-hidden="true">
+                                        <img src="./img/step8/0007_2.png" class="img img1 on" />
+                                    </div>
+                                    <button type="button" class="btnEgg btnEgg2">
+                                        <img src="./img/step8/0007.png" />
+                                        <img src="./img/step8/0007_1.png" />
+                                    </button>
+                                    <div class="draggable draggable2" data-hidden="true">
+                                        <img src="./img/step8/0007_2.png" class="img img1 on" />
+                                    </div>
+                                    <button type="button" class="btnEgg btnEgg3">
+                                        <img src="./img/step8/0007.png" />
+                                        <img src="./img/step8/0007_1.png" />
+                                    </button>
+                                    <div class="draggable draggable3" data-hidden="true">
+                                        <img src="./img/step8/0007_2.png" class="img img1 on" />
+                                    </div>
+                                    <button type="button" class="btnEgg btnEgg4">
+                                        <img src="./img/step8/0007.png" />
+                                        <img src="./img/step8/0007_1.png" />
+                                    </button>
+                                    <div class="draggable draggable4" data-hidden="true">
+                                        <img src="./img/step8/0007_2.png" class="img img1 on" />
+                                    </div>
+                                    <button type="button" class="btnEgg btnEgg5">
+                                        <img src="./img/step8/0007.png" />
+                                        <img src="./img/step8/0007_1.png" />
+                                    </button>
+                                    <div class="draggable draggable5" data-hidden="true">
+                                        <img src="./img/step8/0007_2.png" class="img img1 on" />
+                                    </div>
+                                </div>
+                                <button type="button" class="btnMasher"><span class="hidden">계란 으깨기</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step10::조리 방법5 -->
+                    <div class="step step10">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">5</div>
+                                    <div class="txt">양파, 마요네즈, 머스터드 소스, 후추, 꿀을 넣고 잘 섞습니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step10/0001.png" class="img0001 img0001_0" alt="계란이 으깨져 있는 볼" />
+                                    <img src="./img/step10/0001_1.png" class="img0001 img0001_1" alt="다진 양파" />
+                                    <img src="./img/step10/0001_2.png" class="img0001 img0001_2" alt="마요네즈" />
+                                    <img src="./img/step10/0001_3.png" class="img0001 img0001_3" alt="머스터드 소스" />
+                                    <img src="./img/step10/0001_4.png" class="img0001 img0001_4" alt="후추" />
+                                    <img src="./img/step10/0001_5.png" class="img0001 img0001_5" alt="꿀" />
+                                    <img src="./img/step10/0001_6.gif" class="img0001 img0001_6" alt="으깨진 계란과 다진 양파, 마요네즈, 머스터드 소스, 후추, 꿀을 넣고 섞기" />
+                                    <img src="./img/step10/0001_7.png" class="img0001 img0001_7" alt="" />
+                                    <img src="./img/step10/0003.png" class="img0002" alt="스푼" />                                    
+                                </div>
+                                <div class="droppable"></div>
+                                <div class="draggable_wrap">
+                                    <div class="draggable draggable1 guide bottom right" data-step="1">
+                                        <img src="./img/step10/0002_1.png" class="img img1 on" />
+                                    </div>
+                                    <div class="draggable draggable2" data-step="2">
+                                        <img src="./img/step10/0002_2.png" class="img img1 on" />
+                                    </div>
+                                    <div class="draggable draggable3" data-step="3">
+                                        <img src="./img/step10/0002_3.png" class="img img1 on" />
+                                    </div>
+                                    <div class="draggable draggable4" data-step="4">
+                                        <img src="./img/step10/0002_4.png" class="img img1 on" />
+                                    </div>
+                                    <div class="draggable draggable5" data-step="5">
+                                        <img src="./img/step10/0002_5.png" class="img img1 on" />
+                                    </div>
+                                </div>
+                                <button type="button" class="btnSpoon"><span class="hidden">으깨진 계란과 다진 양파, 마요네즈, 머스터드 소스, 후추, 꿀 섞기</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step11::조리 방법6 -->
+                    <div class="step step11">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">6</div>
+                                    <div class="txt">식빵 한 쪽 면에 절인 오이를 가지런히 올립니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step11/0001.png" class="img0001" alt="도마" />
+                                    <img src="./img/step11/0002.png" class="img0002 img0002_0" alt="식빵" />
+                                    <img src="./img/step11/0002_1.png" class="img0002 img0002_1" alt="식빵" />
+                                    <img src="./img/step11/0002_2.png" class="img0002 img0002_2" alt="식빵" />
+                                    <img src="./img/step11/0002_3.png" class="img0002 img0002_3" alt="식빵" />
+                                </div>
+                                <div class="droppable"></div>
+                                <div class="draggable_wrap">
+                                    <div class="bowl">
+                                        <img src="./img/step11/0003.png" class="img img1" />
+                                        <img src="./img/step11/0003_1.png" class="img img2" />
+                                        <img src="./img/step11/0003_2.png" class="img img3" />
+                                        <img src="./img/step11/0003_3.png" class="img img4" />
+                                    </div>
+                                    <div class="draggable guide bottom right">
+                                        <img src="./img/step11/0003_4.png" class="img img1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step12::조리 방법7 -->
+                    <div class="step step12">
+                        <div class="contents">
+                            <div class="step_title">
+                                <h3>
+                                    <div class="num">7</div>
+                                    <div class="txt">속재료를 적당량 올리고 나머지 식빵을 덮습니다.</div>
+                                </h3>
+                            </div>
+                            <div class="step_contents">
+                                <div class="img_container">
+                                    <img src="./img/step12/0001.png" class="img0001" alt="도마" />
+                                    <img src="./img/step12/0002.png" class="img0002 img0002_0" alt="식빵" />
+                                    <img src="./img/step12/0002_4.png" class="img0002 img0002_1" alt="식빵" />
+                                    <img src="./img/step12/0002_1.png" class="img0003 img0003_1" alt="식빵" />
+                                    <img src="./img/step12/0002_2.png" class="img0003 img0003_2" alt="식빵" />
+                                    <img src="./img/step12/0002_3.png" class="img0003 img0003_3" alt="식빵" />
+                                    <!-- <img src="./img/step12/0002_5.png" class="img0004" alt="식빵" /> -->
+                                    <img src="./img/step12/0002_6.gif" class="img0003 img0003_4" alt="식빵" />
+                                </div>
+                                <div class="droppable"></div>
+                                <div class="draggable_wrap">
+                                    <div class="bowl">
+                                        <img src="./img/step12/0003.png" class="img img1" />
+                                        <img src="./img/step12/0003_1.png" class="img img2" />
+                                        <img src="./img/step12/0003_2.png" class="img img3" />
+                                        <img src="./img/step12/0003_3.png" class="img img4" />
+                                    </div>
+                                    <div class="draggable guide bottom right">
+                                        <img src="./img/step12/0004.png" class="img img1" />
+                                        <img src="./img/step12/0004_1.png" class="img img2" />
+                                    </div>
+                                </div>
+                                <button type="button" class="btnBread"><span class="hidden">식빵 덮기</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- step13::달걀오이샌드위치 완성 -->
+                    <div class="step step13">
+                        <div class="text"><span class="hidden">달걀오이샌드위치 완성!</span></div>
+                        <div class="character character2">
+                            <div class="character_img"></div>
+                            <div class="character_text"><span class="hidden">과일 주스와 함께 상을 차리면 균형 잡힌 식사가 돼요.</span></div>                            
+                        </div>
+                        <button type="button" class="btnReset"><span class="hidden">처음으로</span></button>
+                    </div>
+
+                    <button type="button" class="btnStep next"><span class="hidden">다음 스텝으로 이동하기</span></button>
+                    <!-- 변경되는 컨텐츠 끝 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 복수개의 스타일 가능 -->
+        <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+        <!-- 복수개의 스크립트 파일 가능 -->
+        <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="./common/js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="./common/js/base.js"></script>
+        <script type="text/javascript" src="./common/js/view.js"></script>
+        <script type="text/javascript" src="./common/js/lib.js"></script>
+        <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+        <script type="text/javascript" src="./common/js/common.js"></script>
+        <script type="text/javascript" src="./js/sound.js"></script>
+        <script type="text/javascript" src="./js/drag.js"></script>
+        <script type="text/javascript" src="./js/scripts.js"></script>
+
+    </template>
+
+    <script type="module" src="./common/js/shadow-dom-your.js"></script>
+    <!-- Page js -->
+</body>
+
+</html>

@@ -1,0 +1,1231 @@
+@charset "utf-8";
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+button.clicking {
+    position: relative;
+}
+
+button.clicking::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url("../img/pointer.png") no-repeat center;
+}
+
+button.clicking.blink::after {
+    animation: blink-effect 1.5s linear infinite;
+}
+
+@keyframes blink-effect {
+    5% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    95% {
+        opacity: 1;
+    }
+}
+
+.btnSound {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 99;
+    width: 80px;
+    height: 88px;
+}
+
+.btnSound > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btnSound .on {
+    background-image: url("../img/btn_sound.png");
+}
+
+.btnSound .off {
+    background-image: url("../img/btn_sound_off.png");
+}
+
+.btnSound[data-state="on"] .off,
+.btnSound[data-state="off"] .on {
+    display: none;
+}
+
+.character {
+    position: relative;
+}
+
+.character1 .character_img {
+    width: 310px;
+    height: 313px;
+    background: url("../img/character1.png") no-repeat center;
+}
+
+.character2 {
+    position: absolute;
+    left: 16px;
+    bottom: 20px;
+}
+
+.character2 .character_img {
+    width: 213px;
+    height: 252px;
+    background: url("../img/character2.png") no-repeat center;
+}
+
+.character2 .character_text {
+    width: 1260px;
+    height: 115px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 196px;
+    bottom: 90px;
+}
+
+.btnStep {
+    position: absolute;
+    top: calc(50% + 130px / 2);
+    transform: translateY(-50%);
+    width: 117px;
+    height: 117px;
+    border-radius: 117px;
+    z-index: 10;
+}
+
+.btnStep.blink {
+    animation: blink-effect 1.5s linear infinite;
+}
+
+.btnStep:not(.on) {
+    display: none;
+}
+
+.btnStep.prev {
+    left: 15px;
+    background: url("../img/btn_prev.png") no-repeat center;
+}
+
+.btnStep.next {
+    right: 15px;
+    background: url("../img/btn_next.png") no-repeat center;
+    display: none;
+}
+
+.draggable {
+    position: relative;
+    cursor: grab;
+}
+
+.draggable:not(.on) {
+    display: none;
+}
+
+.draggable.disabled {
+    pointer-events: none;
+}
+
+.draggable.on.guide:not(.disabled)::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: url("../img/pointer.png") no-repeat center;
+}
+
+.draggable.guide.top::after {
+    top: 10%;
+}
+
+.draggable.guide.bottom::after {
+    top: 60%;
+}
+
+.draggable.guide.right::after {
+    left: 60%;
+}
+
+.draggable.guide.left::after {
+    left: 10%;
+}
+
+.draggable.on.guide.top.right:not(.disabled)::after {
+    animation: guideTopRight 1s linear infinite;
+}
+
+@keyframes guideTopRight {
+    40% {
+        opacity: 1;
+    }
+    100% {
+        top: -50%;
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.draggable.on.guide.top.left:not(.disabled)::after {
+    animation: guideTopLeft 1s linear infinite;
+}
+
+@keyframes guideTopLeft {
+    40% {
+        opacity: 1;
+    }
+    100% {
+        top: -50%;
+        left: -50%;
+        opacity: 0;
+    }
+}
+
+.draggable.on.guide.bottom.right:not(.disabled)::after {
+    animation: guideBottomRight 1s linear infinite;
+}
+
+@keyframes guideBottomRight {
+    40% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.draggable.on.guide.bottom.left:not(.disabled)::after {
+    animation: guideBottomLeft 1s linear infinite;
+}
+
+@keyframes guideBottomLeft {
+    40% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        left: -50%;
+        opacity: 0;
+    }
+}
+
+.draggable > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.draggable > img:not(.on) {
+    display: none;
+}
+
+.step {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff9da;
+}
+
+.step.on {
+    z-index: 1;
+}
+
+.step:not(.on) {
+    opacity: 0;
+    z-index: -1;
+}
+
+.step1,
+.step2 {
+    background: url("../img/intro_bg.png") no-repeat center;
+}
+
+.step:not(.step1):not(.step2) .contents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step .contents .step_title {
+    width: 100%;
+    height: 131px;
+    background: url("../img/bg_title.png") no-repeat center;
+    padding-left: 156px;
+}
+
+.step .contents .step_title h3 {
+    width: 100%;
+    height: 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.step3 .contents .step_title h3 {
+    background-image: url("../img/title_step3.png");
+}
+
+.step4 .contents .step_title h3 {
+    background-image: url("../img/title_step4.png");
+}
+
+.step .contents .step_title h3 .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JALNAN';
+    font-size: 56px;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    background-color: #fff;
+    color: #833f00;
+}
+
+.step .contents .step_title h3 .txt {
+    color: #833f00;
+    font-size: 60px;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-left: 20px;
+}
+
+.step .contents .step_title + .step_contents {
+    width: 100%;
+    height: calc(100% - 131px);
+}
+
+.step .contents .step_contents {
+    position: relative;
+}
+
+.step .contents .step_contents .img_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.step .contents .step_contents .img_container > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.step .contents .step_contents .img_container > img.blink {
+    animation: blink-effect 1.5s linear infinite;
+}
+
+.step .contents .step_contents .img_container > img:not(.on) {
+    display: none;
+}
+
+/* step0 */
+.step0 {
+    background: url("../img/bg_intro.png") no-repeat center;
+    background-size: cover;
+}
+
+.step0 h1 {
+    background: url("../img/title_intro.png") center center / cover;
+    position: absolute;
+    z-index: 10;
+    top: 310px;
+    left: 550px;
+    width: 820px;
+    height: 200px;
+}
+
+.step0 .character {
+    background: url("../img/character_intro.png") center center / cover;
+    position: absolute;
+    z-index: 9;
+    top: 514px;
+    left: 803px;
+    width: 311px;
+    height: 256px;
+}
+
+.step0 .btnStart {
+    background: url("../img/button_start.png") center center / cover;
+    position: absolute;
+    z-index: 10;
+    top: 675px;
+    left: 803px;
+    width: 314px;
+    height: 138px;
+}
+
+/* step1 */
+.step1 .contents {
+    position: absolute;
+    top: 275px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.step1 .contents h1 {
+    width: 953px;
+    height: 323px;
+    background: url("../img/intro_title.png") no-repeat center;
+}
+
+.step1 .contents .btnStart {
+    width: 416px;
+    height: 130px;
+    background: url("../img/btn_start.png") no-repeat center;
+    margin-top: 60px;
+}
+
+.step1 .contents .btnStart.clicking::after {
+    top: 10px;
+    left: 315px;
+}
+
+/* step2 */
+.step2 .character {
+    position: absolute;
+    left: 194px;
+    bottom: 50px;
+}
+
+.step2 .character .character_text {
+    position: absolute;
+    left: 253px;
+    top: 91px;
+}
+
+.step2 .character .character_text.text1 {
+    width: 1277px;
+    height: 188px;    
+    background: url("../img/character_text_step2.png") no-repeat center;
+}
+
+.step2 .character .character_text.text2 {
+    width: 901px;
+    height: 124px;    
+    background: url("../img/character_text_step2_2.png") no-repeat center;
+}
+
+/* step3 */
+.step3 .ingredients {
+    padding: 90px 203px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px 100px;
+}
+
+.step3 .ingredients li {
+    position: relative;
+}
+
+.step3 .ingredients li button {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: calc(100% + 24px);
+    height: 273px;
+}
+
+.step3 .ingredients li button.disabled {
+    display: none;
+}
+
+.step3 .ingredients li button::after {
+    left: 40%;
+    top: 40%;
+}
+
+.step3 .ingredients li:nth-child(4) ~ li button {
+    height: 191px;
+}
+
+.step3 .ingredients li:nth-child(1) button {
+    background: url("../img/ingredient01_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(2) button {
+    background: url("../img/ingredient02_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(3) button {
+    background: url("../img/ingredient03_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(4) button {
+    background: url("../img/ingredient04_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(5) button {
+    background: url("../img/ingredient05_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(6) button {
+    background: url("../img/ingredient06_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(7) button {
+    background: url("../img/ingredient07_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(8) button {
+    background: url("../img/ingredient08_btn.png") no-repeat center;
+}
+
+.step3 .ingredients li:nth-child(9) button {
+    background: url("../img/ingredient09_btn.png") no-repeat center;
+}
+
+.step3 .ingredients .ingredient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step3 .ingredients .ingredient .img {
+    height: 246px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step3 .ingredients li:nth-child(4) ~ li .ingredient .img {
+    height: 171px;
+}
+
+.step3 .ingredients .ingredient .text {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-size: 48px;
+    color: #833f00;
+    line-height: 1.25;
+    margin-top: 15px;
+}
+
+.step3 .ingredients li button:not(.disabled) + .ingredient {
+    visibility: hidden;
+}
+
+/* step4 */
+.step4 .step_contents {
+    padding: 24px 162px 37px;
+}
+
+.step4 .step_contents .recipe {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 50px 0 55px;
+}
+
+.step4 .step_contents .recipe > li {
+    height: 124px;
+    display: flex;
+    align-items: center;
+}
+
+.step4 .step_contents .recipe > li + li {
+    margin-top: 44px;
+}
+
+.step4 .step_contents .recipe > li .num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JALNAN';
+    font-size: 56px;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+    background-color: #f1c065;
+    color: #fff;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt,
+.step4 .step_contents .recipe > li .recipe_txt span {
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt {
+    margin-left: 20px;
+    font-size: 60px;
+    color: #833f00;
+    line-height: 1;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt .hidden_txt {
+    position: relative;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt .hidden_txt button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: url("../img/recipe_btn.png") no-repeat center;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt .hidden_txt button::after {
+    top: 20%;
+    left: 40%;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt .hidden_txt .text {
+    position: relative;
+    width: 246px;
+    height: 124px;
+    background-color: #ffca57;
+    color: #fff;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt .hidden_txt .text span {
+    font-family: 'Pretendard';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    border-radius: 8px;
+    background-color: #fa8413;
+    line-height: 1;
+}
+
+.step4 .step_contents .recipe > li:nth-child(1) .recipe_txt .hidden_txt button,
+.step4 .step_contents .recipe > li:nth-child(6) .recipe_txt .hidden_txt button {
+    background: url("../img/recipe_btn_large.png") no-repeat center;
+}
+
+.step4 .step_contents .recipe > li:nth-child(1) .recipe_txt .hidden_txt .text,
+.step4 .step_contents .recipe > li:nth-child(6) .recipe_txt .hidden_txt .text {
+    width: 276px;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt .hidden_txt button.disabled {
+    display: none;
+}
+
+.step4 .step_contents .recipe > li .recipe_txt .hidden_txt button:not(.disabled) + .text {
+    visibility: hidden;
+}
+
+/* step5 */
+.step5 .btnFinger {
+    width: 117px;
+    height: 117px;
+    border-radius: 117px;
+    background: url("../img/step5/btn_finger.png") no-repeat center;
+    position: absolute;
+}
+
+.step5 .btnFinger:not(.on) {
+    display: none;
+}
+
+.step5 .btnFinger:not(.active) {
+    pointer-events: none;
+}
+
+.step5 .btnFinger.clicking::after {
+    top: 13%;
+    left: 5%;
+}
+
+.step5 .btnFinger1 {
+    top: 637px;
+    left: 961px;
+}
+
+.step5 .btnFinger2 {
+    top: 505px;
+    left: 1277px;
+}
+
+.step5 .btnFinger3 {
+    top: 391px;
+    left: 1328px;
+}
+
+.step5 .btnFinger4 {
+    top: 282px;
+    left: 1277px;
+}
+
+.step5 .btnFinger5 {
+    top: 192px;
+    left: 1177px;
+}
+
+.step5 .btnKnife {
+    width: 410px;
+    height: 950px;
+    position: absolute;
+    top: 0;
+    left: 990px;
+}
+
+.step5 .btnKnife.clicking::after {
+    top: 25%;
+    left: 33%;
+}
+
+.step5 .btnKnife:not(.on) {
+    display: none;
+}
+
+.step5 .character2 .character_text {
+    background-image: url("../img/character_text_step5.png");
+}
+
+/* step6 */
+.step6 .contents .step_contents button {
+    position: absolute;
+}
+
+.step6 .contents .step_contents button:not(.on) {
+    display: none;
+}
+
+.step6 .contents .step_contents .btnCucumber {
+    width: 311px;
+    height: 223px;
+    top: 666px;
+    left: 365px;
+}
+
+.step6 .contents .step_contents .btnSalt {
+    width: 145px;
+    height: 104px;
+    top: 732px;
+    left: 1289px;
+}
+
+.step6 .contents .step_contents .btnSpoon {
+    width: 122px;
+    height: 657px;
+    top: 264px;
+    left: 1429px;
+}
+
+.step6 .contents .step_contents .img_container .img0001_3 {
+    width: 1100px;
+    left: 545px;
+    top: 59px;
+}
+
+.step6 .contents .step_contents .img_container .img0001_4 {
+    top: auto;
+    bottom: 0;
+}
+
+.step6 .draggable_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.step6 .draggable_wrap .draggable {
+    position: absolute;
+}
+
+.step6 .draggable_wrap .draggable1 {
+    width: 311px;
+    height: 223px;
+    top: 660px;
+    left: 365px;
+}
+
+.step6 .draggable_wrap .draggable2 {
+    width: 145px;
+    height: 104px;
+    top: 730px;
+    left: 1290px;
+}
+
+.step6 .droppable {
+    width: 740px;
+    height: 530px;
+    position: absolute;
+    top: 200px;
+    left: 590px;
+}
+
+/* step7 */
+.step7 button {
+    position: absolute;
+}
+
+.step7 button:not(.on) {
+    display: none;
+}
+
+.step7 .btnLine {
+    width: 60px;
+    height: 550px;
+    top: 200px;
+    left: 1155px;
+}
+
+.step7 .btnLine.btnLine2 {
+    height: 610px;
+    top: 174px;
+    left: 1127px;    
+}
+
+.step7 .btnLine.clicking::after {
+    top: 43%;
+    left: -35%;
+}
+
+.step7 .btnKnife {
+    width: 410px;
+    height: 950px;
+    position: absolute;
+    top: 0;
+    left: 990px;
+}
+
+.step7 .btnKnife.clicking::after {
+    top: 25%;
+    left: 33%;
+}
+
+.step7 .img0002_7.rotate {
+    transform: rotate(90deg) translateY(-21px) translateX(-54px);
+    transition: transform 1s ease;
+}
+
+/* step8 */
+.step8 .character2 {
+    left: auto;
+    right: 16px;
+}
+
+.step8 .character2 .character_img {
+    transform: scaleX(-1);
+}
+
+.step8 .character2 .character_text {
+    background-position: right center;
+    left: auto;
+    right: 196px;
+}
+
+.step8 .character2 .character_text.text1 {
+    background-image: url("../img/character_text_step8.png");
+}
+
+.step8 .character2 .character_text.text2 {
+    background-image: url("../img/character_text_step8_1.png");
+    height: 170px;
+}
+
+.step8 .contents .step_contents .img_container .img0001:not(.img0001_0) {
+    top: auto;
+    bottom: 0;
+}
+
+.step8 .contents .step_contents .img_container .img0002_1 {
+    width: 780px;
+    top: 58px;
+    left: 181px;
+}
+
+.step8 .contents .step_contents .img_container .img0002_2 {
+    width: 1100px;
+    top: 0px;
+    left: 181px;
+}
+
+.step8 .time_text {
+    width: 317px;
+    height: 235px;
+    background: url("../img/step8/0006.png") no-repeat top center;
+    color: #fff;
+    position: absolute;
+    top: 65px;
+    left: 582px;
+    padding-top: 115px;
+    text-align: center;
+    font-size: 56px;
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+
+.step8 .time_text:not(.on) {
+    display: none;
+}
+
+.step8 .draggable_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.step8 .draggable_wrap .draggable {
+    position: absolute;
+    top: 80px;
+}
+
+.step8 .draggable_wrap .draggable:not(.on) {
+    display: none;
+}
+
+.step8 .draggable_wrap .draggable1 {
+    left: 205px;
+    width: 353px;
+    height: 253px;
+}
+
+.step8 .draggable_wrap .draggable2 {
+    left: 960px;
+    width: 297px;
+    height: 285px;
+}
+
+.step8 .draggable_wrap .draggable3 {
+    top: 55px;
+    left: 1040px;
+    width: 174px;
+    height: 344px;
+}
+
+.step8 .droppable {
+    position: absolute;
+    top: 320px;
+    left: 540px;
+    width: 401px;
+    height: 234px;
+}
+
+.step8 .btnStove {
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    top: 715px;
+    left: 515px;
+    z-index: 10;
+}
+
+.step8 .btnStove:not(.on) {
+    display: none;
+}
+
+.step8 .btnStove.clicking::after {
+    top: 20%;
+    left: 15%;
+}
+
+/* step9 */
+.step9 .contents .step_contents .img_container .img0001 {
+    width: 1700px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    bottom: 0;
+}
+
+.step9 .draggable_wrap {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+
+.step9 .draggable_wrap .btnEgg,
+.step9 .draggable_wrap .draggable {
+    position: relative;
+    width: 138px;
+    height: 181px;
+}
+
+.step9 .draggable_wrap .btnEgg[data-click="2"],
+.step9 .draggable_wrap .btnEgg:not([data-click="2"]) + .draggable {
+    display: none;
+}
+
+.step9 .draggable_wrap .btnEgg > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+}
+
+.step9 .draggable_wrap .btnEgg.clicking::after {
+    top: 50%;
+    left: 40%;
+}
+
+.step9 .draggable_wrap .btnEgg:not([data-click="2"]) > img:nth-child(1),
+.step9 .draggable_wrap .btnEgg[data-click="1"] > img:nth-child(2) {
+    display: block;
+}
+
+.step9 .draggable.disabled {
+    visibility: hidden;
+}
+
+.step9 .droppable {
+    position: absolute;
+    top: 330px;
+    left: 585px;
+    width: 750px;
+    height: 540px;
+}
+
+.step9 .btnMasher {
+    position: absolute;
+    top: 320px;
+    left: 1305px;
+    width: 200px;
+    height: 550px;
+}
+
+.step9 .btnMasher.clicking::after {
+    top: 20%;
+    left: 32%;
+}
+
+.step9 .btnMasher:not(.on) {
+    display: none;
+}
+
+/* step10 */
+.step10 .contents .step_contents .img_container .img0001_6 {
+    top: auto;
+    bottom: 0;
+}
+
+.step10 .draggable_wrap {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 50px;
+}
+
+.step10 .draggable_wrap .draggable {
+    width: 238px;
+    height: 170px;
+}
+
+.step10 .draggable_wrap .draggable.disabled {
+    visibility: hidden;
+}
+
+.step10 .droppable {
+    position: absolute;
+    top: 330px;
+    left: 585px;
+    width: 750px;
+    height: 540px;
+}
+
+.step10 .contents .step_contents .btnSpoon {
+    position: absolute;
+    width: 122px;
+    height: 657px;
+    top: 260px;
+    left: 1429px;
+}
+
+.step10 .contents .step_contents .btnSpoon:not(.on) {
+    display: none;
+}
+
+/* step10 */
+.step11 .draggable_wrap {
+    position: absolute;
+    top: 50px;
+    left: 135px;
+}
+
+.step11 .bowl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 498px;
+    height: 359px;
+}
+
+.step11 .bowl > img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.step11 .bowl > img:not(.on) {
+    display: none;
+}
+
+.step11 .draggable {
+    position: relative;
+    width: 498px;
+    height: 359px;
+}
+
+.step11 .droppable {
+    position: absolute;
+    top: 225px;
+    left: 720px;
+    width: 485px;
+    height: 512px;
+}
+
+/* step12 */
+.step12 .contents .step_contents .img_container .img0003_4 {
+    display: block;
+    width: 1200px;
+    top: -154px;
+    left: 408px;
+}
+
+.step12 .draggable_wrap {
+    position: absolute;
+    top: 145px;
+    left: 275px;
+}
+
+.step12 .bowl {
+    position: absolute;
+    width: 498px;
+    height: 358px;
+    top: -115px;
+    left: -180px;
+}
+
+.step12 .draggable {
+    width: 338px;
+    height: 593px;
+}
+
+.step12 .bowl > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.step12 .bowl > img:not(.on){
+    display: none;
+}
+
+.step12 .bowl > img:nth-child(1) {
+    display: block;
+}
+
+.step12 .droppable {
+    position: absolute;
+    top: 222px;
+    left: 493px;
+    width: 980px;
+    height: 512px;
+}
+
+.step12 .btnBread {
+    position: absolute;
+    top: 222px;
+    left: 987px;
+    width: 485px;
+    height: 512px;
+}
+
+.step12 .btnBread:not(.on) {
+    display: none;
+}
+
+.step12 .draggable.on.guide.bottom.right:not(.disabled)::after {
+    top: 5%;
+    left: 5%;
+    animation: guideBottomRight11 1s linear infinite;
+}
+
+@keyframes guideBottomRight11 {
+    40% {
+        opacity: 1;
+    }
+    100% {
+        top: 25%;
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* step12 */
+.step13 {
+    background: url("../img/bg_finish.png") no-repeat center;
+}
+
+.step13 > .text {
+    position: absolute;
+    top: 94px;
+    left: 216px;
+    width: 896px;
+    height: 97px;
+    background: url("../img/title_step12.png") no-repeat center;
+}
+
+.step13 .character2 .character_text {
+    background-image: url("../img/character_text_step12.png");
+}
+
+.step13 .btnReset {
+    width: 416px;
+    height: 130px;
+    background: url("../img/btn_reset.png") no-repeat center;
+    position: absolute;
+    right: 25px;
+    bottom: 89px;
+}

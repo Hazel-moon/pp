@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+    <title>QR콘텐츠</title>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        your-component {
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <your-component></your-component>
+
+    <template id="class--content">
+        <div id="classStyudyContent">
+            <!-- Content -->
+            <div id="wrap" class="page">
+                <div id="container">
+                    <!-- 변경되는 컨텐츠 시작 -->
+                    <button class="btn_sound"></button>
+                    <!-- <button class="btn-reset">초기화</button> -->
+                    <div class="screen intro-screen active">
+                        <div class="start_page">
+                            <div class="start_btn_area">
+                                <h1 class="start_text">사례로 알아보는 지속가능한 농업</h1>
+                                <button class="btn-start">
+                                    시작하기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen screen-step1" data-screen="1">
+                        <div class="content-wrap">
+                            <div class="step_title">
+                                <span>사례를 통해 지속가능한 농업에 대해 알아볼까요?
+                                </span>
+                            </div>
+                            <div class="step_contents">
+                                <div class="ch-wrap">
+                                    <div class="result-img"></div>
+                                </div>
+                                <div class="con-title">어떤 식품을 이용하는 것이 환경에 더 바람직할까요? </div>
+
+                                <div class="lists">
+                                    <div class="list choice" data-idx="1">
+                                        <div class="img"></div>
+                                        <div class="text"><span>우리 집 근처</span>에서 생산된 식품</div>
+                                    </div>
+                                    <div class="list choice" data-idx="2">
+                                        <div class="img"></div>
+                                        <div class="text"><span>우리 집과 먼 지역</span>에서 생산된 식품</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="popup-wrap" style="display: none;">
+                            <div class="popup">
+                                <button class="btn-close-popup">닫기</button>
+
+                                <div class="popup-slide active" data-slide="1" data-start="0" data-end="16">
+                                    <div class="popup-content">
+                                        <p>우리 집 근처에서 생산된 식품을 이용하는 것이 환경에 더 바람직해요. <br />
+                                            왜냐하면 식품이 생산된 위치에서 소비자의 위치까지 이동하는 거리가 <br />
+                                            멀수록 탄소 배출량이 크기 때문이에요. <br />
+                                        </p>
+                                    </div>
+                                    <button class="btn-next-slide">다음</button>
+                                </div>
+                                <div class="popup-slide" data-slide="2" data-start="17" data-end="50">
+                                    <div class="popup-content">
+                                        <p>
+                                            푸드 마일리지란 식품이 생산된 위치에서<br> 소비자의 위치까지 이동하는 거리를 
+                                            계산한 수치에요.<br>푸드 마일리지 수치가 높을수록 탄소 배출량이 늘어나 
+                                            지구 온난화를 <br>가속화하기 때문에 수치가 낮은 식품을 이용하는 것이 바람직해요. <br>
+                                            이때 우리 집 근처에서 생산된 식품처럼 소비자가 거주하는 지역 또는 근처에서 <br>
+                                            생산된 식품을 로컬 푸드라고 불러요.</p>
+                                    </div>
+                                    <button class="btn-prev-slide">이전</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="screen screen-step2" data-screen="2">
+                        <div class="content-wrap">
+                            <div class="step_title">
+                                <span>사례를 통해 지속가능한 농업에 대해 알아볼까요?
+                                </span>
+                            </div>
+                            <div class="step_contents">
+                                <div class="ch-wrap">
+                                    <div class="result-img"></div>
+                                </div>
+                                <div class="con-title">두 사진 중정밀 농업을 하고 있는 사진은 무엇일까요? </div>
+
+                                <div class="lists">
+                                    <div class="list choice" data-idx="1">
+                                        <div class="img img2"></div>
+                                    </div>
+                                    <div class="list choice" data-idx="2">
+                                        <div class="img img2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="popup-wrap" style="display: none;">
+                            <div class="popup">
+                                <button class="btn-close-popup">닫기</button>
+
+                                <div class="popup-slide active" data-slide="1" data-start="0" data-end="22">
+                                    <div class="popup-content">
+                                        <p>드론을 이용해 농사를 짓고 있는 모습이 정밀 농업이에요.<br />
+                                            정밀 농업이란 작물 재배에 영향을 미치는 요인에 관한 정보를 수집하고<br />
+                                            그에 대한 정밀 분석을 통하여 불필요한 농자재 및 작업을 최소화하면서<br />
+                                            작물 생산 관리의 효율을 최적화하는 농업이에요.</p>
+                                    </div>
+                                    <button class="btn-next-slide">다음</button>
+                                </div>
+                                <div class="popup-slide" data-slide="2" data-start="22" data-end="33">
+                                    <div class="popup-content">
+                                        <p>
+                                            보통 드론을 이용해 토양과 식물의 상태를 파악하고 <br />
+                                            꼭 필요한 양만큼의 물, 비료, 농약을 사용해요.
+                                        </p>
+                                    </div>
+                                    <button class="btn-prev-slide">이전</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="screen screen-step3" data-screen="3">
+                        <div class="content-wrap">
+                            <div class="step_title">
+                                <span>사례를 통해 지속가능한 농업에 대해 알아볼까요?
+                                </span>
+                            </div>
+                            <div class="step_contents">
+                                <div class="ch-wrap">
+                                    <div class="result-img"></div>
+                                </div>
+                                <div class="con-title">두 사진 중 수직 농업으로 스마트 팜을 운영하고 있는 사진은 무엇일까요? </div>
+
+                                <div class="lists">
+                                    <div class="list choice" data-idx="1">
+                                        <div class="img img2"></div>
+                                    </div>
+                                    <div class="list choice" data-idx="2">
+                                        <div class="img img2"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="popup-wrap" style="display: none;">
+                            <div class="popup">
+                                <button class="btn-close-popup">닫기</button>
+
+                                <div class="popup-slide active" data-slide="1" data-start="0" data-end="23">
+                                    <div class="popup-content">
+                                        <p>수직 농장은 선반을 수직으로 쌓아 올려 흙을 사용하지 않고 <br />
+                                            물과 영양분만 사용하여 농작물을 재배하는 친환경적인 아파트형 농장이에요. <br />
+                                            농약과 비료를 사용하지 않아 토양 오염을 줄이고, 재생 에너지를 사용하여 <br />
+                                            에너지 소비량을 줄여 환경에 도움을 주어요.</p>
+                                    </div>
+                                    <!-- <button class="btn-reset">처음으로</button> -->
+                                    <button class="btn-next-slide">다음</button>
+                                </div>
+                                <div class="popup-slide" data-slide="2" data-start="24" data-end="38">
+                                    <div class="popup-content">
+                                        <p>
+                                            스마트 팜은 정보 기기로 환경을 원격으로 제어하고 <br />
+                                            인공지능이 식물에게 적합한 환경을 만들어 주어 <br />
+                                            계절이나 기후에 상관없이 농산물을 생산할 수 있어요.
+                                        </p>
+                                    </div>
+                                    <button class="btn-reset">처음으로</button>
+                                    <button class="btn-prev-slide">이전</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 변경되는 컨텐츠 끝 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 복수개의 스타일 가능 -->
+        <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+        <!-- 복수개의 스크립트 파일 가능 -->
+        <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="./common/js/base.js"></script>
+        <script type="text/javascript" src="./common/js/view.js"></script>
+        <script type="text/javascript" src="./common/js/lib.js"></script>
+        <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+        <script type="text/javascript" src="./common/js/common.js"></script>
+        <script type="text/javascript" src="./js/sound.js"></script>
+        <script type="text/javascript" src="./js/drag.js"></script>
+        <script type="text/javascript" src="./js/scripts.js"></script>
+    </template>
+
+    <script type="module" src="./common/js/shadow-dom-your.js"></script>
+    <!-- Page js -->
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>삼성 갤럭시 언팩 프로젝트</title>
+  <style>
+    :root {
+      --bg: #05060f;
+      --card: #12142b;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --ink: #f2f3fa;
+      --sub: #9aa0c0;
+      --accent: #4c6fff;
+      --accent-2: #7c3aed;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% -10%, rgba(76, 111, 255, 0.25), transparent),
+        radial-gradient(1000px 500px at 100% 0%, rgba(124, 58, 237, 0.2), transparent),
+        var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 56px 24px 80px;
+    }
+    header { max-width: 1080px; margin: 0 auto 48px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      border: 1px solid rgba(76, 111, 255, 0.4);
+      border-radius: 999px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 2.1rem; margin-bottom: 10px; letter-spacing: -0.01em; }
+    header p { color: var(--sub); line-height: 1.7; max-width: 640px; }
+
+    .section-title {
+      max-width: 1080px;
+      margin: 48px auto 18px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .section-title small { font-size: 0.82rem; font-weight: 500; color: var(--sub); }
+
+    .grid {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    a.card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+    a.card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(76, 111, 255, 0.5);
+      background: #171a36;
+    }
+    .card .emoji { font-size: 1.6rem; }
+    .card h2 { font-size: 1rem; line-height: 1.4; }
+    .card p { font-size: 0.83rem; color: var(--sub); line-height: 1.55; }
+    .card .tags { margin-top: auto; display: flex; flex-wrap: wrap; gap: 6px; }
+    .card .tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(76, 111, 255, 0.12);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+    .card .tag.alt { color: var(--accent-2); background: rgba(124, 58, 237, 0.14); }
+
+    footer {
+      max-width: 1080px;
+      margin: 56px auto 0;
+      color: var(--sub);
+      font-size: 0.82rem;
+      line-height: 1.7;
+      border-top: 1px solid var(--card-border);
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="eyebrow">FAVE × SAMSUNG OFFICIAL PARTNER</span>
+    <h1>삼성 갤럭시 언팩 프로젝트</h1>
+    <p>
+      삼성전자 공식 파트너사 소속으로 참여한 Galaxy 시리즈 언팩(Unpacked) 글로벌 런칭 사이트와
+      삼성 반도체 지속가능경영 사이트 작업 모음입니다. 실제 배포 링크는 삼성 내부/파트너 환경에
+      귀속되어 있어 개별 링크는 우선 <code>#</code>로 표시해두었습니다.
+    </p>
+  </header>
+
+  <h2 class="section-title">🚀 2022<small>Galaxy S22 시리즈 · 반도체 지속가능경영</small></h2>
+  <main class="grid">
+    <a class="card" href="#">
+      <span class="emoji">♻️</span>
+      <h2>Samsung Semiconductor CN &amp; JP</h2>
+      <p>삼성전자 반도체 중국·일본 사이트 지속가능경영(Sustainability) 프론트엔드 UX 구현</p>
+      <span class="tags"><span class="tag">AEM</span><span class="tag alt">P6 Migration</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">📱</span>
+      <h2>Galaxy S22 Ultra</h2>
+      <p>공식 Galaxy 사이트 언팩 프로젝트 — Samsung.com 80개국 이상 동시 릴리즈 빌드</p>
+      <span class="tags"><span class="tag">Unpacked</span><span class="tag alt">Global 80+</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">📱</span>
+      <h2>Galaxy S22 | S22+</h2>
+      <p>공식 Galaxy 사이트 언팩 프로젝트 — Samsung.com 80개국 이상 동시 릴리즈 빌드</p>
+      <span class="tags"><span class="tag">Unpacked</span><span class="tag alt">Global 80+</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">🖥️</span>
+      <h2>Galaxy S22 Series</h2>
+      <p>"온라인 체험 쇼룸(Online Experiencing Showroom)" 구축</p>
+      <span class="tags"><span class="tag">Showroom</span></span>
+    </a>
+  </main>
+
+  <h2 class="section-title">🌟 2021<small>Galaxy S21 · Z Fold3 · Z Flip3 · 반도체 지속가능경영</small></h2>
+  <main class="grid">
+    <a class="card" href="#">
+      <span class="emoji">♻️</span>
+      <h2>Samsung Semiconductor KR &amp; EN</h2>
+      <p>삼성전자 반도체 국문·영문 사이트 지속가능경영 프론트엔드 UX 구현</p>
+      <span class="tags"><span class="tag">AEM</span><span class="tag alt">P6 Migration</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">🪭</span>
+      <h2>Galaxy Z Fold3</h2>
+      <p>공식 Galaxy 사이트 언팩 프로젝트 — Samsung.com 80개국 이상 동시 릴리즈, WebGL 인터랙티브 구현</p>
+      <span class="tags"><span class="tag">Unpacked</span><span class="tag alt">WebGL</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">📲</span>
+      <h2>Galaxy Z Flip3</h2>
+      <p>공식 Galaxy 사이트 언팩 프로젝트 — Samsung.com 80개국 이상 동시 릴리즈, WebGL 인터랙티브 구현</p>
+      <span class="tags"><span class="tag">Unpacked</span><span class="tag alt">WebGL</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">🖥️</span>
+      <h2>Galaxy S21</h2>
+      <p>"온라인 체험 쇼룸(Online Experiencing Showroom)" 구축</p>
+      <span class="tags"><span class="tag">Showroom</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">📘</span>
+      <h2>Why Galaxy</h2>
+      <p>삼성 "Why Galaxy" 글로벌 스탠다드 가이드(Global Standard Guide) 사이트 구축</p>
+      <span class="tags"><span class="tag">Standard Guide</span></span>
+    </a>
+    <a class="card" href="#">
+      <span class="emoji">📱</span>
+      <h2>Galaxy S21</h2>
+      <p>공식 Galaxy 사이트 언팩 프로젝트 — Samsung.com 80개국 이상 동시 릴리즈 빌드</p>
+      <span class="tags"><span class="tag">Unpacked</span><span class="tag alt">Global 80+</span></span>
+    </a>
+  </main>
+
+  <footer>
+    ※ 삼성전자 공식 파트너사(FAVE) 소속으로 참여한 프로젝트입니다. 실 배포 사이트는 삼성 내부 정책상
+    별도 공개 링크를 제공하지 않아, 프로젝트별 상세 링크는 추후 스크린샷/영상 자료로 대체할 예정입니다.
+  </footer>
+</body>
+</html>

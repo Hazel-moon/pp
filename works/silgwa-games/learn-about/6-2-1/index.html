@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+  <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+  <title>QR콘텐츠</title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    your-component {
+      display: block;
+      position: relative;
+      width: 80%;
+      height: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <your-component></your-component>
+
+  <template id="class--content">
+    <div id="classStyudyContent">
+      <!-- Content -->
+      <div id="wrap" class="page">
+        <div id="container">
+          <!-- 변경되는 컨텐츠 시작 -->
+          <button class="btn_sound"></button>
+
+          <!-- 시작 페이지 -->
+          <div id="start_page" class="start_page">
+            <div class="start_btn_area">
+              <h1 class="start_text">적정 기술로 알아보는 나눔과 공유의 가치</h1>
+              <button class="start_btn">
+                시작하기</button>
+            </div>
+
+          </div>
+
+          <!-- 활동 페이지 -->
+          <div class="action_page action_page01">
+
+            <div class="action_title">
+              <span>적정 기술에 대해 알아볼까요?
+              </span>
+            </div>
+            <div class="action_contents">
+              <div class="finger_ani"></div>
+              <div class="act_tit">
+                <img src="./img/act_tit.png" alt="적정 기술">
+              </div>
+              <div class="act_cont">
+                <p>
+                  기술의 혜택에서 소외된 사람들이 <span class="post">
+                    <span class="click-area post-1"><img src="./img/postit1.png" alt=""></span> 적은 비용</span>으로
+                </p>
+                <p>
+                  <span class="post">
+                    <span class="click-area post-2"><img src="./img/postit2.png" alt=""></span>기술의 혜택</span>을 쉽게 누릴 수
+                  있도록 해당 지역의
+                </p>
+                <p>
+                  환경이나 사회, 경제 측면을 고려하여
+                  <span class="post post-3"><span class="click-area post-3"><img src="./img/postit3.png"
+                        alt=""></span>발명</span>한 것
+                </p>
+              </div>
+              <div class="action_chartr_wrap">
+                <div class="action_chartr_inner">
+                  <div class="action_chartr">
+                    <img src="./img/action_chartr.png" alt="">
+                  </div>
+                  <div class="action_chartr_txt">
+                    <p class="action_chartr_cont">교과서에서 소개한 <br />
+                      적정 기술 외에도 <br />
+                      여러 적정 기술이 있어요!</p>
+                    <img src="./img/action_chartr_txt.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 활동2 페이지 -->
+          <div class="action_page action_page02 off">
+
+            <div class="action_title">
+              <span>적정 기술에 대해 알아볼까요?</span>
+            </div>
+            <div class="action_contents">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="click_img_box">
+                  <img src="./img/click-img.png" alt="">
+                  <div class="click_box_txt">
+                    <img src="./img/imgboxtit1.png" alt="" class="box_txt1">
+                    <img src="./img/imgboxtit2.png" alt="" class="box_txt2">
+                    <img src="./img/imgboxtit3.png" alt="" class="box_txt3">
+                  </div>
+                </div>
+                <div class="click_cont_box">
+                  <div class="click_cont_img">
+                    <img src="./img/bigpostit.png" alt="">
+                  </div>
+                  <div class="click_cont_txt">
+                    <div class="click_cont_txt_inner">
+                      <p>
+                        큰 항아리 안에 작은 항아리를 넣고,
+                      </p>
+                      <p>
+                        그 사이에 젖은 모래를 채우면 물이
+                      </p>
+                      <p>
+                        증발하면서 온도가 낮아져요. 그래서
+                      </p>
+                      <p>
+                        더운 지역에서도 음식을 신선하게
+                      </p>
+                      <p>
+                        보관할 수 있지요. 전기가 필요 없는
+                      </p>
+                      <p>
+                        친환경 냉장고예요.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nextslide_btn">
+                <button>
+                  <img src="./img/next-slide.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 활동페이지 3 -->
+          <div class="action_page action_page03 off">
+
+            <div class="action_title">
+              <span>적정 기술에 대해 알아볼까요?</span>
+            </div>
+            <div class="action_contents">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit2.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="click_img_box">
+                  <img src="./img/click-img2.png" alt="">
+                  <div class="click_box_txt">
+                    <img src="./img/imgbox2tit1.png" alt="" class="box_txt1">
+                    <img src="./img/imgbox2tit2.png" alt="" class="box_txt2">
+                    <img src="./img/imgbox2tit3.png" alt="" class="box_txt3">
+                    <img src="./img/imgbox2tit4.png" alt="" class="box_txt4">
+                  </div>
+                </div>
+                <div class="click_cont_box">
+                  <div class="click_cont_img">
+                    <img src="./img/bigpostit.png" alt="">
+                  </div>
+                  <div class="click_cont_txt">
+                    <div class="click_cont_txt_inner">
+                      혈액을 분리해서 질병을 진단할 수
+                      있게 해 주는 의료 장치예요. 양쪽의
+                      막대를 잡고 줄을 당겨서 돌리면, 종이
+                      판으로 만든 원반이 회전하면서 혈액
+                      속의 성분이 분리돼요. 의료 장비가
+                      부족한 지역에서 활용할 수 있어요.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nextslide_btn">
+                <button>
+                  <img src="./img/next-slide.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 활동페이지 4 -->
+          <div class="action_page action_page04 off">
+
+            <div class="action_title">
+              <span>적정 기술에 대해 알아볼까요?</span>
+            </div>
+            <div class="action_contents">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit3.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="click_img_box">
+                  <img src="./img/click-img3.png" alt="">
+                  <div class="click_box_txt">
+                    <img src="./img/imgbox3tit1.png" alt="" class="box_txt1">
+                  </div>
+                </div>
+                <div class="click_cont_box">
+                  <div class="click_cont_img">
+                    <img src="./img/bigpostit.png" alt="">
+                  </div>
+                  <div class="click_cont_txt">
+                    <div class="click_cont_txt_inner">
+                      <p>
+                        오염된 물을 넣고 햇빛을 쬐면 물이
+                      </p>
+                      <p>
+                        증발되어 수증기가 되었다가 깨끗한
+                      </p>
+                      <p>
+                        물방울로 변해요. 깨끗한 물은 윗부
+                      </p>
+
+                      <p>
+                        분에 모이고 오염 물질은 바닥으로
+                      </p>
+                      <p>
+                        가라앉지요. 깨끗한 물을 구하기 힘든
+                      </p>
+                      <p>
+                        지역에서 활용해요.
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nextslide_btn">
+                <button>
+                  <img src="./img/next-slide.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 활동페이지 5-->
+          <div class="action_page action_page05 off">
+
+            <div class="action_title">
+              <span>적정 기술에 대해 알아볼까요?</span>
+            </div>
+            <div class="action_contents">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit4.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="click_img_box">
+                  <img src="./img/click-img4.png" alt="">
+                  <div class="click_box_txt">
+                    <img src="./img/imgbox4tit1.png" alt="" class="box_txt1">
+                    <img src="./img/imgbox4tit2.png" alt="" class="box_txt2">
+                  </div>
+                </div>
+                <div class="click_cont_box">
+                  <div class="click_cont_img">
+                    <img src="./img/bigpostit.png" alt="">
+                  </div>
+                  <div class="click_cont_txt">
+                    <div class="click_cont_txt_inner">
+                      축구공 모양의 발전기를 발로 차면 공 안에서 전기 에너지가 만들어져요.
+                      공을 램프에 연결하면 밤에도 불을 밝힐 수 있지요. 전기의 혜택을 받기 어려운 지역에 사는 사람들도 <br />
+                      전기를 쓸 수 있게 해 주어요.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="complete_obj">
+                <button class="final_btn off">
+                  <img src="./img/done-btn.png" alt="">
+                </button>
+                <div class="final_cha02"></div>
+                <button class="home_btn hide">
+                  <img src="./img/home_btn.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="complete_bg">
+              <img src="./img/complete_bg.gif" alt="팡파레 GIF" />
+              <div class="last-chartrt">
+                <div class="action_chartr_inner">
+                  <div class="action_chartr">
+                    <img src="./img/last-chartrss.png" alt="">
+                  </div>
+                  <div class="action_chartr_txt">
+                    <p class="action_chartr_cont">나눔과 공유의 가치를<br /> 실현하는 적정 기술을<br /> 살펴보았어요!</p>
+                    <img src="./img/bubble-last.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="complete_stamp"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 복수개의 스타일 가능 -->
+    <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+    <!-- 복수개의 스크립트 파일 가능 -->
+    <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="./common/js/base.js"></script>
+    <script type="text/javascript" src="./common/js/view.js"></script>
+    <script type="text/javascript" src="./common/js/lib.js"></script>
+    <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+    <script type="text/javascript" src="./js/sound.js"></script>
+    <script type="text/javascript" src="./js/drag.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </template>
+
+  <script type="module" src="./common/js/shadow-dom-your.js"></script>
+  <!-- Page js -->
+</body>
+
+</html>

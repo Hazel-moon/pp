@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"
+        />
+        <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+        <title>QR콘텐츠</title>
+
+        <style>
+            html,
+            body {
+                padding: 0;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            your-component {
+                display: block;
+                position: relative;
+                width: 80%;
+                height: 80%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <your-component></your-component>
+
+        <template id="class--content">
+            <div id="classStyudyContent">
+                <!-- Content -->
+                <div id="wrap" class="page">
+                    <div id="container">
+                        <!-- 변경되는 컨텐츠 시작 -->
+                        <button class="btn_sound"></button>
+                        <div class="screen intro-screen active" data-page="1">
+                            <div class="start_page">
+                                <div class="start_btn_area">
+                                    <button class="start-btn">시작하기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step1" data-page="2"></div>
+
+                        <div class="screen screen-step2" data-page="3">
+                            <div class="step_contents">
+                                <div class="slide-wrap">
+                                    <div class="slides">
+                                        <div class="slide slide1" data-slide="1">
+                                            <div class="stemp"></div>
+                                            <div class="ch-wrap">
+                                                <div class="ch"><img src="./img/ch.png" alt="캐릭터" /></div>
+                                                <div class="bubble">
+                                                    세탁소에서 일을 하기 전 기초 바느질을 배워 보아요. <br />
+                                                    먼저 시침질을 배워 볼까요? <br />
+                                                    순서대로 숫자를 눌러 시침질을 완성해 보아요.
+                                                </div>
+                                            </div>
+                                            <div class="sub-title"><img src="./img/title1.png" alt="시침질" /></div>
+                                            <div class="sub-img"><img src="./img/eximg1.png" alt="시침질" /></div>
+                                            <div class="sewing-wrap">
+                                                <div class="sewing-inner">
+                                                    <img src="./img/fabric.png" alt="섬유" class="fabric" />
+                                                    <img src="./img/sewing1/1/1.png" alt="스템프" class="fabric-gif" />
+                                                    <div class="click-area">
+                                                        <div class="sewing-click sewing-click1 arrow-up" data-num="1">
+                                                            <img src="./img/1.png" alt="순서1" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click2 arrow-down" data-num="2">
+                                                            <img src="./img/2.png" alt="순서2" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click3 arrow-up" data-num="3">
+                                                            <img src="./img/3.png" alt="순서3" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click4 arrow-down" data-num="4">
+                                                            <img src="./img/4.png" alt="순서4" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click5 arrow-up" data-num="5">
+                                                            <img src="./img/5.png" alt="순서5" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide slide2" data-slide="2">
+                                            <div class="stemp"></div>
+                                            <div class="ch-wrap">
+                                                <div class="ch"><img src="./img/ch.png" alt="캐릭터" /></div>
+                                                <div class="bubble">
+                                                    다음으로 기초 바느질 중 홈질을 배워 볼까요? <br />
+                                                    순서대로 숫자를 눌러 홈질을 완성해 보아요.
+                                                </div>
+                                            </div>
+                                            <div class="sub-title"><img src="./img/title2.png" alt="홈질" /></div>
+                                            <div class="sub-img"><img src="./img/eximg2.png" alt="홈질" /></div>
+                                            <div class="sewing-wrap">
+                                                <div class="sewing-inner">
+                                                    <img src="./img/fabric.png" alt="섬유" class="fabric" />
+                                                    <img src="./img/sewing2/1/1.png" alt="스템프" class="fabric-gif" />
+                                                    <div class="click-area">
+                                                        <div class="sewing-click sewing-click1 arrow-up" data-num="1">
+                                                            <img src="./img/1.png" alt="순서1" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click2 arrow-down" data-num="2">
+                                                            <img src="./img/2.png" alt="순서2" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click3 arrow-up" data-num="3">
+                                                            <img src="./img/3.png" alt="순서3" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click4 arrow-down" data-num="4">
+                                                            <img src="./img/4.png" alt="순서4" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click5 arrow-up" data-num="5">
+                                                            <img src="./img/5.png" alt="순서5" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click6 arrow-down" data-num="6">
+                                                            <img src="./img/6.png" alt="순서6" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click7 arrow-up" data-num="7">
+                                                            <img src="./img/7.png" alt="순서7" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide slide3" data-slide="3">
+                                            <div class="stemp"></div>
+                                            <div class="ch-wrap">
+                                                <div class="ch"><img src="./img/ch.png" alt="캐릭터" /></div>
+                                                <div class="bubble">
+                                                    마지막으로 기초 바느질 중 박음질을 배워 볼까요? <br />
+                                                    순서대로 숫자를 눌러 박음질을 완성해 보아요.
+                                                </div>
+                                            </div>
+                                            <div class="sub-title"><img src="./img/title3.png" alt="박음질질" /></div>
+                                            <div class="sub-img"><img src="./img/eximg3.png" alt="박음질질" /></div>
+                                            <div class="next-btn"></div>
+                                            <div class="sewing-wrap">
+                                                <div class="sewing-inner">
+                                                    <img src="./img/fabric.png" alt="섬유" class="fabric" />
+                                                    <img src="./img/sewing3/1/1.png" alt="스템프" class="fabric-gif" />
+                                                    <div class="click-area">
+                                                        <div class="sewing-click sewing-click1 arrow-up" data-num="1">
+                                                            <img src="./img/1.png" alt="순서1" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click2 arrow-down" data-num="2">
+                                                            <img src="./img/2.png" alt="순서2" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click3 arrow-up" data-num="3">
+                                                            <img src="./img/3.png" alt="순서3" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click4 arrow-down" data-num="4">
+                                                            <img src="./img/4.png" alt="순서4" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click5 arrow-up" data-num="5">
+                                                            <img src="./img/5.png" alt="순서5" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click6 arrow-down" data-num="6">
+                                                            <img src="./img/6.png" alt="순서6" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click7 arrow-up" data-num="7">
+                                                            <img src="./img/7.png" alt="순서7" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click8 arrow-down" data-num="8">
+                                                            <img src="./img/8.png" alt="순서8" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click9 arrow-up" data-num="9">
+                                                            <img src="./img/9.png" alt="순서9" />
+                                                        </div>
+                                                        <div
+                                                            class="sewing-click sewing-click10 arrow-down"
+                                                            data-num="10"
+                                                        >
+                                                            <img src="./img/10.png" alt="순서10" />
+                                                        </div>
+                                                        <div class="sewing-click sewing-click11 arrow-up" data-num="11">
+                                                            <img src="./img/11.png" alt="순서11" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide-controls">
+                                        <div class="slide-btn slide-prev"></div>
+                                        <div class="slide-btn slide-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- page-step2 -->
+                        <div class="screen screen-step3" data-page="4">
+                            <div class="laundry-wrap">
+                                <div class="laundry-inner">
+                                    <div class="laundry">
+                                        <div class="bubble">
+                                            안녕하세요. <br />
+                                            그리니네 세탁소입니다. <br />
+                                            무엇을 도와드릴까요?
+                                        </div>
+                                        <img src="./img/build.png" alt="그리니네 세탁소" />
+                                    </div>
+                                    <div class="laundry-btns">
+                                        <button class="laundry-btn" data-num="1">
+                                            <img src="./img/button1.png" alt="홈질로 찢어진 옷 수선하기" />
+                                        </button>
+                                        <button class="laundry-btn" data-num="2">
+                                            <img
+                                                src="./img/button2.png"
+                                                alt="박음질로 구멍 난 바지 주머니 수수선하기"
+                                            />
+                                        </button>
+                                        <button class="laundry-btn" data-num="3">
+                                            <img src="./img/button3.png" alt="단추를 달아 수선하기" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step4" data-page="5">
+                            <div class="sub-title"><img src="./img/page1-title.png" alt="홈질" /></div>
+                            <button class="btn-back"><img src="./img/btn_back.png" alt="뒤로가기" /></button>
+
+                            <div class="page-wrap">
+                                <div class="page-inner">
+                                    <div class="page-sewing-img">
+                                        <img src="./img/page1-co.png" alt="홈질" class="page-sewing-img1" />
+                                        <img src="./img/page1-co2.png" alt="홈질" class="page-sewing-img2" />
+                                    </div>
+                                    <div class="page-sewing">
+                                        <div class="sewing">
+                                            <img src="./img/page1-fabric.png" alt="홈질" class="sewing-img" />
+                                            <img src="./img/sewing4/1.gif" alt="홈질" class="sewing-img-gif" />
+                                            <div class="sewing-clicks">
+                                                <div class="sewing-click sewing-click1 arrow-up" data-num="1"></div>
+                                                <div class="sewing-click sewing-click2 arrow-down" data-num="2"></div>
+                                                <div class="sewing-click sewing-click3 arrow-up" data-num="3"></div>
+                                                <div class="sewing-click sewing-click4 arrow-down" data-num="4"></div>
+                                                <div class="sewing-click sewing-click5 arrow-up" data-num="5"></div>
+                                                <div class="sewing-click sewing-click6 arrow-down" data-num="6"></div>
+                                                <div class="sewing-click sewing-click7 arrow-up" data-num="7"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ch-wrap">
+                                <div class="ch"><img src="./img/ch.png" alt="캐릭터" /></div>
+                                <div class="bubble bubble3">
+                                    손님이 찢어진 옷 수선을 요청했어요. <br />
+                                    홈질로 찢어진 옷을 수선해 볼까요? <br />
+                                    바느질 순서에 맞춰 화살표를 클릭해 보아요.
+                                </div>
+                                <div class="bubble bubble-1 bubble4">찢어진 옷 수선하기 성공!</div>
+                            </div>
+                        </div>
+                        <div class="screen screen-step5" data-page="6">
+                            <div class="sub-title"><img src="./img/page2-title.png" alt="박음질" /></div>
+                            <button class="btn-back"><img src="./img/btn_back.png" alt="뒤로가기" /></button>
+
+                            <div class="page-wrap">
+                                <div class="page-inner">
+                                    <div class="page-sewing-img">
+                                        <img src="./img/page2-co.png" alt="홈질" class="page-sewing-img1" />
+                                        <img src="./img/page2-co2.png" alt="홈질" class="page-sewing-img2" />
+                                    </div>
+                                    <div class="page-sewing">
+                                        <div class="sewing">
+                                            <img src="./img/page2-fabric.png" alt="홈질" class="sewing-img" />
+                                            <img src="./img/sewing5/1.gif" alt="홈질" class="sewing-img-gif" />
+                                            <div class="sewing-clicks sewing-clicks2">
+                                                <div class="sewing-click sewing-click1 arrow-up" data-num="1"></div>
+                                                <div class="sewing-click sewing-click2 arrow-down" data-num="2"></div>
+                                                <div class="sewing-click sewing-click3 arrow-up" data-num="3"></div>
+                                                <div class="sewing-click sewing-click4 arrow-down" data-num="4"></div>
+                                                <div class="sewing-click sewing-click5 arrow-up" data-num="5"></div>
+                                                <div class="sewing-click sewing-click6 arrow-down" data-num="6"></div>
+                                                <div class="sewing-click sewing-click7 arrow-up" data-num="7"></div>
+                                                <div class="sewing-click sewing-click8 arrow-down" data-num="8"></div>
+                                                <div class="sewing-click sewing-click9 arrow-up" data-num="9"></div>
+                                                <div class="sewing-click sewing-click10 arrow-down" data-num="10"></div>
+                                                <div class="sewing-click sewing-click11 arrow-up" data-num="11"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ch-wrap">
+                                <div class="ch"><img src="./img/ch.png" alt="캐릭터" /></div>
+                                <div class="bubble bubble3">
+                                    손님이 구멍 난 바지 주머니 수선을 요청했어요. <br />
+                                    박음질로 구멍난 바지 주머니를 수선해 볼까요? <br />
+                                    바느질 순서에 맞춰 화살표를 클릭해 보아요.
+                                </div>
+                                <div class="bubble bubble-1 bubble5">구멍 난 바지 주머니 수선하기 성공!</div>
+                            </div>
+                        </div>
+                        <div class="screen screen-step6" data-page="7">
+                            <div class="sub-title"><img src="./img/page3-title.png" alt="박음질" /></div>
+                            <button class="btn-back"><img src="./img/btn_back.png" alt="뒤로가기" /></button>
+
+                            <div class="page-wrap">
+                                <div class="page-inner">
+                                    <div class="page-sewing-img">
+                                        <img src="./img/page3-co.png" alt="홈질" class="page-sewing-img1" />
+                                        <img src="./img/page3-co2.png" alt="홈질" class="page-sewing-img2" />
+                                    </div>
+                                    <div class="page-sewing">
+                                        <div class="sewing">
+                                            <img src="./img/page3-fabric.png" alt="홈질" class="sewing-img" />
+                                            <img src="./img/sewing6/1.gif" alt="홈질" class="sewing-img-gif" />
+                                            <div class="sewing-clicks sewing-clicks3">
+                                                <div class="sewing-click sewing-click1" data-num="1"></div>
+                                                <div class="sewing-click sewing-click2" data-num="2"></div>
+                                                <div class="sewing-click sewing-click3" data-num="3"></div>
+                                                <div class="sewing-click sewing-click4" data-num="4"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ch-wrap">
+                                <div class="ch"><img src="./img/ch.png" alt="캐릭터" /></div>
+                                <div class="bubble bubble3">
+                                    손님이 떨어진 단추 수선을 요청했어요. <br />
+                                    떨어진 단추를 달아 옷을 수선해 볼까요? <br />
+                                    바느질 순서에 맞춰 화살표를 클릭해 보아요.
+                                </div>
+                                <div class="bubble bubble-1 bubble6">떨어진 단추를 달아 수선하기 성공!</div>
+                            </div>
+                        </div>
+                        <!-- 변경되는 컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 복수개의 스타일 가능 -->
+            <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+            <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+            <!-- 복수개의 스크립트 파일 가능 -->
+            <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+            <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+            <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+            <script type="text/javascript" src="./common/js/html2canvas.min.js"></script>
+            <script type="text/javascript" src="./common/js/base.js"></script>
+            <script type="text/javascript" src="./common/js/view.js"></script>
+            <script type="text/javascript" src="./common/js/lib.js"></script>
+            <script type="text/javascript" src="./common/js/common.js"></script>
+            <script type="text/javascript" src="./js/sound.js"></script>
+            <script type="text/javascript" src="./js/scripts.js"></script>
+        </template>
+
+        <script type="module" src="./common/js/shadow-dom-your.js"></script>
+        <!-- Page js -->
+    </body>
+</html>
+
+<!-- 0430 -->

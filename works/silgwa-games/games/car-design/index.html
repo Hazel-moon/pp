@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+		<title></title>
+		<link rel="stylesheet" href="./src/styles/font.css" />
+		<style>
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+				height: 100%;
+				overflow: hidden;
+			}
+			your-component,
+			your-modal {
+				display: block;
+				position: relative;
+			}
+		</style>
+
+		<script type="module" src="./src/index.js"></script>
+	</head>
+
+	<body>
+		<your-component style="visibility: hidden"></your-component>
+		<template id="class--content">
+			<main></main>
+			<article id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description"></article>
+			<div id="modal-container" role="presentation"></div>
+			<link rel="stylesheet" type="text/css" href="./src/styles/style.css" />
+		</template>
+	</body>
+</html>

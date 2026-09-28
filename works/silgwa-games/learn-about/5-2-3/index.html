@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+    <title>QR콘텐츠</title>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        your-component {
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <your-component></your-component>
+
+    <template id="class--content">
+        <div id="classStyudyContent">
+            <!-- Content -->
+            <div id="wrap" class="page">
+                <div id="container">
+                    <!-- 변경되는 컨텐츠 시작 -->
+                    <button class="btn_sound"></button>
+                    <div class="screen intro-screen active">
+                        <div class="start_page">
+                            <div class="start_btn_area">
+                                <h1 class="start_text">
+                                    <span>건강하고 적절한
+                                    </span>옷차림하기
+                                </h1>
+                                <button class="start-btn blink">
+                                    시작하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="screen screen-step2">
+                        <div class="step_contents">
+                            <div class="slide-wrap">
+                                <div class="slides">
+                                    <div class="slide slide1">
+                                        <div class="slide-cont">
+                                            <img src="./img/cha-1.png" alt="" class="cha">
+                                            <div class="chat-text cha-txt-01">
+                                                <img src="./img/bubble1.png" alt="">
+                                                <p>
+                                                    건강하고 적절한 옷차림은 때, 장소, 상황에 따라 건강, 안전, 위생, 예절을 고려하여
+                                                    옷을 입는 것을 말해요. 건강하고 적절한 옷차림 놀이를 해 볼까요?
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide slide2">
+                                        <div class="slide-select-box">
+                                            <div class="slide-select-box-inner">
+                                                <ul class="slide-select">
+                                                    <li class="slide-slect-item select-item01">
+                                                        <input type="radio" name="quiz" id="item01">
+                                                        <label for="item01">
+                                                            <span class="blind">봄, 가을 현장 체험 학습을 갈 때</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="slide-slect-item select-item02">
+                                                        <input type="radio" name="quiz" id="item02">
+                                                        <label for="item02">
+                                                            <span class="blind">비 오는 날 학교에 갈 때</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="slide-slect-item select-item03">
+                                                        <input type="radio" name="quiz" id="item03">
+                                                        <label for="item03">
+                                                            <span class="blind">겨울에 눈썰매장에 갈 때</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="slide-slect-item select-item04">
+                                                        <input type="radio" name="quiz" id="item04">
+                                                        <label for="item04">
+                                                            <span class="blind">체육 활동이 있는 날 학교에 갈 때</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="slide-slect-item select-item05">
+                                                        <input type="radio" name="quiz" id="item05">
+                                                        <label for="item05">
+                                                            <span class="blind">결혼식에 갈 때</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="slide-slect-item select-item06">
+                                                        <input type="radio" name="quiz" id="item06">
+                                                        <label for="item06">
+                                                            <span class="blind">집에서 잠을 잘 때</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slide-cont">
+                                            <div class="chat-text cha-txt-02">
+                                                <img src="./img/bubble2.png" alt="">
+                                                <p>
+                                                    옷차림을 할 상황을 선택해 보아요.
+                                                </p>
+                                            </div>
+                                            <img src="./img/cha-1.png" alt="" class="cha">
+                                        </div>
+                                    </div>
+                                    <div class="slide slide3">
+                                        <div class="slide-select-box">
+                                            <div class="slide-select-box-inner">
+                                                <ul class="gender-select">
+                                                    <li class="gender-select-item gender-item01">
+                                                        <input type="radio" name="gender" id="gender01">
+                                                        <label for="gender01">
+                                                            <span class="blind">여자아이</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="gender-select-item gender-item02">
+                                                        <input type="radio" name="gender" id="gender02">
+                                                        <label for="gender02">
+                                                            <span class="blind">남자아이</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="slide-cont">
+                                            <div class="chat-text cha-txt-03">
+                                                <img src="./img/bubble5.png" alt="">
+                                                <p>
+                                                    둘 중 옷차림을 해 주고 싶은 아이를 선택해 보아요.
+                                                </p>
+                                            </div>
+                                            <img src="./img/cha-1.png" alt="" class="cha">
+                                        </div>
+                                    </div>
+                                    <div class="slide slide4 result-page">
+                                        <div class="result-page-wrap">
+                                            <div class="result-cont">
+                                                <div class="dressing-area">
+                                                    <div class="temp-capture-area"></div>
+                                                    <div class="character-area drop_area">
+                                                        <div class="drop_obj" data-type="character">
+                                                            <img src="./img/girl.png" alt="캐릭터" class="character-img">
+                                                            <div class="dressed-items"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clothes-area">
+                                                        <h3 class="situation-title girl-title"></h3>
+                                                        <div class="clothes-list-wrap">
+                                                            <div class="clothes-list">
+                                                                <!-- 의상 아이템들이 여기에 추가됨 -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-wrap">
+                                                            <button type="button" class="btn-save">저장하기</button>
+                                                            <button type="button" class="grading_btn">완성하기</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slide-cont">
+                                                <div class="chat-text">
+                                                    <img src="./img/bubble2.png" alt="">
+                                                    <p>
+                                                        resultData text
+                                                    </p>
+                                                </div>
+                                                <img src="./img/cha-1.png" alt="" class="cha">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide-controls">
+                                    <div class="slide-btn slide-prev"></div>
+                                    <!-- <div class="slide-dots"></div> -->
+                                    <div class="slide-btn slide-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- page-step2 -->
+
+                    <!-- 변경되는 컨텐츠 끝 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 복수개의 스타일 가능 -->
+        <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+        <!-- 복수개의 스크립트 파일 가능 -->
+        <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="./common/js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="./common/js/base.js"></script>
+        <script type="text/javascript" src="./common/js/view.js"></script>
+        <script type="text/javascript" src="./common/js/lib.js"></script>
+        <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+        <script type="text/javascript" src="./common/js/common.js"></script>
+        <script type="text/javascript" src="./js/sound.js"></script>
+        <script type="text/javascript" src="./js/drag.js"></script>
+        <script type="text/javascript" src="./js/scripts.js"></script>
+        <script type="text/javascript" src="./js/capture-v2.js"></script>
+
+    </template>
+
+    <script type="module" src="./common/js/shadow-dom-your.js"></script>
+    <!-- Page js -->
+</body>
+
+</html>

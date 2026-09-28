@@ -1,0 +1,15 @@
+<svg id="레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" width="52.91" height="42.85" viewBox="0 0 52.91 42.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #979797;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-1" points="46.27 35.43 51.41 35.43 51.41 6.39 23.09 6.39 21.28 1.5 7.42 1.5 7.42 6.64"/>
+  <polygon class="cls-1" points="1.5 7.41 1.5 41.35 45.5 41.35 45.5 12.31 17.17 12.31 15.36 7.41 1.5 7.41"/>
+</svg>

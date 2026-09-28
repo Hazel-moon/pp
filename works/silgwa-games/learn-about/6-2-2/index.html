@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+  <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+  <title>QR콘텐츠</title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    your-component {
+      display: block;
+      position: relative;
+      width: 80%;
+      height: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <your-component></your-component>
+
+  <template id="class--content">
+    <div id="classStyudyContent">
+      <!-- Content -->
+      <div id="wrap" class="page">
+        <div id="container">
+          <!-- 변경되는 컨텐츠 시작 -->
+
+          <!-- 시작 페이지 -->
+          <button class="btn_sound"></button>
+          <div id="start_page">
+            <div class="start_btn_area">
+              <h1 class="start_text">생활로 알아보는 인공지능</h1>
+              <button class="start_btn">
+                시작하기</button>
+            </div>
+          </div>
+
+
+          <!-- 인트로 페이지 -->
+          <div id="intro_page" class="off">
+            <img src="./img/it-intro.gif" alt="인트로 GIF" />
+            <div class="it-intro-txt">
+              <p>
+                우리의 일상에 많은 영향을
+              </p>
+              <p>
+                끼치고 있는 인공지능에 대해
+              </p>
+              <p>
+                알아보아요!
+              </p>
+            </div>
+          </div>
+
+          <!-- 활동 페이지 -->
+          <div class="action_page action_page01">
+            
+            <div class="action_title">
+              <span>우리의 일상에 많은 영향을 끼치고 있는 인공지능에 대해 알아볼까요?
+              </span>
+            </div>
+            <div class="action_contents off">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="click_img_box">
+                  <img src="./img/click-img.png" alt="">
+                </div>
+                <div class="replace-box">
+                  <div class="chartr-box">
+                    <div class="action_chartr_inner">
+                      <div class="action_chartr_txt on">
+                        <p class="action_chartr_cont">
+                          아침에 일어날 때에는<br />
+                          어떤 인공지능을 활용할까요?
+                        </p>
+                        <img src="./img/bubble.png" alt="">
+                      </div>
+                      <div class="action_chartr on">
+                        <img src="./img/it-cha.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="click_cont_box">
+                    <div class="click_cont_img off">
+                      <img src="./img/bigpostit.png" alt="">
+                    </div>
+                    <div class="click_cont_txt off">
+                      <div class="click_cont_txt_inner">
+                        <p>
+                          스마트 조명은 사람의 잠자는 패턴을
+                          분석해서 아침에 편하게 일어날 수
+                          있도록 조명을 조절해요.
+                        </p>
+                        <p>
+                          조명이 태양이 뜨는 것처럼 서서히
+
+                        </p>
+                        <p> 밝아지기 때문에 자연스럽게 잠에서
+                          깰 수 있도록 돕지요.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nextslide_btn">
+                <button>
+                  <img src="./img/next-slide.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 활동2 페이지 -->
+          <div class="action_page action_page02 off">
+            <div class="action_title">
+              <span>우리의 일상에 많은 영향을 끼치고 있는 인공지능에 대해 알아볼까요?
+              </span>
+            </div>
+            <div class="action_contents off">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit2.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="click_img_box">
+                  <img src="./img/click-img2.png" alt="">
+                </div>
+                <div class="replace-box">
+                  <div class="chartr-box">
+                    <div class="action_chartr_inner">
+                      <div class="action_chartr_txt on">
+                        <p class="action_chartr_cont">
+                          집에서 밥을 먹을 때에는<br />
+                          어떤 인공지능을 활용할까요?
+                        </p>
+                        <img src="./img/bubble.png" alt="">
+                      </div>
+                      <div class="action_chartr on">
+                        <img src="./img/it-cha.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="click_cont_box">
+                    <div class="click_cont_img off">
+                      <img src="./img/bigpostit2.png" alt="">
+                    </div>
+                    <div class="click_cont_txt off">
+                      <div class="click_cont_txt_inner">
+                        <p>
+                          인공지능이 냉장고 안의 식재료를
+                        </p>
+                        <p>
+                          파악하여 맞춤형 아침 식단을 추천해
+                        </p>
+                        <p>
+                          줘요. 또 부족한 재료가 있다면 자동
+                        </p>
+                        <p>
+                          으로 주문해 주어 장을 보는 시간을
+                        </p>
+                        <p>
+                          아껴 주지요.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nextslide_btn">
+                <button>
+                  <img src="./img/next-slide.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 활동3 페이지 -->
+          <div class="action_page action_page03 off">
+            <div class="action_title">
+              <span>우리의 일상에 많은 영향을 끼치고 있는 인공지능에 대해 알아볼까요?
+              </span>
+            </div>
+            <div class="action_contents off">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit3.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="replace-box">
+                  <div class="chartr-box">
+                    <div class="action_chartr_inner">
+                      <div class="action_chartr_txt on">
+                        <p class="action_chartr_cont">
+                          학교에 갈 때에는 <br />
+                          어떤 인공지능을 활용할까요?
+                        </p>
+                        <img src="./img/bubble.png" alt="">
+                      </div>
+                      <div class="action_chartr on">
+                        <img src="./img/right-cha.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="click_cont_box">
+                    <div class="click_cont_img off">
+                      <img src="./img/bigpostit3.png" alt="">
+                    </div>
+                    <div class="click_cont_txt off">
+                      <div class="click_cont_txt_inner">
+                        <p>자율 주행 셔틀버스를 타고</p>
+                        <p>편안하게 학교에 가요.</p>
+                        <p>셔틀버스의 인공지능이 </p>
+                        <p>실시간으로 길을 살펴보고,</p>
+                        <p>가장 빠르고 안전한 길을</p>
+                        <p>찾아 주지요.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="click_img_box">
+                  <img src="./img/bus-bg.png" alt="">
+                </div>
+              </div>
+              <div class="nextslide_btn">
+                <button>
+                  <img src="./img/next-slide.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 활동4 페이지 -->
+
+          <div class="action_page action_page04 off">
+            <div class="action_title">
+              <span>우리의 일상에 많은 영향을 끼치고 있는 인공지능에 대해 알아볼까요?
+              </span>
+            </div>
+            <div class="action_contents off">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit4.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="replace-box">
+                  <div class="chartr-box">
+                    <div class="action_chartr_inner">
+                      <div class="action_chartr_txt on">
+                        <p class="action_chartr_cont">
+                          공부를 할 때에는 <br />
+                          어떤 인공지능을 활용할까요?
+                        </p>
+                        <img src="./img/bubble.png" alt="">
+                      </div>
+                      <div class="action_chartr on">
+                        <img src="./img/right-cha.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="click_cont_box">
+                    <div class="click_cont_img off">
+                      <img src="./img/bigpostit4.png" alt="">
+                    </div>
+                    <div class="click_cont_txt off">
+                      <div class="click_cont_txt_inner">
+                        <p>수업에서 인공지능이 나에게 맞는</p>
+                        <p>학습 자료를 추천해 줘요.</p>
+                        <p>인공지능을 활용하면 내가 잘 모르</p>
+                        <p>거나 부족한 부분을 더 쉽게 배우고</p>
+                        <p>재미있게 공부할 수 있어요.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="click_img_box">
+                  <img src="./img/tablet-bg.png" alt="">
+                </div>
+              </div>
+              <div class="on-box">
+                <img src="./img/emph01.png" alt="강조1" class="floating-icon icon1">
+                <img src="./img/emph02.png" alt="강조2" class="floating-icon icon2">
+                <img src="./img/emph03.png" alt="강조3" class="floating-icon icon3">
+              </div>
+              <div class="nextslide_btn">
+                <button>
+                  <img src="./img/next-slide.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 활동5 페이지 -->
+          <div class="action_page action_page05 off">
+            <div class="action_title">
+              <span>우리의 일상에 많은 영향을 끼치고 있는 인공지능에 대해 알아볼까요?
+              </span>
+            </div>
+            <div class="action_contents off">
+              <div class="finger_ani"></div>
+              <div class="click_img_tit">
+                <img src="./img/click-img-tit5.png" alt="">
+              </div>
+              <div class="flex_box">
+                <div class="click_img_box">
+                  <img src="./img/small-circle-bg.png" alt="">
+                </div>
+                <div class="replace-box">
+                  <div class="chartr-box">
+                    <div class="action_chartr_inner">
+                      <div class="action_chartr_txt on">
+                        <p class="action_chartr_cont">
+                          가족과 이야기할 때에는<br />
+                          어떤 인공지능을 활용할까요?
+                        </p>
+                        <img src="./img/bubble.png" alt="">
+                      </div>
+                      <div class="action_chartr on">
+                        <img src="./img/it-cha.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="click_cont_box">
+                    <div class="click_cont_img off">
+                      <img src="./img/bigpostit5.png" alt="">
+                    </div>
+                    <div class="click_cont_txt off">
+                      <div class="click_cont_txt_inner">
+                        <p>가족들의 감정 상태를 데이터로 수집</p>
+                        <p>한 뒤 우리 가족이 하루 동안 어떤</p>
+                        <p>기분이었는지 되돌아볼 수 있게 해</p>
+                        <p>줘요. 또 가족끼리 감정을 표현하고</p>
+                        <p>나눌 수 있도록 도와요.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="complete_obj">
+                <button class="final_btn off">
+                  <img src="./img/done-btn.png" alt="">
+                </button>
+                <div class="final_cha02"></div>
+                <button class="home_btn hide">
+                  <img src="./img/home_btn.png" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="complete_bg">
+              <img src="./img/complete_bg.gif" alt="팡파레 GIF" />
+              <div class="last-chartrt">
+                <div class="action_chartr_inner">
+                  <div class="action_chartr">
+                    <img src="./img/last-chartr.png" alt="">
+                  </div>
+                  <div class="action_chartr_txt">
+                    <div class="action_chartr_cont">
+                      <p>
+                        우리의 생활을 더욱 편리하게
+                      </p>
+                      <p>
+                        해 주는 인공지능에 대해
+                      </p>
+                      <p>
+                        살펴보았어요!
+                      </p>
+                    </div>
+                    <img src="./img/bubble3.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="complete_stamp"></div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 복수개의 스타일 가능 -->
+    <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+    <!-- 복수개의 스크립트 파일 가능 -->
+    <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="./common/js/base.js"></script>
+    <script type="text/javascript" src="./common/js/view.js"></script>
+    <script type="text/javascript" src="./common/js/lib.js"></script>
+    <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+    <script type="text/javascript" src="./js/sound.js"></script>
+    <script type="text/javascript" src="./js/drag.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </template>
+
+  <script type="module" src="./common/js/shadow-dom-your.js"></script>
+  <!-- Page js -->
+</body>
+
+</html>

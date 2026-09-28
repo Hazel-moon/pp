@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="72" viewBox="0 0 71 72">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_935" data-name="사각형 935" width="71" height="72" transform="translate(19059 -8209)" fill="#cbd5e1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_10" data-name="마스크 그룹 10" transform="translate(-19059 8209)" clip-path="url(#clip-path)">
+    <g id="icon" transform="translate(19059 -8208.5)">
+      <line id="선_571" data-name="선 571" x2="44.495" y2="44.495" transform="translate(13.253 13.253)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <line id="선_572" data-name="선 572" x2="62.929" transform="translate(4.035 35.505)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <line id="선_573" data-name="선 573" y1="44.495" x2="44.495" transform="translate(13.253 13.253)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <line id="선_574" data-name="선 574" y1="62.929" transform="translate(35.505 4.035)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_217" data-name="타원 217" cx="21.532" cy="21.532" r="21.532" transform="translate(13.973 13.973)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <ellipse id="타원_218" data-name="타원 218" cx="11.5" cy="21.532" rx="11.5" ry="21.532" transform="translate(24.005 13.973)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <line id="선_575" data-name="선 575" y2="43.074" transform="translate(35.505 13.963)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <line id="선_576" data-name="선 576" x2="43.074" transform="translate(13.963 35.505)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <line id="선_577" data-name="선 577" x2="37.219" transform="translate(16.89 24.668)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <line id="선_578" data-name="선 578" x2="37.219" transform="translate(16.89 46.332)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_219" data-name="타원 219" cx="2.993" cy="2.993" r="2.993" transform="translate(32.511 1.042)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_220" data-name="타원 220" cx="2.993" cy="2.993" r="2.993" transform="translate(10.259 10.259)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_221" data-name="타원 221" cx="2.993" cy="2.993" r="2.993" transform="translate(1.042 32.511)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_222" data-name="타원 222" cx="2.993" cy="2.993" r="2.993" transform="translate(10.259 54.754)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_223" data-name="타원 223" cx="2.993" cy="2.993" r="2.993" transform="translate(32.511 63.971)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_224" data-name="타원 224" cx="2.993" cy="2.993" r="2.993" transform="translate(54.754 54.754)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_225" data-name="타원 225" cx="2.993" cy="2.993" r="2.993" transform="translate(63.971 32.511)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+      <circle id="타원_226" data-name="타원 226" cx="2.993" cy="2.993" r="2.993" transform="translate(54.754 10.259)" fill="#fff" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.084"/>
+    </g>
+  </g>
+</svg>

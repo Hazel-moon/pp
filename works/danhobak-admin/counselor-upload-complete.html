@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/logo.svg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="LEFT4CODE">
+    <title>단호박 상담소 관리자</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5">
+    <div class="flex mt-0">
+        <!-- S : 사이드 메뉴 -->
+        <nav class="side-nav">
+            <a href="index.html" class="intro-x flex items-center pl-5 pt-4">
+                <img src="dist/images/danhobak_logo.svg" alt="">
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title">
+                            메인화면 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="mainbanner-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인배너 관리</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mainprod-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인 노출 상품 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="member-list.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                        <div class="side-menu__title">회원관리</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu ">
+                        <div class="side-menu__icon"> <i data-lucide="table"></i> </div>
+                        <div class="side-menu__title">
+                            게시판 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="concern-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">고민게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="share-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">정보공유게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">단호박 솔루션</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="keyword-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">키워드 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="message-square"></i> </div>
+                        <div class="side-menu__title">
+                            전문 상담사 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="side-menu__sub-open">
+                        <li>
+                            <a href="counselor-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="counselor-upload.html" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="package"></i> </div>
+                        <div class="side-menu__title">
+                            상품관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="product-list.html" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="order-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__title">
+                            주문관리
+                            <div class="side-menu__sub-icon "></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="keyword-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="search"></i> </div>
+                        <div class="side-menu__title">
+                            검색어 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 인기 검색어 관리 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rec-keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 연관 검색어 관리 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="report.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="feather"></i> </div>
+                        <div class="side-menu__title"> 단호박 리포트 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="point-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="coins"></i> </div>
+                        <div class="side-menu__title"> 포인트 관리 </div>
+                    </a>
+                </li>
+                  <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="crown"></i> </div>
+                        <div class="side-menu__title">
+                            리뷰관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="review-board.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 고민게시판 리뷰 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-review.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문솔루션 리뷰 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- E : 사이드 메뉴 -->
+
+
+        <!-- S: 컨텐츠 -->
+        <div class="content">
+            <div class="top-bar">
+                <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item">전문 상담사 관리</li>
+                        <li class="breadcrumb-item">목록</li>
+                        <li class="breadcrumb-item active" aria-current="page">조회</li>
+                    </ol>
+                </nav>
+                <div class="intro-x dropdown w-8 h-8 ml-auto">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                        role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                        <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                    </div>
+                    <div class="dropdown-menu w-56">
+                        <ul class="dropdown-content bg-primary text-white">
+                            <li class="p-2">
+                                <div class="font-medium">Kevin Spacey</div>
+                                <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">Software Engineer</div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user"
+                                        class="w-4 h-4 mr-2"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit"
+                                        class="w-4 h-4 mr-2"></i> Add Account </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock"
+                                        class="w-4 h-4 mr-2"></i> Reset Password </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="help-circle"
+                                        class="w-4 h-4 mr-2"></i> Help </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                        class="w-4 h-4 mr-2"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 2xl:col-span-12">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 mt-8">
+                            <h2 class="text-lg font-medium mr-auto">
+                                전문 상담사 등록
+                            </h2>
+                            <div class="box p-5 rounded-md mt-4">
+                                <div class="flex justify-center mb-4">
+                                    <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative">
+                                        <img alt="Midone - HTML Admin Template" class="rounded-full"
+                                            src="dist/images/profile-12.jpg">
+                                    </div>
+                                </div>
+                                <div class="overflow-auto lg:overflow-visible">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center w-56">전문 상담가 활동 여부 </td>
+                                                <td class="">
+                                                    <div>
+                                                        활성화
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">전문 상담가 상태 코드</td>
+                                                <td class="">
+                                                    <div>
+                                                        11
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">전문가 카테고리 코드</td>
+                                                <td class="">
+                                                    <div>
+                                                        11(심리)
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">전문 상담가 코드</td>
+                                                <td class="">
+                                                    <div>
+                                                        QDAWRA
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table-bordered mt-16">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center w-56">이메일 </td>
+                                                <td class="">
+                                                    <div>
+                                                        junmoon@sangdam.com
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">이름</td>
+                                                <td class="">
+                                                    <div>
+                                                        홍길동
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">닉네임</td>
+                                                <td class="">
+                                                    <div>
+                                                        hong
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">구분</td>
+                                                <td class="">
+                                                    <div>
+                                                        심리
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">전문 상담사 소개</td>
+                                                <td class="r">
+                                                    <div>
+                                                        여러분의 심리 상담가 hong입니다.
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">키워드</td>
+                                                <td class="">
+                                                    <div className="keyword-wrap flex gap-2">
+                                                        <button
+                                                            class="keyword-item px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">
+                                                            #키워드
+                                                        </button>
+                                                        <button
+                                                            class="keyword-item px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">
+                                                            #키워드
+                                                        </button>
+                                                        <button
+                                                            class="keyword-item px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">
+                                                            #키워드
+                                                        </button>
+                                                        <button
+                                                            class="keyword-item px-2 py-0.5 bg-slate-200 text-slate-600 dark:bg-darkmode-300 dark:text-slate-400 text-xs rounded-md">
+                                                            #키워드
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">전문 상담사 카테고리</td>
+                                                <td>
+                                                    <div>
+                                                        심리
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">추천 일정 설정</td>
+                                                <td class="">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>일</th>
+                                                                <th>월</th>
+                                                                <th>화</th>
+                                                                <th>수</th>
+                                                                <th>목</th>
+                                                                <th>금</th>
+                                                                <th>토</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>9 ~ 12시</td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>12 ~ 15시</td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox" checked></td>
+                                                                <td><input type="checkbox" checked></td>
+                                                                <td><input type="checkbox" checked></td>
+                                                                <td><input type="checkbox" checked></td>
+                                                                <td><input type="checkbox"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>15 ~ 18시</td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>18 ~ 21시</td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>21 ~ 24시</td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                                <td><input type="checkbox"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">한줄소개</td>
+                                                <td>
+                                                    <div>
+                                                        입력한 한줄 소개 표시 영역임
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">자격증</td>
+                                                <td>
+                                                    <div>
+                                                        심리상담가 2급
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">학력</td>
+                                                <td>
+                                                    <div>
+                                                        단호박대학교 심리학과
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">이수교육</td>
+                                                <td>
+                                                    <div>
+                                                        국가심리상담교육과정 수료
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">경력</td>
+                                                <td>
+                                                    <div>
+                                                        4년 6개월
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">Story</td>
+                                                <td>
+                                                    <div>
+                                                        안녕하세요 심리상담가 hong입니다. 심리적으로 힘들 때 언제든지 찾아오세요.
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">성별</td>
+                                                <td class="text-center">
+                                                    <div class="">
+                                                        <div class="flex flex-col sm:flex-row mt-2">
+                                                            <div class="form-check mr-2 mt-2 sm:mt-0"> <input
+                                                                    id="radio-switch-5" class="form-check-input"
+                                                                    type="radio" name="horizontal_radio_button"
+                                                                    value="남성" checked>
+                                                                <label class="form-check-label"
+                                                                    for="radio-switch-5">남성</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">생년월일</td>
+                                                <td class="">
+                                                    <div>
+                                                        1995.07.31
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="flex justify-center items-center mt-8 gap-2">
+                                <button class="btn btn-secondary w-24 mr-1 mb-2">목록</button>
+                                <button class="btn btn-primary w-24 mr-1 mb-2">수정</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E: 컨텐츠 -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+    <script src="dist/js/app.js"></script>
+    <!-- END: JS Assets-->
+</body>
+
+</html>

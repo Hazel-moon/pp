@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	font-family: 'Noto Sans CJK KR';
+	font-weight: 500;
+	font-size: 38px;
+	line-height: 120%;
+}
+button {
+	cursor: pointer;
+}
+ul {
+	list-style: none;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px; /* 요소가 주변 레이아웃에 영향을 주지 않도록 */
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* 줄바꿈 방지 */
+	border: 0;
+}
+
+main > article {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 1s ease-in-out;
+	opacity: 0;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('./assets/font/NotoSansKR-Regular.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Noto Sans M';
+	src: url('./assets/font/NotoSansKR-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Noto Sans B';
+	src: url('./assets/font/NotoSansKR-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'GmarketSansB';
+	src: url('./assets/font/GmarketSansBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'GmarketSansM';
+	src: url('./assets/font/GmarketSansMedium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Hakgyoansim';
+	src: url('./assets/font/Hakgyoansim.woff') format('woff');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GangwonEduSaeeum';
+	src: url('./assets/font/GangwonEduSaeeum.woff') format('woff');
+	font-style: normal;
+}
+
+main .test {
+	background: url(./assets/img/tmp.png) center center / cover;
+	opacity: 0.4;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

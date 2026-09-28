@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/logo.svg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="LEFT4CODE">
+    <title>단호박 상담소 관리자</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5">
+    <div class="flex mt-0">
+        <!-- S : 사이드 메뉴 -->
+        <nav class="side-nav">
+            <a href="index.html" class="intro-x flex items-center pl-5 pt-4">
+                <img src="dist/images/danhobak_logo.svg" alt="">
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title">
+                            메인화면 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="mainbanner-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인배너 관리</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mainprod-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인 노출 상품 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="member-list.html" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                        <div class="side-menu__title">회원관리</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="table"></i> </div>
+                        <div class="side-menu__title">
+                            게시판 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="concern-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">고민게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="share-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">정보공유게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">단호박 솔루션</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="keyword-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">키워드 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="message-square"></i> </div>
+                        <div class="side-menu__title">
+                            전문 상담사 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="counselor-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="counselor-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu  ">
+                        <div class="side-menu__icon"> <i data-lucide="package"></i> </div>
+                        <div class="side-menu__title">
+                            상품관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="product-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="order-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__title">
+                            주문관리
+                            <div class="side-menu__sub-icon "></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="keyword-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="search"></i> </div>
+                        <div class="side-menu__title">
+                            검색어 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 인기 검색어 관리 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rec-keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 연관 검색어 관리 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="report.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="feather"></i> </div>
+                        <div class="side-menu__title"> 단호박 리포트 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="point-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="coins"></i> </div>
+                        <div class="side-menu__title"> 포인트 관리 </div>
+                    </a>
+                </li>
+                  <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="crown"></i> </div>
+                        <div class="side-menu__title">
+                            리뷰관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="review-board.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 고민게시판 리뷰 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-review.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문솔루션 리뷰 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- E : 사이드 메뉴 -->
+
+
+        <!-- S: 컨텐츠 -->
+        <div class="content">
+            <div class="top-bar">
+                <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item">회원관리</li>
+                        <li class="breadcrumb-item active" aria-current="page">회원 상세</li>
+                    </ol>
+                </nav>
+                <div class="intro-x dropdown w-8 h-8 ml-auto">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                        role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                        <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                    </div>
+                    <div class="dropdown-menu w-56">
+                        <ul class="dropdown-content bg-primary text-white">
+                            <li class="p-2">
+                                <div class="font-medium">Kevin Spacey</div>
+                                <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">Software Engineer</div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user"
+                                        class="w-4 h-4 mr-2"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit"
+                                        class="w-4 h-4 mr-2"></i> Add Account </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock"
+                                        class="w-4 h-4 mr-2"></i> Reset Password </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="help-circle"
+                                        class="w-4 h-4 mr-2"></i> Help </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                        class="w-4 h-4 mr-2"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 2xl:col-span-12">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 mt-8">
+                            <ul class="nav nav-tabs member_tab">
+                                <li class="nav-item flex-1" data-tab="tab_basic"><button class="nav-link w-full py-2 active">기본정보</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_write"><button class="nav-link w-full py-2">게시판 작성글</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_comment"><button class="nav-link w-full py-2">작성한 댓글</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_vote"><button class="nav-link w-full py-2">참여한 투표</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_point"><button class="nav-link w-full py-2">포인트 내역</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_purchase"><button class="nav-link w-full py-2">구매내역</button> </li>
+                                <li class="nav-item flex-1" data-tab="tab_counseling"><button class="nav-link w-full py-2">사전 접수지</button> </li>
+                            </ul>
+                            <div class="box p-5 rounded-md">
+                                <!-- 기본정보 -->
+                                <div class="member_box tab_basic">
+                                    <table class="table table-bordered table-sm">
+                                        <colgroup>
+                                            <col width="15%">
+                                            <col width="35%">
+                                            <col width="15%">
+                                            <col width="35%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">이름</td>
+                                                <td>홍길동</td>
+                                                <td class="text-center bg-slate-100">회원상태</td>
+                                                <td>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option>정상</option>
+                                                        <option>정지</option>
+                                                        <option>탈퇴</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">닉네임</td>
+                                                <td>서자</td>
+                                                <td class="text-center bg-slate-100">고유 ID</td>
+                                                <td>asdfasd</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">이메일</td>
+                                                <td>example@example.com</td>
+                                                <td class="text-center bg-slate-100">휴대폰 번호</td>
+                                                <td>010-1234-1234</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">성별</td>
+                                                <td colspan="3">남성</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">생년월일</td>
+                                                <td>2023.03.03</td>
+                                                <td class="text-center bg-slate-100">가입일</td>
+                                                <td>2023.03.03</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">이벤트/마케팅 동의</td>
+                                                <td>동의</td>
+                                                <td class="text-center bg-slate-100">가입채널</td>
+                                                <td>카카오톡</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="overflow-auto mt-16">
+                                        <h3 class="font-medium">
+                                            관리자 메모
+                                        </h3>
+                                        <table class="table table-bordered mt-2">
+                                            <colgroup>
+                                                <col width="15%">
+                                                <col width="85%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">작성자</td>
+                                                    <td class="text-center">
+                                                        <div class="flex items-center justify-between">
+                                                            <p>슈퍼관리자</p>
+                                                            <div>
+                                                                <button class="btn btn-secondary w-20 rounded" onclick="confirm('메모 작성을 취소하시겠습니까?')">취소</button>
+                                                                <button class="btn btn-primary w-20 ml-2 rounded" onclick="confirm('작성한 메모를 남기시겠습니까?')">등록</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">메모</td>
+                                                    <td>
+                                                        <textarea name="" id=""  class="form-control"></textarea>
+                                                    </td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="overflow-auto mt-10">
+                                        <table class="table table-bordered ">
+                                            <colgroup>
+                                                <col width="10%">
+                                                <col width="70%">
+                                                <col width="10%">
+                                                <col width="10%">
+                                            </colgroup>
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="whitespace-nowrap text-center">작성자</th>
+                                                    <th class="whitespace-nowrap text-center">메모</th>
+                                                    <th class="whitespace-nowrap text-center">등록일</th>
+                                                    <th class="whitespace-nowrap text-center">-</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">슈퍼관리자</td>
+                                                    <td class="text-center">메모의 내용이 표시됩니다.</td>
+                                                    <td class="text-center">2023.03.03</td>
+                                                    <td class="text-center"><button class="btn-sm btn-secondary rounded">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">슈퍼관리자</td>
+                                                    <td class="text-center">메모영역 width 70%만 표시되며 넘어가는 텍스트는 줄바꿈으로 표시 </td>
+                                                    <td class="text-center">2023.03.03</td>
+                                                    <td class="text-center"><button class="btn-sm btn-secondary rounded">삭제</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">슈퍼관리자</td>
+                                                    <td class="text-center">줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최대 7줄로 표시되며 초과는 줄은 스크롤줄은 최</td>
+                                                    <td class="text-center">2023.03.03</td>
+                                                    <td class="text-center"><button class="btn-sm btn-secondary rounded">삭제</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- 게시판 작성글 -->
+                                <div class="member_box tab_write hidden">
+                                    <div class="text-slate-500">총 nn개의 작성된 게시글이 있습니다.</div>
+                                    <div class="overflow-auto mt-2">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="70%">
+                                                <col width="10%">
+                                            </colgroup>
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="whitespace-nowrap text-center">게시판</th>
+                                                    <th class="whitespace-nowrap text-center">카테고리</th>
+                                                    <th class="whitespace-nowrap text-center">제목</th>
+                                                    <th class="whitespace-nowrap text-center">-</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">고민글</td>
+                                                    <td class="text-center">연애</td>
+                                                    <td class="text-center">여자친구가 연락을 너무 많이 해요</td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline">보기</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav class="w-full mt-4">
+                                        <ul class="pagination justify-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-left"
+                                                        class="lucide lucide-chevrons-left w-4 h-4"
+                                                        data-lucide="chevrons-left">
+                                                        <polyline points="11 17 6 12 11 7"></polyline>
+                                                        <polyline points="18 17 13 12 18 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-left"
+                                                        class="lucide lucide-chevron-left w-4 h-4"
+                                                        data-lucide="chevron-left">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                            <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-right"
+                                                        class="lucide lucide-chevron-right w-4 h-4"
+                                                        data-lucide="chevron-right">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-right"
+                                                        class="lucide lucide-chevrons-right w-4 h-4"
+                                                        data-lucide="chevrons-right">
+                                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <!-- 작성한 댓글 -->
+                                <div class="member_box tab_comment hidden">
+                                    <div class="text-slate-500">총 nn개의 작성된 댓글이 있습니다.</div>
+                                    <div class="overflow-auto mt-2">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col width="10%">
+                                                <col width="10%">
+                                                <col width="35%">
+                                                <col width="35%">
+                                                <col width="10%">
+                                            </colgroup>
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="whitespace-nowrap text-center">게시판</th>
+                                                    <th class="whitespace-nowrap text-center">카테고리</th>
+                                                    <th class="whitespace-nowrap text-center">제목</th>
+                                                    <th class="whitespace-nowrap text-center">댓글</th>
+                                                    <th class="whitespace-nowrap text-center">-</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">고민글</td>
+                                                    <td class="text-center">연애</td>
+                                                    <td class="text-center">여자친구가 연락을 너무 많이 해요</td>
+                                                    <td class="text-center">핸드폰을 끄세요</td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline">보기</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">고민글</td>
+                                                    <td class="text-center">연애</td>
+                                                    <td class="text-center">상담상품 시간 어떻게 정하는 건가요?</td>
+                                                    <td class="text-center">1:1 상담이요</td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline">보기</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav class="w-full mt-4">
+                                        <ul class="pagination justify-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-left"
+                                                        class="lucide lucide-chevrons-left w-4 h-4"
+                                                        data-lucide="chevrons-left">
+                                                        <polyline points="11 17 6 12 11 7"></polyline>
+                                                        <polyline points="18 17 13 12 18 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-left"
+                                                        class="lucide lucide-chevron-left w-4 h-4"
+                                                        data-lucide="chevron-left">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                            <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-right"
+                                                        class="lucide lucide-chevron-right w-4 h-4"
+                                                        data-lucide="chevron-right">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-right"
+                                                        class="lucide lucide-chevrons-right w-4 h-4"
+                                                        data-lucide="chevrons-right">
+                                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <!-- 참여한 투표 -->
+                                <div class="member_box tab_vote hidden">
+                                    <div class="text-slate-500">총 nn개의 참여한 투표가 있습니다.</div>
+                                    <div class="overflow-auto mt-2">
+                                        <table class="table table-bordered">
+                                            <colgroup>
+                                                <col width="10%">
+                                                <col width="30%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="10%">
+                                            </colgroup>
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="whitespace-nowrap text-center">카테고리</th>
+                                                    <th class="whitespace-nowrap text-center">제목</th>
+                                                    <th class="whitespace-nowrap text-center">투표제목</th>
+                                                    <th class="whitespace-nowrap text-center">선택지</th>
+                                                    <th class="whitespace-nowrap text-center">-</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">연애</td>
+                                                    <td class="text-center">여자친구가 연락을 너무 많이 해요</td>
+                                                    <td class="text-center">핸드폰을 끄세요</td>
+                                                    <td class="text-center">핸드폰을 끄세요</td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline">보기</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">질문</td>
+                                                    <td class="text-center">상담상품 시간 어떻게 정하는 건가요?</td>
+                                                    <td class="text-center">1:1 상담이요</td>
+                                                    <td class="text-center">1:1 상담이요</td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline">보기</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center" rowspan="0">질문</td>
+                                                    <td class="text-center" rowspan="0">상담상품 시간 어떻게 정하는 건가요?</td>
+                                                    <td class="text-center" rowspan="0">1:1 상담이요</td>
+                                                    <td class="text-center">1:1 상담이요</td>
+                                                    <td class="text-center" rowspan="0"><a href="javascript:;" class="underline">보기</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">1:1 상담이요</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">1:1 상담이요</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav class="w-full mt-4">
+                                        <ul class="pagination justify-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-left"
+                                                        class="lucide lucide-chevrons-left w-4 h-4"
+                                                        data-lucide="chevrons-left">
+                                                        <polyline points="11 17 6 12 11 7"></polyline>
+                                                        <polyline points="18 17 13 12 18 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-left"
+                                                        class="lucide lucide-chevron-left w-4 h-4"
+                                                        data-lucide="chevron-left">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                            <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-right"
+                                                        class="lucide lucide-chevron-right w-4 h-4"
+                                                        data-lucide="chevron-right">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-right"
+                                                        class="lucide lucide-chevrons-right w-4 h-4"
+                                                        data-lucide="chevrons-right">
+                                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <!-- 포인트 내역 -->
+                                <div class="member_box tab_point hidden">
+                                    <div class="text-slate-500">총 nnnn P 가 있습니다.</div>
+                                    <div class="overflow-auto mt-2">
+                                        <table class="table table-bordered">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="whitespace-nowrap text-center">포인트 내역</th>
+                                                    <th class="whitespace-nowrap text-center">Point</th>
+                                                    <th class="whitespace-nowrap text-center">일시</th>
+                                                    <th class="whitespace-nowrap text-center">잔액</th>
+                                                    <th class="whitespace-nowrap text-center">유효기간</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">정보공유 게시글 작성</td>
+                                                    <td class="text-center">+ 300</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center">2,410</td>
+                                                    <td class="text-center">2024.03.03 13:13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">고민 게시글 작성</td>
+                                                    <td class="text-center">+ 100</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center">2,110</td>
+                                                    <td class="text-center">2024.03.03 13:13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">투표 참여</td>
+                                                    <td class="text-center">+ 10</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center">2,010</td>
+                                                    <td class="text-center">2024.03.03 13:13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">관리자 증정</td>
+                                                    <td class="text-center">+ 1,000</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center">2,000</td>
+                                                    <td class="text-center">2024.03.03 13:13</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav class="w-full mt-4">
+                                        <ul class="pagination justify-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-left"
+                                                        class="lucide lucide-chevrons-left w-4 h-4"
+                                                        data-lucide="chevrons-left">
+                                                        <polyline points="11 17 6 12 11 7"></polyline>
+                                                        <polyline points="18 17 13 12 18 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-left"
+                                                        class="lucide lucide-chevron-left w-4 h-4"
+                                                        data-lucide="chevron-left">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                            <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-right"
+                                                        class="lucide lucide-chevron-right w-4 h-4"
+                                                        data-lucide="chevron-right">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-right"
+                                                        class="lucide lucide-chevrons-right w-4 h-4"
+                                                        data-lucide="chevrons-right">
+                                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <!-- 구매내역 -->
+                                <div class="member_box tab_purchase hidden">
+                                    <div class="text-slate-500">총 nn개의 구매이력이 있습니다.</div>
+                                    <div class="overflow-auto mt-2">
+                                        <table class="table table-bordered">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th class="whitespace-nowrap text-center">주문번호</th>
+                                                    <th class="whitespace-nowrap text-center">카테고리</th>
+                                                    <th class="whitespace-nowrap text-center">상품명</th>
+                                                    <th class="whitespace-nowrap text-center">담당 전문가</th>
+                                                    <th class="whitespace-nowrap text-center">상품 가격</th>
+                                                    <th class="whitespace-nowrap text-center">상담 진행 방식</th>
+                                                    <th class="whitespace-nowrap text-center">구매일자</th>
+                                                    <th class="whitespace-nowrap text-center">상담 일시</th>
+                                                    <th class="whitespace-nowrap text-center">리뷰 작성 여부</th>
+                                                    <th class="whitespace-nowrap text-center"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">15-76083502</td>
+                                                    <td class="text-center">상담</td>
+                                                    <td class="text-center">줌테라피</td>
+                                                    <td class="text-center">홍길동</td>
+                                                    <td class="text-center">12,000</td>
+                                                    <td class="text-center">화상</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline" data-tw-toggle="modal" data-tw-target="#review-modal">작성</a></td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline" data-tw-toggle="modal" data-tw-target="#counseling-modal">상담일지</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">15-76083502</td>
+                                                    <td class="text-center">상담</td>
+                                                    <td class="text-center">줌테라피</td>
+                                                    <td class="text-center">홍길동</td>
+                                                    <td class="text-center">12,000</td>
+                                                    <td class="text-center">화상</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center">2023.03.03 13:13</td>
+                                                    <td class="text-center">미작성</td>
+                                                    <td class="text-center"><a href="javascript:;" class="underline" data-tw-toggle="modal" data-tw-target="#counseling-modal">상담일지</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav class="w-full mt-4">
+                                        <ul class="pagination justify-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-left"
+                                                        class="lucide lucide-chevrons-left w-4 h-4"
+                                                        data-lucide="chevrons-left">
+                                                        <polyline points="11 17 6 12 11 7"></polyline>
+                                                        <polyline points="18 17 13 12 18 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-left"
+                                                        class="lucide lucide-chevron-left w-4 h-4"
+                                                        data-lucide="chevron-left">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                            <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-right"
+                                                        class="lucide lucide-chevron-right w-4 h-4"
+                                                        data-lucide="chevron-right">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-right"
+                                                        class="lucide lucide-chevrons-right w-4 h-4"
+                                                        data-lucide="chevrons-right">
+                                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                                <!-- 사전 접수지 -->
+                                <div class="member_box tab_counseling hidden">
+                                    <table class="table table-bordered table-sm">
+                                        <colgroup>
+                                            <col width="15%">
+                                            <col width="85%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">최종 저장 일자</td>
+                                                <td class="text-center">2023.03.22 10:51</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">성별</td>
+                                                <td class="text-center">기타</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">생년월일</td>
+                                                <td class="text-center">2023.03.03</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">종교</td>
+                                                <td class="text-center">천주교</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">직업</td>
+                                                <td class="text-center">서비스 기획자</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">상담받고 싶은 영역</td>
+                                                <td class="text-center">연애, 생활 / 습관</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">현재 건강상태</td>
+                                                <td class="text-center">매우 건강</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">부정적요인 특이사항</td>
+                                                <td class="text-center">해당 없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center bg-slate-100">상담경험</td>
+                                                <td class="text-center">해당 없음</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="overflow-auto mt-16">
+                                        <h3 class="font-medium">
+                                            가족관계
+                                        </h3>
+                                        <table class="table table-bordered mt-2">
+                                            <colgroup>
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                                <col width="25%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <td class="text-center bg-slate-100">관계</td>
+                                                    <td class="text-center bg-slate-100">나이</td>
+                                                    <td class="text-center bg-slate-100">동거여부</td>
+                                                    <td class="text-center bg-slate-100">친밀도</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">부친</td>
+                                                    <td class="text-center">65</td>
+                                                    <td class="text-center">Y</td>
+                                                    <td class="text-center">5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">모친</td>
+                                                    <td class="text-center">59</td>
+                                                    <td class="text-center">Y</td>
+                                                    <td class="text-center">5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">남매</td>
+                                                    <td class="text-center">35</td>
+                                                    <td class="text-center">Y</td>
+                                                    <td class="text-center">5</td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="overflow-auto mt-16">
+                                        <h3 class="font-medium mb-2">
+                                            사용자가 겪고 있는 어려움
+                                        </h3>
+                                        <textarea name="" id="" class="form-control h-[200px]">사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다.  사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 
+                                        </textarea>
+                                    </div>
+                                    <div class="overflow-auto mt-16">
+                                        <h3 class="font-medium mb-2">
+                                            사용자가 상담을 통해 얻고자 하는 것
+                                        </h3>
+                                        <textarea name="" id="" class="form-control h-[200px]">사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다.  사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 사용자가 겪고 있는 어려움이 적혀지는 영역입니다. 
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="review-modal" class="modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body p-5">
+                                            <div class="review_item">
+                                                <div class="top_box flex items-center justify-between">
+                                                    <div class="star_grade">
+                                                        <div class="grade" style="width: 40%;"></div>
+                                                    </div>
+                                                    <span>닉네임</span>
+                                                </div>
+                                                <div class="desc mt-3">사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한 사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한 사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한 사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한 리뷰가 표시되는 영역입니다사용자가 작성한</div>
+                                                <div class="tag mt-2">
+                                                    <span>#태그표시</span>
+                                                    <span>#태그표시</span>
+                                                    <span>#태그표시</span>
+                                                    <span>#태그표시</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary w-24 mr-1" data-tw-dismiss="modal">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- END: Modal Content -->
+
+                            <div id="counseling-modal" class="modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2 class="font-medium text-base mr-auto">홍길동 (서자) 님의 상담일지</h2>
+                                        </div>
+                                        <div class="modal-body p-5">
+                                            <table class="table table-bordered table-sm">
+                                                <colgroup>
+                                                    <col width="15%">
+                                                    <col width="85%">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center bg-slate-100">상담 일시</td>
+                                                        <td>
+                                                            <div class="relative w-80">
+                                                                <div class="absolute rounded-l w-10 h-full flex items-center justify-center bg-slate-100 border text-slate-500 dark:bg-darkmode-700 dark:border-darkmode-800 dark:text-slate-400">
+                                                                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                                                                </div> 
+                                                                <input type="text" class="datepicker form-control pl-12" data-daterange="true" value="2023-03-03 ~ 2023-03-04">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center bg-slate-100">회차</td>
+                                                        <td><input id="" type="text" class="form-control w-80"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center bg-slate-100">종결여부</td>
+                                                        <td>
+                                                            <select class="form-select mt-2 sm:mr-2 " aria-label="">
+                                                                <option>O</option>
+                                                                <option>X</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center bg-slate-100">상담내용</td>
+                                                        <td><textarea name="" id="" class="form-control"></textarea></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center bg-slate-100">상담평가</td>
+                                                        <td><textarea name="" id="" class="form-control"></textarea></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary w-24 mr-1" data-tw-dismiss="modal">취소</button>
+                                            <button class="btn btn-primary w-24 mr-1">저장</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- END: Modal Content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E: 컨텐츠 -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+    <script src="dist/js/app.js"></script>
+    <!-- END: JS Assets-->
+</body>
+
+</html>

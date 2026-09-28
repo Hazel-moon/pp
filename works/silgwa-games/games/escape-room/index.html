@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+  <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+  <title>QR콘텐츠</title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    your-component {
+      display: block;
+      position: relative;
+      width: 80%;
+      height: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <your-component></your-component>
+
+  <template id="class--content">
+    <div id="classStyudyContent">
+      <!-- Content -->
+      <div id="wrap" class="page">
+        <div id="container">
+          <div class="btn_sound deactive"></div>
+          <div class="bottom-desc deactive intro-desc"></div>
+          <div class="screen intro-screen active">
+            <div class="title">실과놀이 팡팡</div>
+            <button class="btn start-btn">시작하기</button>
+          </div>
+          <div class="screen intro-title-screen">
+            <div class="intro-title">디지털 방 탈출하기!</div>
+            <div class="cha-intro">
+              <img src="./img/cha-intro.gif" alt="" id="chaIntroGif">
+            </div>
+          </div>
+
+          <div class="screen welcome-screen">
+            <div class="welcome-content">
+              <p class="welcome-text">디지털 방 탈출에 온 것을 환영합니다.
+                디지털 데이터의 특징을 떠올리며
+                방탈출에 성공하시길</p>
+              <button class="btn ready-btn">준비완료</button>
+            </div>
+          </div>
+
+          <div class="screen door-screen">
+            <div class="door-content">
+              <button class="btn problem-btn">문제풀기</button>
+            </div>
+            <div class="door-click"></div>
+          </div>
+
+          <div class="screen quiz-screen">
+            <div id="popup" class="action_pop">
+              <div class="slide-wrap" id="slider1">
+                <div class="arrow right off" style="cursor: pointer"></div>
+                <div class="slide slide-container">
+                  <div class="bottom-desc"><span>무게의 차이가 미세해요. 전자 저울이 필요하겠어요.</span></div>
+                  <div class="slide-item" data-pic-title="" id="drag1">
+                    <!-- 퀴즈 1: 무게 측정 -->
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        <div class="ques-des01">5.4kg인 상자를 찾으세요.</div>
+                      </div>
+                    </div>
+
+                    <!-- 저울 영역 -->
+                    <div class="quiz-content">
+                      <div class="drop_area drop1" data-num="1">
+                        <!-- 저울 이미지 -->
+                        <div class="scale-image"></div>
+                        <div class="weight-display">0.0</div>
+                      </div>
+
+                      <!-- 드래그 영역 -->
+                      <div class="drag_area_wrap">
+                        <div class="drag_area">
+                          <div class="drag_item box-item drag_item01" data-weight="5.2" data-num="0">
+                            <img src="./img/box1.png" alt="">
+                          </div>
+                        </div>
+                        <div class="drag_area">
+                          <div class="drag_item box-item drag_item02" data-weight="5.4" data-num="1">
+                            <img src="./img/box2.png" alt="">
+                          </div>
+                        </div>
+                        <div class="drag_area">
+                          <div class="drag_item box-item drag_item03" data-weight="5.3" data-num="2">
+                            <img src="./img/box3.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 정답 선택 버튼 -->
+                    <button type="button" class="btn select-answer hidden">정답 정하기</button>
+                  </div>
+
+                  <!-- 퀴즈 2: 시간 선택 -->
+                  <div class="slide-item" data-pic-title="" id="drag2">
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        <div class="ques-des01">현재 시각을 입력하세요.</div>
+                      </div>
+                    </div>
+                    <div class="items-container">
+                      <img src="./img/slide2-items.png" alt="">
+                    </div>
+                  </div>
+
+                  <!-- 퀴즈 3: 색상 조정 -->
+                  <div class="slide-item" data-pic-title="" id="drag3">
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        <div class="ques-des01">별을 숨겨 보세요.</div>
+                      </div>
+                    </div>
+
+                    <div class="color-selector">
+                      <div class="color-display">
+                        <div class="shape-triangle"></div>
+                      </div>
+
+                      <div class="color-controls">
+                        <div class="color-value">
+                          <span class="rgb-value">
+                            <span>1</span>
+                            <span class="changable">8</span>
+                            <span>2</span>
+                          </span>
+                        </div>
+                        <div class="color-arrows">
+                          <div class="arrow-up">▲</div>
+                          <div class="arrow-down">▼</div>
+                        </div>
+                        <button class="btn color-confirm hidden">결정완료</button>
+                      </div>
+                    </div>
+                    <div class="click-button">
+                      <img src="./img/click.png" alt="">
+                    </div>
+                  </div>
+
+                  <!-- 퀴즈 4: 글자 회전 -->
+                  <div class="slide-item" data-pic-title="" id="drag4">
+
+                    <div class="bear-wrap">
+                      <img src="./img/bear.png" alt="">
+                      <div class="ques-wrap">
+                        <div class="ques-des">
+                          <div class="ques-des01">내가 거꾸로 있는 곳에 가서 <br /> 답을 입력하세요.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rotation-container">
+                      <div class="rotate-item" id="rotate-text">곰</div>
+                      <div class="rotate-arrow">↻</div>
+                    </div>
+
+                    <div class="answer-buttons hidden">
+                      <button class="btn door-btn">문으로 간다</button>
+                      <button class="btn home-btn">집으로 간다</button>
+                    </div>
+                  </div>
+
+                  <!-- 비밀먼호 페이지 -->
+                  <div class="slide-item" data-pic-title="" id="drag6">
+                    <div class="ques-des password-title">
+                      <div class="ques-des01">
+                        비밀번호는 3자리입니다. 비밀번호를 정하세요.
+                      </div>
+                    </div>
+                    <div class="mirror-wrap">
+                      <div class="mirro-drop-wrap">
+                        <div class="drop_area drop1" data-num="0">
+                          <img src="./img/mirror.png" alt="">
+                        </div>
+                        <div class="drop_area drop2" data-num="0">
+                          <img src="./img/mirror.png" alt="">
+                        </div>
+                        <div class="drop_area drop3" data-num="0">
+                          <img src="./img/mirror.png" alt="">
+                        </div>
+                      </div>
+                      <div class="drag_area_wrap password-drag-wrap">
+                        <div class="drag_area">
+                          <div class="drag_item num-item01" data-mirror="9" data-num="0">
+                            <img src="./img/number01.png" alt="">
+                          </div>
+                        </div>
+                        <div class="drag_area">
+                          <div class="drag_item num-item02" data-mirror="2" data-num="0">
+                            <img src="./img/number02.png" alt="">
+                          </div>
+                        </div>
+                        <div class="drag_area">
+                          <div class="drag_item num-item03" data-mirror="8" data-num="0">
+                            <img src="./img/number03.png" alt="">
+                          </div>
+                        </div>
+                        <div class="drag_area">
+                          <div class="drag_item num-item04" data-mirror="0" data-num="0">
+                            <img src="./img/number04.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="complete-btn">결정완료</div>
+                    </div>
+                  </div>
+
+                  <!-- 마지막페이지 최총문 선택  -->
+                  <div class="slide-item" data-pic-title="" id="drag7">
+                    <div class="hint"></div>
+                    <div class="door-open">
+                      <img src="./img/door_sequence01.png" alt="">
+                    </div>
+                    <div class="moon-wrap">
+                      <div class="moon-drop-wrap">
+                        <div class="drop_area drop1" data-num="1">
+                        </div>
+                        <div class="drop_area drop2" data-num="2">
+                        </div>
+                        <div class="drop_area drop3" data-num="3">
+                        </div>
+                      </div>
+                      <div class="drag_area_wrap moon-drag-wrap">
+                        <div class="drag_area">
+                          <div class="drag_item moon-item01" data-num="3">
+                            <img src="./img/moon.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="complete_bg">
+                        <img src="./img/complete_bg.gif" alt="팡파레 GIF" />
+                        <div class="complete_stamp"></div>
+                        <div class="re_btn_wrap">
+                          <div class="re-btn">처음으로</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="answer-notebook" id="drag5">
+                <div class="answer-notebook-wrap">
+                  <div class="notebook-title">정답 공책</div>
+                  <!-- 정답 슬롯 영역 (이 부분은 항상 보임) -->
+                  <div class="answer-notebook-box">
+                    <div class="answer-slots">
+                      <div class="answer-slot drop_area drop1 shine" data-slot="1" data-num="1"></div>
+                      <div class="answer-slot drop_area drop2" data-slot="2" data-num="2"></div>
+                      <div class="answer-slot drop_area drop3" data-slot="3" data-num="3"></div>
+                      <div class="answer-slot drop_area drop4" data-slot="4" data-num="4"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 숨겨진 드래그 아이템 영역 (정답정하기 후 표시) -->
+                <div class="drag_area_wrap box-hidden-wrap">
+                  <div class="drag_area">
+                    <div class="drag_item box-item drag_item01" data-weight="5.2" data-num="0">
+                      <img src="./img/newbox01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="drag_area">
+                    <div class="drag_item box-item drag_item02" data-weight="5.4" data-num="1">
+                      <img src="./img/newbox02.png" alt="">
+                    </div>
+                  </div>
+                  <div class="drag_area">
+                    <div class="drag_item box-item drag_item03" data-weight="5.3" data-num="0">
+                      <img src="./img/newbox03.png" alt="">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 시간정하기 드래그 영역-->
+
+                <div class="drag_area_wrap time-hidden-wrap">
+                  <div class="drag_area">
+                    <div class="drag_item time-item01" data-time="10:15" data-num="0">
+                      <img src="./img/time-item01.png" alt="">
+                    </div>
+                  </div>
+                  <div class="drag_area">
+                    <div class="drag_item time-item02" data-time="10:27" data-num="2">
+                      <img src="./img/time-item02.png" alt="">
+                    </div>
+                  </div>
+                  <div class="drag_area">
+                    <div class="drag_item time-item03" data-time="23:56" data-num="0">
+                      <img src="./img/time-item03.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 변경되는 컨텐츠 끝 -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 복수개의 스타일 가능 -->
+    <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+    <!-- 복수개의 스크립트 파일 가능 -->
+    <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="./common/js/base.js"></script>
+    <script type="text/javascript" src="./common/js/view.js"></script>
+    <script type="text/javascript" src="./common/js/lib.js"></script>
+    <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+    <script type="text/javascript" src="./js/sound.js"></script>
+    <script type="text/javascript" src="./js/drag.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </template>
+
+  <script type="module" src="./common/js/shadow-dom-your.js"></script>
+  <!-- Page js -->
+
+</body>
+
+</html>

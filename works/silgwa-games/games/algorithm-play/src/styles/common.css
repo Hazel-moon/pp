@@ -1,0 +1,60 @@
+/* 장식적 요소 스타일 */
+.decorative {
+	/* 시각적 스타일 */
+	pointer-events: none; /* 마우스 이벤트 무시 */
+	user-select: none; /* 텍스트 선택 방지 */
+}
+
+/* 스크린 리더가 무시해야 하는 장식적 요소 */
+[aria-hidden='true'] {
+	/* 시각적으로는 보이지만 스크린 리더는 무시 */
+	position: relative;
+	z-index: -1;
+}
+
+/* 스크린 리더 전용 클래스 */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* 스크린 리더 전용 클래스 (포커스 가능한 요소용) */
+.sr-only-focusable:not(:focus) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.bubble {
+	position: absolute;
+}
+
+
+.blink {
+	animation: blink 2s infinite;
+}
+
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0.2; }
+	100% { opacity: 1; }
+}

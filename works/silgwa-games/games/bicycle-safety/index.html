@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+  <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+  <title>QR콘텐츠</title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    your-component {
+      display: block;
+      position: relative;
+      width: 80%;
+      height: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <your-component></your-component>
+
+  <template id="class--content">
+    <div id="classStyudyContent">
+      <!-- Content -->
+      <div id="wrap" class="page">
+        <div id="container">
+          <!-- 변경되는 컨텐츠 시작 -->
+          <div class="btn_sound deactive"></div>
+          <div class="screen intro-screen active">
+            <div class="title">
+              식품 구성 자전거
+              바르게 타기
+            </div>
+            <button type="button" class="btn start-btn">시작하기</button>
+          </div>
+          <div class="screen welcome-screen">
+            <div class="welcome-content">
+              <img src="./img/welcome-cha.gif" alt="" class="welcome-cha">
+              <div class="welcome-text">
+                안녕하세요? 여러분은 평소에 균형 잡힌 식사를 하고 있나요?
+              </div>
+            </div>
+          </div>
+          <div id="action_page">
+            <div class="slide-wrap" id="slider1">
+
+              <!-- 여기부터 -->
+              <div class="arrow left off" style="cursor: pointer"></div>
+              <div class="arrow right off" style="cursor: pointer"></div>
+              <div class="slide slide-container">
+
+                <div class="slide-item" data-pic-title="" id="drag1">
+                  <div class="slide-content">
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        식품 구성 자전거란 무엇인가요?
+                      </div>
+                    </div>
+                    <div class="cont-wrap">
+                      <div class="left-content">
+                        <img src="./img/bike.png" alt="식품구성자전거" class="bike-img" style="cursor: pointer;">
+                      </div>
+                      <div class="right-content">
+                        <div class="text-box" style="display: none;">
+                          <img src="./img/question.png" alt="question mark" class="question-img">
+                          <p>
+                            균형 잡힌 식단의 중요성을 <br />
+                            전달하고 실천 방법을<br />
+                            이해하기 쉽게 만든<br />
+                            식품 모형이에요.
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item" data-pic-title="" id="drag2">
+                  <div class="slide-content">
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        식품 구성 자전거의 각 부분을 살펴보아요.
+                      </div>
+                    </div>
+                    <div class="cont-wrap">
+                      <div class="center-content">
+                        <img src="./img/bike2.png" alt="식품구성자전거" class="bike-img" style="cursor: pointer;">
+                      </div>
+                      <div class="button-content">
+                        <button type="button" class="popup-btn popup-btn01 blink">
+                          자전거를 탄 사람
+                        </button>
+                        <button type="button" class="popup-btn popup-btn02 blink">
+                          앞바퀴의 물
+                        </button>
+                        <button type="button" class="popup-btn popup-btn03 blink">
+                          뒷바퀴의 식품군
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item" data-pic-title="" id="drag3">
+                  <div class="slide-content">
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        여섯 가지 식품군을 살펴보아요.
+                      </div>
+                    </div>
+                    <div class="cont-wrap">
+                      <div class="center-content">
+                        <img src="./img/wheel.png" alt="식품구성자전거" class="bike-img" style="cursor: pointer;">
+                      </div>
+                      <div class="button-content">
+                        <button type="button" class="popup-btn popup-btn04 blink">
+                          곡류
+                        </button>
+                        <button type="button" class="popup-btn popup-btn05 blink">
+                          유지·당류
+                        </button>
+                        <button type="button" class="popup-btn popup-btn06 blink">
+                          우유·유제품류
+                        </button>
+                        <button type="button" class="popup-btn popup-btn07 blink">
+                          고기·생선·달걀·콩류
+                        </button>
+                        <button type="button" class="popup-btn popup-btn08 blink">
+                          채소류
+                        </button>
+                        <button type="button" class="popup-btn popup-btn09 blink">
+                          과일류
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item" data-pic-title="" id="drag4">
+                  <div class="slide-content">
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        다양한 식품을 여섯 가지 식품군으로 분류해 보세요.
+                      </div>
+                    </div>
+                    <div class="cont-wrap">
+                      <div class="answer-content">
+                        <div class="answer-img-wrap">
+                          <img src="./img/answer01.png" alt="answer" class="answer-img" data-answer="3">
+                          <p class="answer-txt-01">표고버섯</p>
+                        </div>
+                        <div class="correct-wrap">
+                          <img src="./img/correct.png" alt="correct" class="correct-img">
+                          <img src="./img/incorrect.png" alt="incorrect" class="incorrect-img">
+                        </div>
+                        <div class="reselect">
+                          다시 선택해 볼까요?
+                        </div>
+                          <div class="goodjob">
+                            잘했어요!
+                        </div>
+                      </div>
+                      <div class="select-content">
+                        <button type="button" class="select-btn select-btn01" data-answer="1">
+                          곡류
+                        </button>
+                        <button type="button" class="select-btn select-btn02" data-answer="2">
+                          고기·생선·달걀·콩류
+                        </button>
+                        <button type="button" class="select-btn select-btn03" data-answer="3">
+                          채소류
+                        </button>
+                        <button type="button" class="select-btn select-btn04" data-answer="4">
+                          과일류
+                        </button>
+                        <button type="button" class="select-btn select-btn05" data-answer="5">
+                          우유·유제품류
+                        </button>
+                        <button type="button" class="select-btn select-btn06" data-answer="6">
+                          유지·당류
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slide-item" data-pic-title="" id="drag5">
+                  <div class="slide-content">
+                    <div class="ques-wrap">
+                      <div class="ques-des">
+                        적절한 섭취량을 선택해 뒷바퀴를 완성해 보세요.
+                      </div>
+                    </div>
+                    <div class="cont-wrap">
+                      <div class="fanfare">
+                        <img src="./img/fanfare.gif" alt="fanfare">
+                      </div>
+                      <div class="complete_stamp"></div>
+                      <div class="left-content">
+                        <div class="last-bike">
+                          <img src="./img/person2.png" alt="" class="bike-person">
+                          <img src="./img/level1.png" alt="" class="bike-circle">
+                          <img src="./img/water.png" alt="" class="water-bike">
+                        </div>
+                        <div class="answer-area">
+                        </div>
+                      </div>
+                      <div class="right-content">
+                        <div class="last-select">
+                          <div class="last-sel-btn sel-wrap01 on">
+                            <div class="sel-tit">곡류</div>
+                            <button type="button" class="last-sel last-sel-btn01">하루에0~1번</button>
+                            <button type="button" class="last-sel last-sel-btn02" data-ans="true">하루에2.5~3번</button>
+                            <button type="button" class="last-sel last-sel-btn03">하루에5번</button>
+                          </div>
+                          <div class="last-sel-btn sel-wrap02">
+                            <div class="sel-tit">고기·생선·달걀·콩류</div>
+                            <button type="button" class="last-sel last-sel-btn01">하루에1번</button>
+                            <button type="button" class="last-sel last-sel-btn02" data-ans="true">식사 때마다 1~2가지</button>
+                            <button type="button" class="last-sel last-sel-btn03">식사 때마다 4가지 이상</button>
+                          </div>
+                          <div class="last-sel-btn sel-wrap03">
+                            <div class="sel-tit">채소류</div>
+                            <button type="button" class="last-sel last-sel-btn01">식사 때마다 1가지</button>
+                            <button type="button" class="last-sel last-sel-btn02" data-ans="true">식사 때마다 3가지 이상</button>
+                            <button type="button" class="last-sel last-sel-btn03">식사 때마다 5가지 이상</button>
+                          </div>
+                          <div class="last-sel-btn sel-wrap04">
+                            <div class="sel-tit">과일류</div>
+                            <button type="button" class="last-sel last-sel-btn01">일주일에 2가지</button>
+                            <button type="button" class="last-sel last-sel-btn02" data-ans="true">하루에 1~2번</button>
+                            <button type="button" class="last-sel last-sel-btn03">하루에 4번 이상</button>
+                          </div>
+                          <div class="last-sel-btn sel-wrap05">
+                            <div class="sel-tit">우유·유제품류</div>
+                            <button type="button" class="last-sel last-sel-btn01">일주일에3잔</button>
+                            <button type="button" class="last-sel last-sel-btn02" data-ans="true">하루에2잔이상</button>
+                            <button type="button" class="last-sel last-sel-btn03">하루에4잔이상</button>
+                          </div>
+                          <div class="last-sel-btn sel-wrap06">
+                            <div class="sel-tit">유지·당류</div>
+                            <button type="button" class="last-sel last-sel-btn01">많이 먹어요</button>
+                            <button type="button" class="last-sel last-sel-btn02" data-ans="true">적게 먹어요</button>
+                          </div>
+                          <div class="last-sel-btn sel-wrap07">
+                            <div class="sel-tit">물</div>
+                            <button type="button" class="last-sel last-sel-btn01" data-ans="true">마셔요</button>
+                            <button type="button" class="last-sel last-sel-btn02">안 마셔요</button>
+                          </div>
+
+                        </div>
+                        <div class="last-buttons">
+                          <button type="button" class="btn-ride">자전거타기</button>
+                          <button type="button" class="btn-reselect">다시하기</button>
+                        </div>
+                        <div class="re-btn-wrap">
+                          <button type="button" class="re-btn">다시 풀기</button>
+                        </div>
+                        <div class="water-img success">
+                          <img src="./img/gif01_forever.gif">
+                        </div>
+                        <div class="water-img fail">
+                          <img src="./img/gif02_forever.gif">
+                        </div>
+                        <div class="water-img nowater">
+                          <img src="./img/gif03.gif">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 변경되는 컨텐츠 끝 -->
+        <!-- 팝업 추가 -->
+        <div class="popup-container popup01" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-left">
+                <img src="./img/popup-img02.png" alt="규칙적인 운동" class="popup-img">
+              </div>
+              <div class="popup-right">
+                <div class="popup-title">자전거를 탄 사람은 규칙적인 운동의 중요성을 뜻해요.</div>
+                <div class="popup-desc">
+                  <p>건강한 몸을 만들고, 건강 체중을 유지하고 싶다면 꾸준한 신체 활동을 통해 이룰 수 있어요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-container popup02" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-left">
+                <img src="./img/popup-img01.png" alt="물의 중요성" class="popup-img">
+              </div>
+              <div class="popup-right">
+                <div class="popup-title">자전거 앞바퀴의 물은 수분 섭취의 중요성을 나타내요.</div>
+                <div class="popup-desc">
+                  <p>물은 우리 몸에서 혈액을 만들고, 영양소와 노폐물을 나르며, 체온을 조절하는 등 다양한 역할을 해요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-container popup03" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-top">
+                <img src="./img/popup-img03.png" alt="식품군" class="popup-img">
+                <div class="popup-title">식품군은 영양소의 종류에 따라 식품을 비슷한 것끼리 묶은 것이에요.</div>
+              </div>
+              <div class="popup-bottom">
+                <div class="popup-desc">
+                  <p>식품군은 영양소의 종류에 따라 식품을 비슷한 것끼리 묶은 것이에요. 곡류, 고기·생선·달걀·콩류, 채소류, 과일류, 우유·유제품류, 유지·당류의 여섯 가지가 있어요.
+                    식품군별로 하루에 섭취해야 할 양에 따라 면적이 달라요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 식품군 팝업 추가 -->
+        <div class="popup-container popup04" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-top">
+                <img src="./img/popup-img04.png" alt="곡류" class="popup-img">
+              </div>
+              <div class="popup-bottom">
+                <h3 class="popup-title">곡류</h3>
+                <div class="popup-desc">
+                  <p>우리 몸에 에너지를 주는 탄수화물이 많아요.</p>
+                  <p>예) 밥, 빵, 감자, 옥수수, 떡, 시리얼, 국수, 고구마 등</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-container popup05" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-top">
+                <img src="./img/popup-img05.png" alt="유지·당류" class="popup-img">
+              </div>
+              <div class="popup-bottom">
+                <h3 class="popup-title">유지·당류</h3>
+                <div class="popup-desc">
+                  <p>기름과 단맛을 내는 식품으로, 음식을 만들 때 양념으로 들어가기 때문에 적게 먹는 것이 좋아요.</p>
+                  <p>예) 설탕, 콩기름, 올리브유, 버터 등</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-container popup06" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-top">
+                <img src="./img/popup-img06.png" alt="우유·유제품류" class="popup-img">
+              </div>
+              <div class="popup-bottom">
+                <h3 class="popup-title">우유·유제품류</h3>
+                <div class="popup-desc">
+                  <p>뼈와 치아를 튼튼하게 해 주는 칼슘이 많아요.</p>
+                  <p>예) 우유, 치즈, 액상 요구르트, 호상 요구르트, 아이스크림 등</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-container popup07" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-top">
+                <img src="./img/popup-img07.png" alt="고기·생선·달걀·콩류" class="popup-img">
+              </div>
+              <div class="popup-bottom">
+                <h3 class="popup-title">고기·생선·달걀·콩류</h3>
+                <div class="popup-desc">
+                  <p>근육, 머리카락 등 신체 조직 발달에 필요한 단백질이 많아요.</p>
+                  <p>예) 쇠고기, 닭고기, 두부, 달걀, 호두, 생선, 새우, 완두콩, 오징어 등</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-container popup08" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-top">
+                <img src="./img/popup-img08.png" alt="채소류" class="popup-img">
+              </div>
+              <div class="popup-bottom">
+                <h3 class="popup-title">채소류</h3>
+                <div class="popup-desc">
+                  <p>무기질, 비타민이 풍부해 우리 몸이 잘 기능하도록 도와요.</p>
+                  <p>예) 오이, 당근, 애호박, 배추, 김치, 브로콜리, 김, 고추, 표고버섯 등</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup-container popup09" style="display: none;">
+          <div class="popup-content">
+            <button type="button" class="popup-close">×</button>
+            <div class="popup-inner">
+              <div class="popup-top">
+                <img src="./img/popup-img09.png" alt="과일류" class="popup-img">
+              </div>
+              <div class="popup-bottom">
+                <h3 class="popup-title">과일류</h3>
+                <div class="popup-desc">
+                  <p>무기질, 비타민이 풍부해 우리 몸이 잘 기능하도록 도와요.</p>
+                  <p>예) 바나나, 자두, 수박, 포도, 귤, 사과, 딸기, 블루베리 등</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- 복수개의 스타일 가능 -->
+    <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+    <!-- 복수개의 스크립트 파일 가능 -->
+    <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="./common/js/base.js"></script>
+    <script type="text/javascript" src="./common/js/view.js"></script>
+    <script type="text/javascript" src="./common/js/lib.js"></script>
+    <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+    <script type="text/javascript" src="./common/js/common.js"></script>
+    <script type="text/javascript" src="./js/sound.js"></script>
+    <script type="text/javascript" src="./js/drag.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+  </template>
+
+  <script type="module" src="./common/js/shadow-dom-your.js"></script>
+  <!-- Page js -->
+</body>
+
+</html>

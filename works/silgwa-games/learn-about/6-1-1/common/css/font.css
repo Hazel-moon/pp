@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------------------------------------------------------- */
+/* font */
+
+/* 학교안심 돋보기 */
+@font-face {
+    font-family: 'HakgyoansimDotbogi';
+    src: url('../fonts/HakgyoansimDotbogi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 강원교육새음체 */
+@font-face {
+    font-family: 'GangwonEduSaeeum';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/GangwonEduSaeeum.woff2') format('woff2'), url('../fonts/GangwonEduSaeeum.woff') format('woff');
+}
+
+/* G마켓 서체 */
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../fonts/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../fonts/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../fonts/GmarketSansBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 교보손글씨 2023 우선아체 */
+@font-face {
+    font-family: 'KyoboHandwriting2023wsa';
+    src: url('../fonts/KyoboHandwriting2023wsa.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 야놀자체 */
+@font-face {
+    font-family: 'YanoljaYache';
+    src: url('../fonts/YanoljaYacheR.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'YanoljaYache';
+    src: url('../fonts/YanoljaYacheB.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 123RF */
+@font-face {
+    font-family: '123RF';
+    src: url('../fonts/123RF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* kimm */
+@font-face {
+    font-family: 'kimm';
+    src: url('../fonts/kimm.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kimm-bold';
+    font-weight: 700;
+    src: url('../fonts/kimmBold.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hakgyoansim Allimjang';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/HakgyoansimAllimjang-R.woff2') format('woff2'),
+        url('../fonts/HakgyoansimAllimjang-R.woff') format('woff'),
+        url('../fonts/HakgyoansimAllimjang-R.otf') format('opentype'),
+        url('../fonts/HakgyoansimAllimjang-R.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hakgyoansim Allimjang';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/HakgyoansimAllimjang-B.woff2') format('woff2'),
+        url('../fonts/HakgyoansimAllimjang-B.woff') format('woff'),
+        url('../fonts/HakgyoansimAllimjang-B.otf') format('opentype'),
+        url('../fonts/HakgyoansimAllimjang-B.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Hakgyoansim Monggeulmonggeul';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/HakgyoansimMonggeulmonggeul.woff2') format('woff2'),
+        url('../fonts/HakgyoansimMonggeulmonggeul.woff') format('woff'),
+        url('../fonts/HakgyoansimMonggeulmonggeul.otf') format('opentype'),
+        url('../fonts/HakgyoansimMonggeulmonggeul.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Hakgyoansim Chilpanjiugae';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/HakgyoansimChilpanjiugae-L.woff2') format('woff2'),
+        url('../fonts/HakgyoansimChilpanjiugae-L.woff') format('woff'),
+        url('../fonts/HakgyoansimChilpanjiugae-L.otf') format('opentype'),
+        url('../fonts/HakgyoansimChilpanjiugae-L.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hakgyoansim Chilpanjiugae';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/HakgyoansimChilpanjiugae-B.woff2') format('woff2'),
+        url('../fonts/HakgyoansimChilpanjiugae-B.woff') format('woff'),
+        url('../fonts/HakgyoansimChilpanjiugae-B.otf') format('opentype'),
+        url('../fonts/HakgyoansimChilpanjiugae-B.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Hakgyoansim Dunggeunmiso';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Hakgyoansim Dunggeunmiso OTF R.otf') format('opentype'),
+        url('../fonts/Hakgyoansim Dunggeunmiso TTF R.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hakgyoansim Dunggeunmiso';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Hakgyoansim Dunggeunmiso OTF B.otf') format('opentype'),
+        url('../fonts/Hakgyoansim Dunggeunmiso TTF B.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gumi Romance';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/GumiRomance.otf') format('opentype'), url('../fonts/Gumi\ Romance.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSans-Medium.eot');
+    src: url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans-Medium.woff') format('woff'), url('../fonts/NotoSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSans-Bold.eot');
+    src: url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSans-Bold.woff') format('woff'), url('../fonts/NotoSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('../fonts/NotoSansKR-Black.eot');
+    src: url('../fonts/NotoSansKR-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NotoSansKR-Black.woff') format('woff'), url('../fonts/NotoSansKR-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url('../fonts/Pretendard-Bold.woff2') format('woff2'),
+        url('../fonts/Pretendard-Bold.woff') format('woff'), url('../fonts/Pretendard-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url('../fonts/Pretendard-Regular.woff2') format('woff2'),
+        url('../fonts/Pretendard-Regular.woff') format('woff'),
+        url('../fonts/Pretendard-Regular.otf') format('opentype');
+}

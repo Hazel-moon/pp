@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="72" viewBox="0 0 71 72">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_932" data-name="사각형 932" width="71" height="72" transform="translate(18139 -8209)" fill="#cbd5e1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_7" data-name="마스크 그룹 7" transform="translate(-18139 8209)" clip-path="url(#clip-path)">
+    <g id="icon" transform="translate(18139 -8205.571)">
+      <path id="패스_373" data-name="패스 373" d="M4.257,40.463,22.1,20.887l3.784,7.161L31.623,17.4l4.145,7.136L55.188,4.2" transform="translate(1.245 1.632)" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+      <rect id="사각형_938" data-name="사각형 938" width="6.376" height="6.466" transform="translate(42.3 40.953) rotate(-45)" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+      <path id="패스_374" data-name="패스 374" d="M68.518,62.661h0a5.053,5.053,0,0,1-7.431-.309L46.88,45.524l4.5-4.5L68.209,55.229A5.053,5.053,0,0,1,68.518,62.661Z" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+      <circle id="타원_211" data-name="타원 211" cx="21.448" cy="21.448" r="21.448" transform="translate(7.995 2.138)" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+      <path id="패스_375" data-name="패스 375" d="M40.13,34.282a15.114,15.114,0,1,1,0-21.375A15.13,15.13,0,0,1,40.13,34.282Z" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+      <path id="패스_376" data-name="패스 376" d="M16.327,31.107l5.912-8.823,4.53,7.74,6.749-11.552,4.966,7.7,5.539-6.585" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+      <circle id="타원_212" data-name="타원 212" cx="2.656" cy="2.656" r="2.656" transform="translate(1.001 41.786)" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+      <circle id="타원_213" data-name="타원 213" cx="2.656" cy="2.656" r="2.656" transform="translate(55.466 1.001)" fill="none" stroke="#312e81" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.001"/>
+    </g>
+  </g>
+</svg>

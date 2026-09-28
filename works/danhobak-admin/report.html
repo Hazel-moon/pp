@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/logo.svg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords"
+        content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="LEFT4CODE">
+    <title>단호박 상담소 관리자</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5">
+    <div class="flex mt-0">
+        <!-- S : 사이드 메뉴 -->
+        <nav class="side-nav">
+            <a href="index.html" class="intro-x flex items-center pl-5 pt-4">
+                <img src="dist/images/danhobak_logo.svg" alt="">
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title">
+                            메인화면 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="mainbanner-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인배너 관리</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mainprod-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">메인 노출 상품 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="member-list.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="user"></i> </div>
+                        <div class="side-menu__title">회원관리</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu ">
+                        <div class="side-menu__icon"> <i data-lucide="table"></i> </div>
+                        <div class="side-menu__title">
+                            게시판 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="concern-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">고민게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="share-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">정보공유게시판</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">단호박 솔루션</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="keyword-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title">키워드 관리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="message-square"></i> </div>
+                        <div class="side-menu__title">
+                            전문 상담사 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="counselor-list.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="counselor-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문상담사 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="package"></i> </div>
+                        <div class="side-menu__title">
+                            상품관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="product-list.html" class="side-menu side-menu--active">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 목록 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product-upload.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 상품 등록 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="order-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="file"></i> </div>
+                        <div class="side-menu__title">
+                            주문관리
+                            <div class="side-menu__sub-icon "></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="keyword-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="search"></i> </div>
+                        <div class="side-menu__title">
+                            검색어 관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 인기 검색어 관리 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="rec-keyword-mng.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 연관 검색어 관리 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="report.html" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="feather"></i> </div>
+                        <div class="side-menu__title"> 단호박 리포트 </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="point-mng.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="coins"></i> </div>
+                        <div class="side-menu__title"> 포인트 관리 </div>
+                    </a>
+                </li>
+                  <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="crown"></i> </div>
+                        <div class="side-menu__title">
+                            리뷰관리
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="review-board.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 고민게시판 리뷰 </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="solution-review.html" class="side-menu">
+                                <div class="side-menu__icon"> <i data-lucide="corner-down-right"></i> </div>
+                                <div class="side-menu__title"> 전문솔루션 리뷰 </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- E : 사이드 메뉴 -->
+
+
+        <!-- S: 컨텐츠 -->
+        <div class="content">
+            <div class="top-bar">
+                <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">단호박 리포트</li>
+                        <li class="breadcrumb-item active" aria-current="page">목록</li>
+                    </ol>
+                </nav>
+                <div class="intro-x dropdown w-8 h-8 ml-auto">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                        role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                        <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                    </div>
+                    <div class="dropdown-menu w-56">
+                        <ul class="dropdown-content bg-primary text-white">
+                            <li class="p-2">
+                                <div class="font-medium">Kevin Spacey</div>
+                                <div class="text-xs text-white/70 mt-0.5 dark:text-slate-500">Software Engineer</div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="user"
+                                        class="w-4 h-4 mr-2"></i> Profile </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="edit"
+                                        class="w-4 h-4 mr-2"></i> Add Account </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="lock"
+                                        class="w-4 h-4 mr-2"></i> Reset Password </a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="help-circle"
+                                        class="w-4 h-4 mr-2"></i> Help </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider border-white/[0.08]">
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                        class="w-4 h-4 mr-2"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 2xl:col-span-12">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="col-span-12 mt-8">
+                            <div class="box p-5 rounded-md mb-4">
+                                <div class="overflow-auto lg:overflow-visible">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">등록일시</td>
+                                                <td class="text-center">
+                                                    <input type="text" data-daterange="true"
+                                                        class="datepicker form-control block w-full">
+                                                </td>
+                                                <td class="text-center">제목</td>
+                                                <td class="text-center">
+                                                    <input id="regular-form-1" type="text" class="form-control"
+                                                        placeholder="">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="flex justify-end mt-4 gap-2">
+                                        <button class="btn btn-sm btn-secondary w-24 mr-1 mb-2">초기화</button>
+                                        <button class="btn btn-sm btn-primary w-24 mr-1 mb-2">검색</button>
+                                    </div>
+                                    <div class="text-slate-500 mt-2">총 nn개의 단호박 리포트가 있습니다.</div>
+                                </div>
+                            </div>
+                            <div class="box p-5 rounded-md">
+                                <div class="flex justify-end mt-4 gap-2 mb-2">
+                                    <a href="/report-register.html" class="btn btn-outline-primary w-40 mr-1 mb-2">단호박
+                                        리포트 등록</a>
+                                </div>
+                                <div class="overflow-auto lg:overflow-visible">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="whitespace-nowrap text-center">등록일시</th>
+                                                <th class="whitespace-nowrap text-center">제목</th>
+                                                <th class="whitespace-nowrap text-center">URL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">결혼이 싫었던 내가 유일하게 흔들린 순간</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">둘 중 한 명과 반드시 결혼해야 한다면?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">내가 ‘속도위반’ 결혼할 확률은 얼마나 될까?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">결혼이 싫었던 내가 유일하게 흔들린 순간</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">둘 중 한 명과 반드시 결혼해야 한다면?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">내가 ‘속도위반’ 결혼할 확률은 얼마나 될까?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">결혼이 싫었던 내가 유일하게 흔들린 순간</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">둘 중 한 명과 반드시 결혼해야 한다면?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">내가 ‘속도위반’ 결혼할 확률은 얼마나 될까?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">결혼이 싫었던 내가 유일하게 흔들린 순간</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">둘 중 한 명과 반드시 결혼해야 한다면?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">내가 ‘속도위반’ 결혼할 확률은 얼마나 될까?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">결혼이 싫었던 내가 유일하게 흔들린 순간</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">둘 중 한 명과 반드시 결혼해야 한다면?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2023-03-03</td>
+                                                <td class="text-center">
+                                                    <a href="/report-detail.html">내가 ‘속도위반’ 결혼할 확률은 얼마나 될까?</a>
+                                                </td>
+                                                <td class="text-center">
+                                                    www.asdfg12c.co.kr
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <nav class="w-full mt-4">
+                                        <ul class="pagination justify-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-left"
+                                                        class="lucide lucide-chevrons-left w-4 h-4"
+                                                        data-lucide="chevrons-left">
+                                                        <polyline points="11 17 6 12 11 7"></polyline>
+                                                        <polyline points="18 17 13 12 18 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-left"
+                                                        class="lucide lucide-chevron-left w-4 h-4"
+                                                        data-lucide="chevron-left">
+                                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                                            <li class="page-item active"> <a class="page-link" href="#">2</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                                            <li class="page-item"> <a class="page-link" href="#">...</a> </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevron-right"
+                                                        class="lucide lucide-chevron-right w-4 h-4"
+                                                        data-lucide="chevron-right">
+                                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" icon-name="chevrons-right"
+                                                        class="lucide lucide-chevrons-right w-4 h-4"
+                                                        data-lucide="chevrons-right">
+                                                        <polyline points="13 17 18 12 13 7"></polyline>
+                                                        <polyline points="6 17 11 12 6 7"></polyline>
+                                                    </svg> </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E: 컨텐츠 -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+    <script src="dist/js/app.js"></script>
+    <!-- END: JS Assets-->
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"
+        />
+        <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+        <title>QR콘텐츠</title>
+
+        <style>
+            html,
+            body {
+                padding: 0;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+            }
+            your-component {
+                display: block;
+                position: relative;
+                width: 80%;
+                height: 80%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <your-component></your-component>
+
+        <template id="class--content">
+            <div id="classStyudyContent">
+                <!-- Content -->
+                <div id="wrap" class="page">
+                    <div id="container">
+                        <!-- 변경되는 컨텐츠 시작 -->
+                        <button class="btn_sound active"></button>
+
+                        <div class="screen intro-screen active">
+                            <div class="title">도구로 알아보는 조리</div>
+                            <div class="start-btn">시작하기</div>
+                        </div>
+                        <div class="screen screen-step1">
+                            <div class="title-wrap">
+                                <div class="title"></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="ch"></div>
+                                    <div class="start-checklists">
+                                        <div class="checklist">
+                                            <div class="checklist-title">우리는 조리 도구를 언제 사용할까요?</div>
+                                            <div class="checklist-content">
+                                                <div class="click-area active"></div>
+                                                음식 재료를 준비하고, 가열하고, 그릇에 담는 과정에서 이용해요.
+                                            </div>
+                                        </div>
+                                        <div class="checklist">
+                                            <div class="checklist-title">
+                                                조리 도구의 쓰임새를 알면 어떤 점이 좋을까요?
+                                            </div>
+                                            <div class="checklist-content">
+                                                <div class="click-area active"></div>
+                                                조리 도구를 알맞게 사용하면 좀 더 손쉽고 안전하게 조리할 수 있어요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="next-btn">다음</div>
+                            </div>
+                        </div>
+                        <div class="screen screen-step2">
+                            <div class="title-wrap title-wrap-type1">
+                                <div class="title">조리 활동의 순서대로 단추를 눌러 조리 도구를 살펴보세요.</div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="button-wrap">
+                                        <div class="button" data-index="1">1. 재료 계량하기</div>
+                                        <div class="button" data-index="2">2. 재료 다듬기</div>
+                                        <div class="button" data-index="3">3. 가열하기</div>
+                                        <div class="button" data-index="4">4. 상차림하기</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stemp"></div>
+                            <div class="btn-reset">처음으로</div>
+                        </div>
+
+                        <!-- page-step2 -->
+
+                        <div class="screen screen-step3 screen-type2">
+                            <div class="title-wrap title-wrap-type2">
+                                <div class="title"><span>1. 재료 계량하기</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="q_btn pop-open-btn" data-pop="1">계량이란?</div>
+                                    <div class="img-lists-wrap">
+                                        <div class="img-list pop-open-btn" data-pop="2">
+                                            <div class="img-list-title">저울</div>
+                                            <div class="img"></div>
+                                        </div>
+                                        <div class="img-list pop-open-btn" data-pop="3">
+                                            <div class="img-list-title">계량스푼</div>
+                                            <div class="img"></div>
+                                        </div>
+                                        <div class="img-list pop-open-btn" data-pop="4">
+                                            <div class="img-list-title">계량컵</div>
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="next-btn">다음</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step4 screen-type2">
+                            <div class="title-wrap title-wrap-type1">
+                                <div class="title"><span>눈높이를 맞추고 재료의 양을 읽어 보세요.</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="ch-wrap active">
+                                        <div class="bubble">
+                                            액체의 표면에 <br />
+                                            눈높이를 맞추고<br />
+                                            눈금을 읽어야 해요.
+                                        </div>
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <div class="img"></div>
+                                        <div class="graduation">
+                                            <div class="graduation-lines">
+                                                <div class="graduation-line"></div>
+                                                <div class="graduation-line"></div>
+                                                <div class="graduation-line">
+                                                    <div class="dot-line"></div>
+                                                </div>
+                                                <div class="graduation-line"></div>
+                                                <div class="graduation-line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="next-btn">다음</div>
+                                <div class="read-btn">눈금 읽기</div>
+                                <div class="stemp">최고</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step5 screen-type2">
+                            <div class="title-wrap title-wrap-type1">
+                                <div class="title"><span>막대를 움직여 넘친 재료를 평편하게 깎아 주세요.</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="ch-wrap active">
+                                        <div class="bubble">
+                                            재료의 양이 넘치지 않게 <br />
+                                            평편하게 깎아야 정확한 <br />
+                                            양을 잴 수 있어요.
+                                        </div>
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <div class="img"></div>
+                                        <div class="img2"><img src="./img/gif/1.png" alt="평편하게 이미지" /></div>
+                                        <div class="click"></div>
+                                    </div>
+                                </div>
+                                <div class="close-btn">닫기</div>
+                                <div class="stemp">최고</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step6 screen-type2">
+                            <div class="title-wrap title-wrap-type2">
+                                <div class="title"><span>2. 재료 다듬기</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="q_btn pop-open-btn" data-pop="5">계량이란?</div>
+                                    <div class="img-lists-wrap">
+                                        <div class="img-list pop-open-btn" data-pop="6">
+                                            <div class="img-list-title">칼과 도마마</div>
+                                            <div class="img"></div>
+                                        </div>
+                                        <div class="img-list pop-open-btn" data-pop="7">
+                                            <div class="img-list-title">볼</div>
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="next-btn">다음</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step7 screen-type2">
+                            <div class="title-wrap title-wrap-type1">
+                                <div class="title"><span>손가락을 구부려 안전한 썰기 자세를 만들어 보세요.</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="ch-wrap">
+                                        <div class="bubble">
+                                            재료를 잡은 손은 손가락을 <br />
+                                            안쪽으로 둥글게 구부려야 <br />
+                                            다치지 않아요.
+                                        </div>
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="img-wrap">
+                                        <div class="img"></div>
+                                        <div class="img2">
+                                            <div class="hand hand1 active">
+                                                <img src="./img/hand1.png" alt="손 이미지" />
+                                            </div>
+                                            <div class="hand hand2">
+                                                <img src="./img/hand2.png" alt="손 이미지" />
+                                            </div>
+                                            <div class="hand hand3">
+                                                <img src="./img/hand3.png" alt="손 이미지" />
+                                            </div>
+                                            <div class="hand hand4">
+                                                <img src="./img/hand4.png" alt="손 이미지" />
+                                            </div>
+                                            <div class="hand hand5">
+                                                <img src="./img/hand5.png" alt="손 이미지" />
+                                            </div>
+                                            <div class="hand hand6">
+                                                <img src="./img/hand6.png" alt="손 이미지" />
+                                            </div>
+
+                                            <div class="click click1" data-index="1"></div>
+                                            <div class="click click2" data-index="2"></div>
+                                            <div class="click click3" data-index="3"></div>
+                                            <div class="click click4" data-index="4"></div>
+                                            <div class="click click5" data-index="5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="next-btn">다음</div>
+                                <div class="stemp">최고</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step8 screen-type2">
+                            <div class="title-wrap title-wrap-type1">
+                                <div class="title"><span>손을 베었을 때 응급 처치 방법을 살펴보아요.</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="ch-wrap">
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="quiz-wrap">
+                                        <div class="quiz-lists">
+                                            <div class="quiz-list">
+                                                손에 묻은 음식물을 <span>흐르는</span> 물로 씻어 냅니다.
+                                            </div>
+                                            <div class="quiz-list">
+                                                <span>깨끗한</span> 거즈, 수건 등으로 상처 부위를 <span>눌러</span
+                                                ><br />
+                                                피가 멈추게 합니다.
+                                            </div>
+                                            <div class="quiz-list">
+                                                상처가 깊거나 피가 멈추지 않으면 <br />
+                                                <span>병원</span> 에 가서 치료를 받습니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="close-btn">닫기</div>
+                                <div class="stemp">최고</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step9 screen-type2">
+                            <div class="title-wrap title-wrap-type2">
+                                <div class="title"><span>3. 가열하기</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="q_btn pop-open-btn" data-pop="8">가열하면?</div>
+                                    <div class="img-lists-wrap">
+                                        <div class="img-list">
+                                            <div class="img-list-title pop-open-btn" data-pop="9">냄비</div>
+                                            <div class="img-list-title img-list-title2 pop-open-btn" data-pop="10">
+                                                국자
+                                            </div>
+                                            <div class="img"></div>
+                                        </div>
+                                        <div class="img-list">
+                                            <div class="img-list-title pop-open-btn" data-pop="11">프라이팬</div>
+                                            <div class="img-list-title img-list-title2 pop-open-btn" data-pop="12">
+                                                뒤집개
+                                            </div>
+                                            <div class="img"></div>
+                                        </div>
+                                        <div class="img-list">
+                                            <div class="img-list-title pop-open-btn" data-pop="13">가열 기구</div>
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="next-btn">다음</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step10 screen-type2">
+                            <div class="title-wrap title-wrap-type1">
+                                <div class="title"><span>가열 도구 사용 시 유의 사항을 살펴보아요.</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="ch-wrap">
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="quiz-wrap">
+                                        <div class="quiz-lists">
+                                            <div class="quiz-list">
+                                                <span>어른</span> 이 함께 있을 때에만 사용합니다.
+                                            </div>
+                                            <div class="quiz-list">주변에 불에 탈 수 있는 물질은 멀리 치웁니다.</div>
+                                            <div class="quiz-list">
+                                                가스레인지의 <span>가스 밸브</span>는 사용할 때에만 엽니다.
+                                            </div>
+                                            <div class="quiz-list">
+                                                불을 <span>끈 뒤</span>에도 열이 남아 뜨거우므로 데지 않게 조심합니다.
+                                            </div>
+                                            <div class="quiz-list">
+                                                불이 났을 때에는 <span>소화기</span>를 이용합니다.
+                                            </div>
+                                            <div class="quiz-list">
+                                                <span>기름</span>에 불이 붙었을 때에는 절대 물을 뿌리지
+                                                <span>않습니다</span>.<br />
+                                                물을 뿌리면 불길이 더 커질 수 있습니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="close-btn">닫기</div>
+                                <div class="stemp">최고</div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step11 screen-type2">
+                            <div class="title-wrap title-wrap-type2">
+                                <div class="title"><span>4. 상차림하기</span></div>
+                            </div>
+                            <div class="content-wrap">
+                                <div class="content">
+                                    <div class="q_btn pop-open-btn" data-pop="14">상차림</div>
+                                    <div class="img-lists-wrap">
+                                        <div class="img-list">
+                                            <div class="img-list-title pop-open-btn" data-pop="15">그릇</div>
+                                            <div class="img-list-title img-list-title2 pop-open-btn" data-pop="16">
+                                                수저
+                                            </div>
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="close-btn">닫기</div>
+                            </div>
+                        </div>
+
+                        <!-- 팝업 레이어 -->
+                        <div class="pop-wrap">
+                            <div class="pop">
+                                <div class="pop-close"></div>
+                                <div class="pop-title">
+                                    <div class="pop-title-text"></div>
+                                </div>
+                                <div class="pop-content">
+                                    <div class="pop-content-inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 팝업 레이어 끝-->
+                        <!-- 변경되는 컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 복수개의 스타일 가능 -->
+            <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+            <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+            <!-- 복수개의 스크립트 파일 가능 -->
+            <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+            <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+            <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+            <script type="text/javascript" src="./common/js/base.js"></script>
+            <script type="text/javascript" src="./common/js/view.js"></script>
+            <script type="text/javascript" src="./common/js/lib.js"></script>
+            <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+            <script type="text/javascript" src="./common/js/common.js"></script>
+            <script type="text/javascript" src="./js/sound.js"></script>
+            <script type="text/javascript" src="./js/drag.js"></script>
+            <script type="text/javascript" src="./js/scripts.js"></script>
+        </template>
+
+        <script type="module" src="./common/js/shadow-dom-your.js"></script>
+        <!-- Page js -->
+    </body>
+</html>

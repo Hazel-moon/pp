@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"/>
+        <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+        <title>QR콘텐츠</title>
+
+        <style>
+            html,
+            body {
+                padding: 0;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+            }
+            your-component {
+                display: block;
+                position: relative;
+                width: 80%;
+                height: 80%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+            <div id="classStyudyContent">
+                <!-- Content -->
+                <div id="wrap" class="page">
+                    <div id="container">
+                        <!-- 변경되는 컨텐츠 시작 -->
+
+                        <!-- 시작 페이지 -->
+                        <div id="start_page" class="off">
+                            <div class="start_btn_area">
+                                <img src="./img/title_text.png" alt="" />
+                                <div class="intro_cha">
+                                    <img src="./img/charactor.png" alt="" />
+                                    <button class="start_btn">시작하기</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 인트로 페이지 -->
+                        <div id="intro_page" class="off">
+                            <div class="intro_inner">
+                                <div class="intro_title">
+                                    <img src="./img/charactor2.png" alt="">
+                                    <img src="./img/title_text2.png" alt="">
+                                </div>
+                                <button class="start_btn">시작하기</button>
+                            </div>
+                        </div>
+
+
+                        <!-- 놀이 페이지 -->
+                        <div id="page1">
+                            <div class="page1_inner">
+                                <div class="page_header">
+                                    <button type="button" class="btn_help">놀이 방법 보기</button>
+                                    <div>
+                                        <button type="button" class="btn_play">놀이하기</button>
+                                        <button class="btn_sound"></button>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="bike_list">
+                                        <div class="items">
+                                            <button type="button" class="bike_btn" data-size="2" data-src="bike_blue1.png">
+                                                <img src="./img/bike_blue1.png" alt="1인용 자전거">
+                                            </button>
+                                            <button type="button" class="bike_btn" data-size="3" data-src="bike_blue2.png">
+                                                <img src="./img/bike_blue2.png" alt="2인용 자전거">
+                                            </button>
+                                            <button type="button" class="bike_btn" data-size="2" data-src="bike_green1.png">
+                                                <img src="./img/bike_green1.png" alt="1인용 자전거">
+                                            </button>
+                                            <button type="button" class="bike_btn" data-size="3" data-src="bike_green2.png">
+                                                <img src="./img/bike_green2.png" alt="2인용 자전거">
+                                            </button>
+                                            <button type="button" class="bike_btn" data-size="2" data-src="bike_yell1.png">
+                                                <img src="./img/bike_yell1.png" alt="1인용 자전거">
+                                            </button>
+                                            <button type="button" class="bike_btn" data-size="3" data-src="bike_yell2.png">
+                                                <img src="./img/bike_yell2.png" alt="2인용 자전거">
+                                            </button>
+                                            <button type="button" class="bike_btn" data-size="2" data-src="bike_red1.png">
+
+                                            </button>
+                                            <button type="button" class="bike_btn" data-size="3" data-src="bike_blue1.png">
+                                                <img src="./img/bike_red2.png" alt="2인용 자전거">
+                                            </button>
+                                        </div>
+                                        <button type="button" class="btn_done">위치 정하기 완료</button>
+                                   </div>
+                                   <div class="game_board">
+                                        <div class="grid" id="grid">
+                                            <!-- JS로 채움 -->
+                                        </div>
+                                        <div class="exit">출구</div>
+                                   </div>
+                                </div>
+                               
+                               
+                            </div>
+                        </div>
+
+                        
+
+                        <!-- 변경되는 컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 복수개의 스타일 가능 -->
+            <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+            <link rel="stylesheet" type="text/css" href="./css/common.css" />
+            
+            <!-- 복수개의 스크립트 파일 가능 -->
+            <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+            <script type="text/javascript" src="./common/js/base.js"></script>
+            <script type="text/javascript" src="./common/js/view.js"></script>
+            <script type="text/javascript" src="./common/js/lib.js"></script>
+            <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+            <script type="text/javascript" src="./common/js/common.js"></script>
+            <script type="text/javascript" src="./js/data.js"></script>
+            <script type="text/javascript" src="./js/script.js"></script>
+
+        <script type="module" src="./common/js/shadow-dom-your.js"></script>
+        <script type="text/javascript" src="./js/game.js" defer></script>
+       
+        <!-- Page js -->
+    </body>
+</html>

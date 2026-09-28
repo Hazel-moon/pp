@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"
+        />
+        <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+        <title>QR콘텐츠</title>
+
+        <style>
+            html,
+            body {
+                padding: 0;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+            }
+            your-component {
+                display: block;
+                position: relative;
+                width: 80%;
+                height: 80%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <your-component></your-component>
+
+        <template id="class--content">
+            <div id="classStyudyContent">
+                <!-- Content -->
+                <div id="wrap" class="page">
+                    <div id="container">
+                        <!-- 변경되는 컨텐츠 시작 -->
+                        <button class="btn_sound"></button>
+
+                        <div class="screen intro-screen active">
+                            <div class="intro-title"></div>
+
+                            <div class="start-btn">시작하기</div>
+                        </div>
+                        <div class="screen screen-step1">
+                            <div class="title-wrap">
+                                <div class="title">동식물 자원으로 알아보는 생명 기술</div>
+                            </div>
+                            <div class="ch-all"></div>
+                            <div class="btn-wrap">
+                                <div class="pa-btn plant-btn">식물</div>
+                                <div class="pa-btn animal-btn">동물</div>
+                            </div>
+                        </div>
+                        <div class="screen screen-step2">
+                            <div class="slide-wrap">
+                                <div class="slides">
+                                    <div class="slide slide1">
+                                        <div class="sub-title-wrap">
+                                            <div class="sub-title">
+                                                <div class="sub-title-left"></div>
+                                                <div class="sub-title-center">무엇일까요?</div>
+                                                <div class="sub-title-right"></div>
+                                            </div>
+                                            <div class="tag tag1">식물</div>
+                                        </div>
+                                        <div class="sub-body">
+                                            <div class="img-wrap">
+                                                <div class="img"><div class="click"></div></div>
+                                                <div class="effect-wrap">
+                                                    <div class="effect effect1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="ch-wrap">
+                                                <div class="bubble">
+                                                    <div class="text text1 active">
+                                                        이 식물에는 어떤 생명 기술이<br />
+                                                        있을까요?
+                                                    </div>
+                                                    <div class="text text2">
+                                                        이 식물은 공기 정화 식물인 <br />
+                                                        아레카야자에요. 공기 속에 있는 <br />
+                                                        오염 물질을 정화하는 식물의 <br />
+                                                        특성을 활용해 공기의 질을 높여요.
+                                                    </div>
+                                                </div>
+                                                <div class="ch"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide slide2">
+                                        <div class="sub-title-wrap">
+                                            <div class="sub-title">
+                                                <div class="sub-title-left"></div>
+                                                <div class="sub-title-center">무엇일까요?</div>
+                                                <div class="sub-title-right"></div>
+                                            </div>
+                                            <div class="tag tag1">식물</div>
+                                        </div>
+                                        <div class="sub-body">
+                                            <div class="img-wrap">
+                                                <div class="img"><div class="click"></div></div>
+                                                <div class="effect-wrap">
+                                                    <div class="effect effect1">
+                                                        <div class="scissors scissors1"></div>
+                                                        <div class="scissors scissors2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ch-wrap">
+                                                <div class="bubble">
+                                                    <div class="text text1 active">
+                                                        식물을 잘라 화분에 심었네요.<br />
+                                                        어떤 생명 기술이 있을까요?
+                                                    </div>
+                                                    <div class="text text2">
+                                                        식물의 줄기나 잎, 뿌리 일부를<br />
+                                                        잘라내어 새로운 식물로 키우는<br />
+                                                        번식 방법인 꺾꽂이에요. <br />
+                                                        상처 난 부위가 재생되는 식물의<br />
+                                                        기능을 활용해 식물을 번식시켜요.
+                                                    </div>
+                                                </div>
+                                                <div class="ch"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide slide3">
+                                        <div class="sub-title-wrap">
+                                            <div class="sub-title">
+                                                <div class="sub-title-left"></div>
+                                                <div class="sub-title-center">무엇일까요?</div>
+                                                <div class="sub-title-right"></div>
+                                            </div>
+                                            <div class="tag tag1">식물</div>
+                                        </div>
+                                        <div class="sub-body">
+                                            <div class="img-wrap">
+                                                <div class="img"><div class="click"></div></div>
+                                                <div class="effect-wrap">
+                                                    <div class="effect effect1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="ch-wrap">
+                                                <div class="bubble">
+                                                    <div class="text text1 active">
+                                                        우리가 자주 먹는 콩이 있네요.<br />
+                                                        이 콩에는 어떤 생명 기술이 있을까요?
+                                                    </div>
+                                                    <div class="text text2">
+                                                        이 콩은 유전자 변형 식품이에요.<br />
+                                                        유전자를 변형해 수확한 콩이라<br />
+                                                        병충해에 강해요.
+                                                    </div>
+                                                </div>
+                                                <div class="ch"></div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-back">돌아가기</div>
+                                    </div>
+                                </div>
+                                <div class="slide-controls">
+                                    <div class="slide-btn slide-prev"></div>
+                                    <!-- <div class="slide-dots"></div> -->
+                                    <div class="slide-btn slide-next"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step3">
+                            <div class="slide-wrap">
+                                <div class="slides">
+                                    <div class="slide slide1">
+                                        <div class="sub-title-wrap">
+                                            <div class="sub-title">
+                                                <div class="sub-title-left"></div>
+                                                <div class="sub-title-center">무엇일까요?</div>
+                                                <div class="sub-title-right"></div>
+                                            </div>
+                                            <div class="tag tag2">동물</div>
+                                        </div>
+                                        <div class="sub-body">
+                                            <div class="img-wrap">
+                                                <div class="img"><div class="click"></div></div>
+                                                <div class="effect-wrap">
+                                                    <div class="effect effect1"></div>
+                                                    <div class="effect effect2"></div>
+                                                    <div class="effect effect3"></div>
+                                                </div>
+                                            </div>
+                                            <div class="ch-wrap">
+                                                <div class="bubble">
+                                                    <div class="text text1 active">
+                                                        이 곤충에는 어떤 생명 기술이<br />
+                                                        있을까요?
+                                                    </div>
+                                                    <div class="text text2">
+                                                        이 곤충은 환경 정화 곤충인<br />
+                                                        동애등에에요. 음식물 쓰레기를<br />
+                                                        먹는 동애등에를 이용해 쓰레기를<br />
+                                                        처리하고, 동애등에의 번데기는<br />
+                                                        사료로 사용해요.
+                                                    </div>
+                                                </div>
+                                                <div class="ch"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide slide2">
+                                        <div class="sub-title-wrap">
+                                            <div class="sub-title">
+                                                <div class="sub-title-left"></div>
+                                                <div class="sub-title-center">무엇일까요?</div>
+                                                <div class="sub-title-right"></div>
+                                            </div>
+                                            <div class="tag tag2">동물</div>
+                                        </div>
+                                        <div class="sub-body">
+                                            <div class="img-wrap">
+                                                <div class="img"><div class="click"></div></div>
+                                                <div class="effect-wrap">
+                                                    <div class="effect effect1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="ch-wrap">
+                                                <div class="bubble">
+                                                    <div class="text text1 active">
+                                                        오리가 논에서 헤엄치고 있네요.<br />
+                                                        어떤 생명 기술이 있을까요?
+                                                    </div>
+                                                    <div class="text text2">
+                                                        오리를 활용해 농사를 짓는<br />
+                                                        친환경 오리 농법이에요. <br />
+                                                        오리를 이용하여 농약 없이 해충을 잡고, <br />
+                                                        오리의 배설물로 토양을 비옥하게 해요.
+                                                    </div>
+                                                </div>
+                                                <div class="ch"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide slide3">
+                                        <div class="sub-title-wrap">
+                                            <div class="sub-title">
+                                                <div class="sub-title-left"></div>
+                                                <div class="sub-title-center">무엇일까요?</div>
+                                                <div class="sub-title-right"></div>
+                                            </div>
+                                            <div class="tag tag2">동물</div>
+                                        </div>
+                                        <div class="sub-body">
+                                            <div class="img-wrap">
+                                                <div class="img"><div class="click"></div></div>
+                                                <div class="effect-wrap">
+                                                    <div class="effect effect1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="ch-wrap">
+                                                <div class="bubble">
+                                                    <div class="text text1 active">
+                                                        벌이 집을 짓고 있어요. <br />
+                                                        어떤 생명 기술이 있을까요?
+                                                    </div>
+                                                    <div class="text text2">
+                                                        꿀을 얻기 위해 벌을 기르는 양봉이에요. <br />
+                                                        겨울을 대비해 미리 꽃의 꿀을 모아 두는<br />
+                                                        벌의 특성을 활용해 꿀을 얻어요.
+                                                    </div>
+                                                </div>
+                                                <div class="ch"></div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-back">돌아가기</div>
+                                    </div>
+                                </div>
+                                <div class="slide-controls">
+                                    <div class="slide-btn slide-prev"></div>
+                                    <!-- <div class="slide-dots"></div> -->
+                                    <div class="slide-btn slide-next"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- page-step2 -->
+
+                        <!-- 변경되는 컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 복수개의 스타일 가능 -->
+            <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+            <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+            <!-- 복수개의 스크립트 파일 가능 -->
+            <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+            <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+            <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+            <script type="text/javascript" src="./common/js/base.js"></script>
+            <script type="text/javascript" src="./common/js/view.js"></script>
+            <script type="text/javascript" src="./common/js/lib.js"></script>
+            <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+            <script type="text/javascript" src="./common/js/common.js"></script>
+            <script type="text/javascript" src="./js/sound.js"></script>
+            <script type="text/javascript" src="./js/drag.js"></script>
+            <script type="text/javascript" src="./js/scripts.js"></script>
+        </template>
+
+        <script type="module" src="./common/js/shadow-dom-your.js"></script>
+        <!-- Page js -->
+    </body>
+</html>

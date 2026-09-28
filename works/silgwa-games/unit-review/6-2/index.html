@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+		<link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+		<title>QR콘텐츠</title>
+
+		<style>
+			html,
+			body {
+				padding: 0;
+				height: 100%;
+				margin: 0;
+				overflow: hidden;
+			}
+			your-component {
+				display: block;
+				position: relative;
+				width: 80%;
+				height: 80%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<your-component></your-component>
+
+		<template id="class--content">
+			<div id="classStyudyContent" style="visibility: hidden">
+				<!-- Content -->
+				<div id="wrap" class="page unit2 class_6">
+					<div id="container">
+						<!-- 변경되는 컨텐츠 시작 -->
+
+						<!-- 시작 페이지 -->
+						<div id="start_page">
+							<div class="start_btn_area">
+								<img src="./img/intro_title.png" alt="" />
+								<div class="intro_cha"></div>
+								<button class="start_btn">시작하기</button>
+							</div>
+						</div>
+
+						<!-- 인트로 페이지 -->
+						<div id="intro_page" class="off">
+							<button class="btn_sound"></button>
+							<img src="./img/bg1_gif.gif" alt="인트로 GIF" />
+							<div class="starting_title">
+								<span
+									>발명과 기술적<br />
+									문제 해결</span
+								>
+								<div class="title_mask"></div>
+							</div>
+						</div>
+
+						<!-- 활동 페이지 -->
+						<div class="action_page action_page01">
+							<button class="btn_sound"></button>
+							<div class="action_title">
+								<span>빈칸에 들어갈 글자를 찾아봅시다.</span>
+							</div>
+							<div class="action_contents">
+								<div class="slide-wrap" id="slider1">
+									<div class="arrow left off" style="cursor: pointer"></div>
+
+									<div class="slide slide-container">
+										<!-- Slide 01 -->
+										<div class="slide-item" id="drag1" data-pic-title="">
+											<!-- 본문 텍스트 및 드롭 영역 -->
+											<div class="contents_txt_wrap">
+												<div class="contents_txt contents_txt01">
+													<span class="grading_icon"></span>
+													<div class="drop_area">
+														<div class="drop_obj drop_obj01" data-ans="발"></div>
+														<div class="drop_obj drop_obj01" data-ans="명" style="margin-right: -12px"></div>
+													</div>
+													은/는 지금까지 없었던 물건을 새롭게 만들어 내거나, 이미 <br />
+													있었던 것을 개선하는 것입니다.
+												</div>
+
+												<div class="contents_txt contents_txt02">
+													기술적 문제 해결 과정의 단계는 <span class="grading_icon"></span>
+													<div class="drop_area">
+														<div class="drop_obj drop_obj01" data-ans="문"></div>
+														<div class="drop_obj drop_obj02" data-ans="제"></div>
+													</div>
+													확인하기, 아이디어 탐색 및
+													<div class="drop_area">
+														<div class="drop_obj drop_obj01" data-ans="구"></div>
+														<div class="drop_obj drop_obj02" data-ans="체"></div>
+														<div class="drop_obj drop_obj03" data-ans="화" style="margin-right: -12px"></div>
+													</div>
+													하기, 실행하기, 평가하기로 이루어집니다.
+												</div>
+											</div>
+
+											<!-- 드래그 영역 -->
+											<div class="drag_area">
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj01">명</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj02">지</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj03">체</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj04">구</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj05">권</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj06">문</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj07">재</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj08">산</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj09">화</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj10">발</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj11">제</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj12">식</div>
+												</div>
+											</div>
+
+											<!-- 채점 버튼 및 캐릭터 -->
+											<div class="grading_area">
+												<button class="grading_btn">채점하기</button>
+												<div class="cha"></div>
+												<div class="bubble bubble01">
+													<span
+														>채점하기 전에 <br />
+														답을 맞게 입력했는지 <br />
+														확인해 보아요.
+													</span>
+												</div>
+											</div>
+
+											<div class="final_obj">
+												<div class="final_cha"></div>
+												<button class="final_btn">다 했어요</button>
+
+												<div class="next_section_btn">
+													<button class="next_action_btn">다음 활동하기</button>
+												</div>
+											</div>
+										</div>
+										<!-- Slide 02 -->
+										<div class="slide-item" id="drag2" data-pic-title="">
+											<!-- 본문 텍스트 및 드롭 영역 -->
+											<div class="contents_txt_wrap">
+												<div class="contents_txt contents_txt03">
+													<span class="grading_icon"></span>
+													<div class="drop_area">
+														<div class="drop_obj drop_obj01" data-ans="지"></div>
+														<div class="drop_obj drop_obj02" data-ans="식" style="margin-right: 24px"></div>
+														<div class="drop_obj drop_obj03" data-ans="재"></div>
+														<div class="drop_obj drop_obj04" data-ans="산"></div>
+														<div class="drop_obj drop_obj05" data-ans="권" style="margin-right: -12px"></div>
+													</div>
+													은/는 사람이 만든 창작물 중에서 법으로 보호할 만한 가치가 있는 것에 부여하는 권리입니다.
+												</div>
+											</div>
+
+											<!-- 드래그 영역 -->
+											<div class="drag_area">
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj01">명</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj02">지</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj03">체</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj04">구</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj05">권</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj06">문</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj07">재</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj08">산</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj09">화</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj10">발</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj11">제</div>
+												</div>
+												<div class="item_wrap">
+													<div class="drag_item drag_obj drag_obj12">식</div>
+												</div>
+											</div>
+
+											<!-- 채점 버튼 및 캐릭터 -->
+											<div class="grading_area">
+												<button class="grading_btn">채점하기</button>
+												<div class="cha"></div>
+												<div class="bubble bubble01">
+													<span
+														>채점하기 전에 <br />
+														답을 맞게 입력했는지 <br />
+														확인해 보아요.
+													</span>
+												</div>
+											</div>
+
+											<div class="final_obj">
+												<div class="final_cha"></div>
+												<button class="final_btn">다 했어요</button>
+
+												<div class="next_section_btn">
+													<button class="next_action_btn">다음 활동하기</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="arrow right" style="cursor: pointer"></div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 활동2 페이지 -->
+						<div class="action_page action_page02 off">
+							<button class="btn_sound"></button>
+							<div class="action_title">
+								<span>이 단원에서 성취한 내용을 점검해 봅시다.</span>
+								<button class="home_btn hide">처음으로</button>
+							</div>
+							<div class="action_contents">
+								<div class="finger_ani"></div>
+								<ul>
+									<li>
+										<label for="inspection01">
+											<input type="checkbox" id="inspection01" />
+											<span class="inspection_box"></span>
+											<span class="inspection_txt">기술의 가치를 알고, 발명과 기술에 대한 관심과 흥미가 생겼어요. </span>
+										</label>
+									</li>
+									<li>
+										<label for="inspection02">
+											<input type="checkbox" id="inspection02" />
+											<span class="inspection_box"></span>
+											<span class="inspection_txt">일상생활 속에서 발명 아이디어를 떠올릴 수 있어요. </span>
+										</label>
+									</li>
+									<li>
+										<label for="inspection03">
+											<input type="checkbox" id="inspection03" />
+											<span class="inspection_box"></span>
+											<span class="inspection_txt">개선해야 할 생활 속 문제를 확인할 수 있어요. </span>
+										</label>
+									</li>
+									<li>
+										<label for="inspection04">
+											<input type="checkbox" id="inspection04" />
+											<span class="inspection_box"></span>
+											<span class="inspection_txt">지식 재산권 보호에 대해 알게 되었어요. </span>
+										</label>
+									</li>
+									<li>
+										<label for="inspection05">
+											<input type="checkbox" id="inspection05" />
+											<span class="inspection_box"></span>
+											<span class="inspection_txt">발명 사고 기법을 적용하여 창의적인 제품을 구상하고 제작할 수 있어요. </span>
+										</label>
+									</li>
+									<li>
+										<label for="inspection06">
+											<input type="checkbox" id="inspection06" />
+											<span class="inspection_box"></span>
+											<span class="inspection_txt">발명품의 특허 정보를 검색할 수 있어요. </span>
+										</label>
+									</li>
+								</ul>
+
+								<!-- 페이지 업다운 버튼(텍스트 길어질 때) -->
+								<!-- <div class="up_down_btn_wrap">
+                  <button class="up_btn"></button>
+                  <button class="down_btn"></button>
+                </div> -->
+
+								<div class="complete_obj hide">
+									<button class="final_btn">다 했어요</button>
+									<div class="final_cha02"></div>
+								</div>
+							</div>
+
+							<!-- 토스트 팝업 -->
+							<div class="toast_popup">
+								<div class="inner">
+									<span class="toast_popup_title">정말 다 했나요?</span>
+									<div class="btn_wrap">
+										<button class="yes_btn">네</button>
+										<button class="no_btn">아니요</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="complete_bg">
+								<img src="./img/complete_bg.gif" alt="팡파레 GIF" />
+								<div class="complete_stamp"></div>
+								<p class="complete-comment"></p>
+							</div>
+						</div>
+
+						<!-- 변경되는 컨텐츠 끝 -->
+					</div>
+				</div>
+			</div>
+
+			<!-- 복수개의 스타일 가능 -->
+			<link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+			<link rel="stylesheet" type="text/css" href="./css/common.css" />
+			<link rel="stylesheet" type="text/css" href="./css/variable.css" />
+
+			<!-- 복수개의 스크립트 파일 가능 -->
+			<script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+			<script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+			<script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+			<script type="text/javascript" src="./common/js/base.js"></script>
+			<script type="text/javascript" src="./common/js/view.js"></script>
+			<script type="text/javascript" src="./common/js/lib.js"></script>
+			<script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+			<script type="text/javascript" src="./common/js/common.js"></script>
+			<script type="text/javascript" src="./js/sound.js"></script>
+			<script type="text/javascript" src="./js/drag.js"></script>
+			<script type="text/javascript" src="./js/scripts.js"></script>
+		</template>
+
+		<script type="module" src="./common/js/shadow-dom-your.js"></script>
+		<script type="module" src="./js/magnifirePage/index.js"></script>
+		<!-- Page js -->
+	</body>
+</html>

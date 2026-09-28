@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<title>QR콘텐츠</title>
+		<style>
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+				height: 100%;
+				overflow: hidden;
+			}
+			your-component,
+			your-modal {
+				display: block;
+				position: relative;
+			}
+		</style>
+
+		<script type="module" src="./app.js"></script>
+	</head>
+
+	<body>
+		<your-component style="visibility: hidden"></your-component>
+		<your-modal style="visibility: hidden"></your-modal>
+		<template id="class--content">
+			<main id="content-page"></main>
+			<link rel="stylesheet" type="text/css" href="./style.css" />
+		</template>
+		<template id="class--modal">
+			<div id="modal" style="width: 100%; height: 100%; display: none"></div>
+			<div id="modal-container" style="display: none; background-color: rgba(0, 0, 0, 0.5); width: 100vw; height: 100vh"></div>
+			<link rel="stylesheet" type="text/css" href="./style.css" />
+		</template>
+	</body>
+</html>

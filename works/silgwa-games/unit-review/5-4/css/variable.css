@@ -1,0 +1,79 @@
+/* title mask */
+
+.complete_bg .complete-comment {
+	background: url(../img/bubble3.png) no-repeat center center / contain;
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 305px;
+	height: 208px;
+	top: 739px;
+	left: 1416px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.complete_bg .complete-comment p {
+	transform: rotateY(180deg);
+	font-family: 'GangwonEduSaeeum';
+	font-size: 40px;
+	text-align: center;
+}
+
+.contents_txt .magnifire_btn {
+	display: inline-block;
+	position: relative;
+}
+.contents_txt .magnifire_btn img {
+	position: absolute;
+	top: -68px;
+	left: -2px;
+
+	width: 54px;
+	height: 66px;
+}
+
+.contents_txt .magnifire_btn img:nth-child(2) {
+	animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0;
+		transform: scale(1.1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.class_5.unit4 .cha {
+	background: url(../img/cha_unit01.png) no-repeat center;
+}
+
+.class_5.unit4 .cha.on {
+	background: url(../img/cha_unit01_on.png) no-repeat center;
+}
+
+/* action 페이지 배경 */
+
+.class_5.unit4 .action_page {
+	background: url(../img/action_page01_class5_unit01_bg.png) no-repeat center;
+}
+.class_5.unit4 .action_page.action_page02 {
+	background: url(../img/action_page02_class5_unit01_bg.png) no-repeat center;
+}
+/* 번호 */
+
+/* 드래그 영역 */
+
+.inspection_txt {
+	word-break: keep-all;
+}
+.inspection_btn.lines {
+	top: 110px !important;
+}

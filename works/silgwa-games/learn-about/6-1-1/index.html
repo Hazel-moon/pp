@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"
+        />
+        <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+        <title>QR콘텐츠</title>
+
+        <style>
+            html,
+            body {
+                padding: 0;
+                height: 100%;
+                margin: 0;
+                overflow: hidden;
+            }
+            your-component {
+                display: block;
+                position: relative;
+                width: 80%;
+                height: 80%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <your-component></your-component>
+
+        <template id="class--content">
+            <div id="classStyudyContent">
+                <!-- Content -->
+                <div id="wrap" class="page">
+                    <div id="container">
+                        <!-- 변경되는 컨텐츠 시작 -->
+                        <button class="btn_sound"></button>
+                        <!-- <button class="btn-reset">초기화</button> -->
+                        <div class="screen intro-screen active">
+                            <div class="intro-title"></div>
+                            <div class="btn-start"></div>
+                        </div>
+                        <div class="screen screen-step1" data-screen="1">
+                            <div class="content-wrap">
+                                <div class="content-title">
+                                    <h2>지속가능한 의식주 생활을 하기 위한 행동을 골라 볼까요?</h2>
+                                </div>
+                                <div class="content">
+                                    <div class="ch-wrap">
+                                        <div class="bubble"></div>
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="con-title">음료를 마실 때에는</div>
+
+                                    <div class="lists">
+                                        <div class="list choice" data-idx="1">
+                                            <div class="img"></div>
+                                            <div class="text">
+                                                <span data-text="다회용 컵">다회용 컵</span>을 사용해요
+                                            </div>
+                                        </div>
+                                        <div class="list choice" data-idx="2">
+                                            <div class="img"></div>
+                                            <div class="text">
+                                                <span data-text="일회용 컵">일회용 컵</span>을 사용해요
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step2" data-screen="2">
+                            <div class="content-wrap">
+                                <div class="content-title">
+                                    <h2>지속가능한 의식주 생활을 하기 위한 행동을 골라 볼까요?</h2>
+                                </div>
+                                <div class="content">
+                                    <div class="ch-wrap">
+                                        <div class="bubble"></div>
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="con-title">더 이상 입지 않지만 깨끗한 옷이 있다면</div>
+
+                                    <div class="lists">
+                                        <div class="list choice" data-idx="1">
+                                            <div class="img"></div>
+                                            <div class="text">
+                                                <span data-text="전부 버리고">전부 버리고</span>&nbsp;새옷을 사요
+                                            </div>
+                                        </div>
+                                        <div class="list choice" data-idx="2">
+                                            <div class="img"></div>
+                                            <div class="text">
+                                                필요한 사람에게&nbsp;<span data-text="나누어요">나누어요</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step3" data-screen="3">
+                            <div class="content-wrap">
+                                <div class="content-title">
+                                    <h2>지속가능한 의식주 생활을 하기 위한 행동을 골라 볼까요?</h2>
+                                </div>
+                                <div class="content">
+                                    <div class="ch-wrap">
+                                        <div class="bubble">
+                                            정답이에요! <br />
+                                            불필요한 전등을 끄면<br />
+                                            에너지를 절약할 수<br />
+                                            있어요.
+                                        </div>
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="con-title">급식을 먹을떄에는</div>
+                                    <div class="btn-wrap">
+                                        <button class="btn choice" data-idx="1">끈다</button>
+                                        <button class="btn choice" data-idx="2">끄지 않는다</button>
+                                    </div>
+                                    <div class="lists">
+                                        <div class="list">
+                                            <div class="img"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen screen-step4" data-screen="4">
+                            <div class="stemp"></div>
+                            <div class="btn-reset"></div>
+                            <div class="content-wrap">
+                                <div class="content-title">
+                                    <h2>지속가능한 의식주 생활을 하기 위한 행동을 골라 볼까요?</h2>
+                                </div>
+                                <div class="content">
+                                    <div class="ch-wrap">
+                                        <div class="bubble"></div>
+                                        <div class="ch"></div>
+                                    </div>
+                                    <div class="con-title">급식을 먹을떄에는</div>
+                                    <div class="btn-wrap">
+                                        <button class="btn choice" data-idx="1">먹을 만큼만 덜기</button>
+                                        <button class="btn choice" data-idx="2">먹고 남을 만큼 덜기</button>
+                                    </div>
+                                    <div class="lists active">
+                                        <div class="list">
+                                            <div class="img">
+                                                <div class="q-icon">?</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 변경되는 컨텐츠 끝 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 복수개의 스타일 가능 -->
+            <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+            <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+            <!-- 복수개의 스크립트 파일 가능 -->
+            <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+            <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+            <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+            <script type="text/javascript" src="./common/js/base.js"></script>
+            <script type="text/javascript" src="./common/js/view.js"></script>
+            <script type="text/javascript" src="./common/js/lib.js"></script>
+            <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+            <script type="text/javascript" src="./common/js/common.js"></script>
+            <script type="text/javascript" src="./js/sound.js"></script>
+            <script type="text/javascript" src="./js/drag.js"></script>
+            <script type="text/javascript" src="./js/scripts.js"></script>
+        </template>
+
+        <script type="module" src="./common/js/shadow-dom-your.js"></script>
+        <!-- Page js -->
+    </body>
+</html>

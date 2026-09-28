@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>초등 실과 게임 콘텐츠 포트폴리오</title>
+  <style>
+    :root {
+      --bg: #f6f1e7;
+      --card: #ffffff;
+      --ink: #3a3128;
+      --sub: #8a7d6b;
+      --accent: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      padding: 48px 24px 80px;
+    }
+    header { max-width: 1080px; margin: 0 auto 40px; }
+    h1 { font-size: 2rem; margin-bottom: 8px; }
+    header p { color: var(--sub); line-height: 1.6; }
+    .grid {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    a.card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 8px rgba(58, 49, 40, 0.08);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    a.card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(58, 49, 40, 0.14);
+    }
+    .card .emoji { font-size: 2rem; }
+    .card h2 { font-size: 1.05rem; }
+    .card p { font-size: 0.85rem; color: var(--sub); line-height: 1.5; }
+    .card .tag {
+      margin-top: auto;
+      align-self: flex-start;
+      font-size: 0.72rem;
+      color: var(--accent);
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 2px 10px;
+    }
+    footer { max-width: 1080px; margin: 48px auto 0; color: var(--sub); font-size: 0.85rem; }
+    .section-title {
+      max-width: 1080px;
+      margin: 48px auto 16px;
+      font-size: 1.3rem;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(58, 49, 40, 0.1);
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .section-title small { display: block; font-size: 0.85rem; font-weight: 400; color: var(--sub); margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>초등 실과 게임 콘텐츠</h1>
+    <p>초등학교 실과 교과 QR 학습 콘텐츠로 개발한 웹 콘텐츠 모음입니다.<br />
+    HTML / CSS / JavaScript (jQuery · Web Components · Shadow DOM) 기반, 태블릿·PC 반응형 지원.</p>
+  </header>
+
+  <h2 class="section-title">🎮 게임 콘텐츠<small>교과 주제를 놀이로 익히는 미니게임 4종</small></h2>
+  <main class="grid">
+    <a class="card" href="./games/dress-up/">
+      <span class="emoji">👕</span>
+      <h2>옷입히기</h2>
+      <p>상황에 맞는 옷차림을 골라 캐릭터를 꾸미는 게임</p>
+      <span class="tag">꾸미기 · 캡처</span>
+    </a>
+    <a class="card" href="./games/escape-room/">
+      <span class="emoji">🔐</span>
+      <h2>방탈출 게임</h2>
+      <p>단서를 찾고 문제를 풀어 방을 탈출하는 게임</p>
+      <span class="tag">추리 · 문제해결</span>
+    </a>
+    <a class="card" href="./games/bicycle-safety/">
+      <span class="emoji">🥗</span>
+      <h2>식품 구성 자전거 바르게 타기</h2>
+      <p>식품군을 골고루 채워 식품 구성 자전거를 달리게 하는 영양 학습 게임</p>
+      <span class="tag">영양 · 학습</span>
+    </a>
+    <a class="card" href="./games/calligraphy/">
+      <span class="emoji">🖌️</span>
+      <h2>궁체 연습하기</h2>
+      <p>화면 속 궁체 가이드를 따라 손글씨를 연습하는 미술 콘텐츠</p>
+      <span class="tag">미술 · 트레이싱</span>
+    </a>
+  </main>
+
+  <h2 class="section-title">🔍 ㅇㅇ으로 알아보는 ㅇㅇ<small>사례·소재로 교과 개념을 탐구하는 인터랙티브 콘텐츠 5종</small></h2>
+  <main class="grid">
+    <a class="card" href="./learn-about/6-1-1/">
+      <span class="emoji">🌏</span>
+      <h2>지속가능한 의식주 생활</h2>
+      <p>지속가능한 의식주 생활을 위한 행동 골라 보기</p>
+      <span class="tag">6-1-1</span>
+    </a>
+    <a class="card" href="./learn-about/6-2-1/">
+      <span class="emoji">🤝</span>
+      <h2>적정 기술로 알아보는 나눔과 공유</h2>
+      <p>적정 기술 사례로 나눔과 공유의 가치를 알아보는 콘텐츠</p>
+      <span class="tag">6-2-1</span>
+    </a>
+    <a class="card" href="./learn-about/6-2-2/">
+      <span class="emoji">🧠</span>
+      <h2>생활로 알아보는 인공지능</h2>
+      <p>일상생활 속 사례로 인공지능을 알아보는 콘텐츠</p>
+      <span class="tag">6-2-2</span>
+    </a>
+    <a class="card" href="./learn-about/6-4-2/">
+      <span class="emoji">🚜</span>
+      <h2>미래 농업으로 알아보는 직업 세계</h2>
+      <p>미래 농업 기술과 관련 직업 세계를 탐구하는 콘텐츠</p>
+      <span class="tag">6-4-2</span>
+    </a>
+    <a class="card" href="./learn-about/6-4-2-2/">
+      <span class="emoji">🌾</span>
+      <h2>사례로 알아보는 지속가능한 농업</h2>
+      <p>실제 사례로 지속가능한 농업을 알아보는 콘텐츠</p>
+      <span class="tag">6-4-2-2</span>
+    </a>
+  </main>
+
+  <h2 class="section-title">📝 대단원 마무리<small>단원별 핵심 개념을 빈칸 채우기·드래그로 정리하고 채점하는 퀴즈 10종 (5~6학년)</small></h2>
+  <main class="grid">
+    <a class="card" href="./unit-review/5-1/">
+      <span class="emoji">💻</span>
+      <h2>5학년 1단원</h2>
+      <p>디지털 기술과 건설 기술 등 기술의 세계 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/5-2/">
+      <span class="emoji">🍚</span>
+      <h2>5학년 2단원</h2>
+      <p>건강한 발달과 균형 잡힌 식사 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/5-3/">
+      <span class="emoji">🧹</span>
+      <h2>5학년 3단원</h2>
+      <p>생활 자원의 관리와 쾌적한 생활 공간 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/5-4/">
+      <span class="emoji">🚢</span>
+      <h2>5학년 4단원</h2>
+      <p>수송 수단과 수송 기술 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/5-5/">
+      <span class="emoji">🖥️</span>
+      <h2>5학년 5단원</h2>
+      <p>소프트웨어와 절차적 문제 해결 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/6-1/">
+      <span class="emoji">🌍</span>
+      <h2>6학년 1단원</h2>
+      <p>지속가능한 의식주 생활 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/6-2/">
+      <span class="emoji">💡</span>
+      <h2>6학년 2단원</h2>
+      <p>발명과 기술적 문제 해결 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/6-3/">
+      <span class="emoji">📊</span>
+      <h2>6학년 3단원</h2>
+      <p>데이터와 정보의 유형 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/6-4/">
+      <span class="emoji">🤖</span>
+      <h2>6학년 4단원</h2>
+      <p>로봇의 구조와 기능 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+    <a class="card" href="./unit-review/6-5/">
+      <span class="emoji">👨‍👩‍👧‍👦</span>
+      <h2>6학년 5단원</h2>
+      <p>가정생활과 가족, 가정일 참여 개념 정리 퀴즈</p>
+      <span class="tag">퀴즈 · 채점</span>
+    </a>
+  </main>
+
+  <footer>
+    ※ 게임은 정적 웹 서버 환경에서 실행됩니다. 실행 방법은 README.md 참고.
+  </footer>
+</body>
+</html>

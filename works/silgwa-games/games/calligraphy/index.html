@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="./common/css/font.css" />
+    <title>QR콘텐츠</title>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        your-component {
+            display: block;
+            position: relative;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <your-component></your-component>
+
+    <template id="class--content">
+        <div id="classStyudyContent">
+            <!-- Content -->
+            <div id="wrap" class="page">
+                <div id="container">
+                    <!-- 변경되는 컨텐츠 시작 -->
+
+                    <button class="btn_sound"></button>
+                    <div class="slide-wrap">
+                        <div class="slides">
+                            <!-- 슬라이드 1: 한글 자음/모음 선택 -->
+
+                            <div class="slide slide1 active">
+                                <div class="select-title">연습할 한글을 고르세요.</div>
+                                <div class="select-options hangul-select">
+                                    <label><input type="radio" name="hangul" value="ㄱ"><span>ㄱ</span></label>
+                                    <label><input type="radio" name="hangul" value="ㅅ"><span>ㅅ</span></label>
+                                    <label><input type="radio" name="hangul" value="ㅇ"><span>ㅇ</span></label>
+                                    <label><input type="radio" name="hangul" value="ㅏ"><span>ㅏ</span></label>
+                                    <label><input type="radio" name="hangul" value="ㅡ"><span>ㅡ</span></label>
+                                    <label><input type="radio" name="hangul" value="ㅣ"><span>ㅣ</span></label>
+                                    <label><input type="radio" name="hangul" value="ㅓ"><span>ㅓ</span></label>
+                                </div>
+                            </div>
+
+                            <!-- 슬라이드 2: 한글 쓰기 연습 -->
+                            <div class="slide slide2">
+                                <div class="practice-title">빨간 보조선을 따라 궁체를 익혀보세요.</div>
+                                <div class="canvas-container">
+                                    <div class="guide-text hangul-guide"></div>
+                                    <canvas id="hangulCanvas" width="560" height="560"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- 슬라이드 3: 단어 선택 -->
+                            <div class="slide slide3">
+                                <div class="select-title">연습하고 싶은 단어를 선택하세요.</div>
+                                <div class="select-options word-select">
+                                    <label><input type="radio" name="word" value="초콜릿"><span>초콜릿</span></label>
+                                    <label><input type="radio" name="word" value="휴지통"><span>휴지통</span></label>
+                                    <label><input type="radio" name="word" value="자전거"><span>자전거</span></label>
+                                </div>
+                            </div>
+
+                            <!-- 슬라이드 4: 단어 쓰기 연습 -->
+                            <div class="slide slide4">
+                                <div class="practice-title">빨간 보조선을 따라 궁체를 익혀보세요.</div>
+                                <div class="canvas-container">
+                                    <div class="guide-text word-guide"></div>
+                                    <canvas id="wordCanvas" width="1531" height="400"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- 슬라이드 5: 텍스트 입력 -->
+                            <div class="slide slide5">
+                                <div class="practice-title">연습하고싶은 텍스트를 입력하세요.</div>
+                                <div class="sub-title">*띄어쓰기 포함 최대 6글자 까지 입력가능합니다.</div>
+                                <input type="text" id="customText" maxlength="6" placeholder="텍스트 입력">
+                            </div>
+
+                            <!-- 슬라이드 6: 자유 쓰기 연습 -->
+                            <div class="slide slide6">
+                                <div class="practice-title">궁체의 특징을 생각하면서 글자를 써보세요.</div>
+                                <div class="canvas-container">
+                                    <div class="guide-text custom-guide"></div>
+                                    <canvas id="customCanvas" width="1531" height="400"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- 슬라이드 7: 완료 -->
+                            <div class="slide slide7">
+                            </div>
+                        </div>
+
+                        <!-- 슬라이드 네비게이션 버튼 -->
+                        <button class="slide-prev" style="display: none;">이전</button>
+                        <button class="slide-next">다음</button>
+                    </div>
+
+                    <!-- 완료 팝업-->
+                    <div class="completion-popup" style="display: none;">
+                        <div class="popup-content">
+                            <img src="./img/complete.gif" alt="" class="complete-img">
+                            <p>궁체연습 완료!</p>
+                            <button class="btn-restart">다시하기</button>
+                        </div>
+                    </div>
+
+                    <!-- 변경되는 컨텐츠 끝 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 복수개의 스타일 가능 -->
+        <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+
+        <!-- 복수개의 스크립트 파일 가능 -->
+        <script type="text/javascript" src="./common/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./common/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="./common/js/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="./common/js/html2canvas.min.js"></script>
+        <script type="text/javascript" src="./common/js/base.js"></script>
+        <script type="text/javascript" src="./common/js/view.js"></script>
+        <script type="text/javascript" src="./common/js/lib.js"></script>
+        <script type="text/javascript" src="./common/js/audioPlayer.js"></script>
+        <script type="text/javascript" src="./common/js/common.js"></script>
+        <script type="text/javascript" src="./js/sound.js"></script>
+        <!-- <script type="text/javascript" src="./js/drag.js"></script> -->
+        <script type="text/javascript" src="./js/scripts.js"></script>
+    </template>
+
+    <script type="module" src="./common/js/shadow-dom-your.js"></script>
+    <!-- Page js -->
+</body>
+
+</html>
