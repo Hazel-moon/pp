@@ -58,7 +58,7 @@ const RESUME = [
   },
 ];
 
-/* 경력기술서 — 회사별 주요업무/주요 프로젝트. 문이슬-CV.docx 기준. */
+
 const CAREER_HISTORY = [
   {
     company: "페이브 (SI 에이전시)",
